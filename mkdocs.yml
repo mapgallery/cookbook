@@ -33,6 +33,8 @@ nav:
   - Kookboek:
       - index.md
       - punten/index.md
+      - lijnen/index.md
+      - vlakken/index.md
 
 plugins:
   - macros:
