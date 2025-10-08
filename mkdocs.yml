@@ -35,6 +35,7 @@ nav:
       - punten/index.md
       - lijnen/index.md
       - vlakken/index.md
+      - geavanceerd/index.md
 
 plugins:
   - macros:

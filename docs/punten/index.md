@@ -6,8 +6,12 @@ title: "Punten"
 
 Punten
 ---
-Voor de handleiding over de styling van punten is gebruik gemaakt van de [dataset molens](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e). Deze is te vinden in o.a. het nationaal georegister van PDOK.
-Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery.
+Voor deze handleiding over de styling van punten is gebruik gemaakt van de [dataset molens](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e). Deze is te vinden in o.a. het nationaal georegister van PDOK.
+Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
+
+Simpele styling 
+---
+
 ### Simpele punt
 
 ```
@@ -34,15 +38,15 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 ```
 ![title](foto_simpele_punt.png)
 
-De code hierboven is het resultaat van het genereren van een eenvoudige punt weergave in MapGallery. Binnen __rules__ zijn de stylingsregels beschreven. In de __filter__ is gekozen voor alle geometrieën van het type punt.
+De code hierboven is het resultaat van het genereren van een eenvoudige punt weergave in MapGallery. Binnen rules zijn de stylingsregels beschreven. In de filter is gekozen voor alle geometrieën van het type "Point".
 
-- Het type symbool is __mark__, ofwel een markering op de kaart. 
-- De __kleur__ "#12cdf3" in hex notatie, de code begint met # gevolgd door 6 tekens, bestaande uit drie paren, die respectievelijk de intensiteit van rood, groen en blauw (RGB) weergeven. Maar de basiskleuren worden ook herkend zoals red, green, indigo ect. 
--	De grootte ofwel __radius__ is op het moment 7 pixels.
--	De __strokeColor__, ofwel de omlijning is zwart. Hierbij kan je gebruik maken van de zelfde kleur opties als bij de kleur van de punt. 
--	De __strokeWidth__ bepaald de dikte van de omlijning.
--	De __strokeOpacity__ bepaald de transparantie van het punt.
--	Bij __wellKnownName__ wordt de vorm van het symbool bepaald, in dit geval een cirkel. Alternatieven hiervan zijn bijvoorbeeld square of triangle, maar op het moment wordt cirkel ondersteund.   
+- Het type symbool is "Mark", ofwel een markering op de kaart. 
+- De kleur #12cdf3 in hex notatie, de code begint met # gevolgd door 6 tekens, bestaande uit drie paren, die respectievelijk de intensiteit van rood, groen en blauw (RGB) weergeven. Maar de basiskleuren worden ook herkend zoals red, green, indigo ect. 
+-	De grootte ofwel radius is op het moment 7 pixels.
+-	De strokeColor, ofwel de omlijning is zwart. Hierbij kan je gebruik maken van de zelfde kleur opties als bij de kleur van de punt. 
+-	De strokeWidth bepaald de dikte van de omlijning.
+-	De strokeOpacity bepaald de transparantie van het punt.
+-	Bij wellKnownName wordt de vorm van het symbool bepaald, in dit geval een cirkel. Alternatieven hiervan zijn bijvoorbeeld square of triangle, maar op het moment wordt alleen de cirkel ondersteund.   
 
 ### Afbeelding als symbool
 ```
@@ -66,10 +70,10 @@ De code hierboven is het resultaat van het genereren van een eenvoudige punt wee
 }
 ```
 ![title](foto_afbeelding_punt.png)
-Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om de punten weer te geven met het symbooltype __icon__.  
+Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om de punten weer te geven met het symbooltype icon.  
 
--	Bij __image__ moet in dit geval de url van de gewenste afbeelding geplaatst worden. Let op dat het een directe link naar de afbeelding is, eindigend op het bestandsformat zoals .jpg/.svg/.png. Een goede bron voor afbeeldingen is [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images).
--	Met __allowOverlap__ bepaald men of de afbeelding mogen overlappen. Zoniet, dan worden ze pas allemaal zichtbaar bij het verder inzoomen van de kaart. Zowel, zijn niet alle symbolen zichtbaar als ze overlappen.  
+-	Bij image moet in dit geval de url van de gewenste afbeelding geplaatst worden. Let op dat het een directe link naar de afbeelding is, eindigend op het bestandsformat zoals .jpg/.svg/.png. Een goede bron voor afbeeldingen is [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images).
+-	De optie allowOverlap bepaalt of de afbeeldingen elkaar mogen overlappen. Als overlappen niet is toegestaan, verschijnen alle symbolen pas bij verder inzoomen op de kaart. Als overlappen wel is toegestaan, kunnen sommige symbolen onzichtbaar zijn doordat ze elkaar bedekken.
 
 ### Punten met labels 
 ```
@@ -108,19 +112,20 @@ Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om de punten weer te
   ]
 }
 ```
-![title](foto_punt_label.png)
+![title](punt_label.png)
 
-Naast het gebruik van symbolen kan er ook informatie weergeven worden met labels. Hier is gekozen voor gebruik van het veld “Type” voor de inhoud van de labels. 
+Naast het gebruik van symbolen kan er ook informatie weergeven worden met labels. Hier is gekozen voor gebruik van het veld “TYPE” voor de inhoud van de labels. 
 
--	De __name__ bepaald hoe het label heet in de legenda, dit kan naar smaak aangepast worden. 
--	__Size__ en __color__ kunnen net als bij symbolen aangepast worden.
--	Bij __“args”__, na __label__: word het veld opgegeven voor de inhoud van de labels, in dit geval [“TYPE”]
--	Onder __offset__ word de afstand het label tot het punt bepaald.
--	De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hiervan word bepaald met __haloColor__ en __haloWidth__.
+-	De name bepaald hoe het label heet in de legenda, dit kan naar smaak aangepast worden. 
+-	Size en color kunnen net als bij symbolen aangepast worden.
+-	Bij “args”, na label: word het veld opgegeven voor de inhoud van de labels, in dit geval [“TYPE”]
+-	Onder offset word de afstand het label tot het punt bepaald.
+-	De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hiervan word bepaald met haloColor en haloWidth.
 
 
 ### Syling op categorie 
 ```
+{
 {
   "name": "",
   "rules": [
@@ -130,7 +135,7 @@ Naast het gebruik van symbolen kan er ook informatie weergeven worden met labels
       "symbolizers": [
         {
           "kind": "Mark",
-          "color": "#779e78",
+          "color": "#a21248",
           "radius": 7,
           "strokeColor": "black",
           "strokeWidth": 2,
@@ -145,9 +150,9 @@ Naast het gebruik van symbolen kan er ook informatie weergeven worden met labels
       "symbolizers": [
         {
           "kind": "Mark",
-          "color": "#594466",
+          "color": "#3ec918",
           "radius": 7,
-          "strokeColor": "white",
+          "strokeColor": "black",
           "strokeWidth": 2,
           "strokeOpacity": 1,
           "wellKnownName": "circle"
@@ -160,20 +165,22 @@ Naast het gebruik van symbolen kan er ook informatie weergeven worden met labels
       "symbolizers": [
         {
           "kind": "Mark",
-          "color": "#c829dc",
+          "color": "#511fbb",
           "radius": 7,
-          "strokeColor": "white",
+          "strokeColor": "black",
           "strokeWidth": 2,
           "strokeOpacity": 1,
           "wellKnownName": "circle"
-        }
       ]
     }
   ]
 }
-
 ```
-![title](foto_categorie.png)
+![title](punt_categorie.png)
 
-Het is mogelijk om aparte symbolen te genereren voor verschillende categorieën. Binnen molens is in dit voorbeeld gekozen voor styling op het veld HFDFUNCTIE. Het gewenste veld kan geselecteerd worden wanneer men “Weergave op categorie” selecteert binnen het de genereer style functie. 
-Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan uit opeenvolgende blokken bestaat met een verschillende filterwaarde voor het veld HFDFUNCTIE. Let op, de voorbeeldcode beslaat alleen de eerste 3 types van de categorie.
+Het is mogelijk om aparte symbolen te genereren voor verschillende categorieën. Binnen de datasets molens is in dit voorbeeld gekozen voor styling op het veld "HFDFUNCTIE". Het gewenste veld kan geselecteerd worden wanneer men “Weergave op categorie” selecteert binnen het de genereer style functie. 
+Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan uit opeenvolgende blokken bestaat met een verschillende filterwaarde voor het veld "HFDFUNCTIE". Let op, de voorbeeldcode beslaat alleen de eerste 3 types van de categorie.
+
+Geavanceerde styling
+---
+xx
