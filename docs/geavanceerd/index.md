@@ -7,71 +7,155 @@ title: "Geavanceerde styling"
 Geavanceerde styling
 ---
 
-Introductie.......
 
-### Labels
+Nog in ontwikkeling
 
-Voor de basis uitleg over labels (punten, lijnen en vlakken) ->>
-*+* kan voor allemaal worden gebruikt
 
+
+### Op attribuut-gebaseerd styling
+In dit voorbeeld worden de punten aangepast op basis van kan kenmerken. 
 ```
 {
   "name": "",
   "rules": [
     {
-      "name": "PDOK - Molens",
-      "filter": ["==", "$type", "Point"],
+      "name": "Zachter dan 100",
+      "filter": ["<", "omschr", 100],
       "symbolizers": [
-        {
-          "kind": "Mark",
-          "color": "#5904c8",
-          "radius": 7,
-          "strokeColor": "gray",
-          "strokeWidth": 2,
-          "strokeOpacity": 1,
-          "wellKnownName": "circle"
-        }
+        { "kind": "Line", "color": "#37ebb8", "width": 3, "opacity": 1 }
       ]
     },
     {
-      "name": "HFDFUNCTIE",
+      "name": "80 - 120",
+      "filter": ["&&", [">=", "omschr", 100], ["<", "omschr", 120]],
+      "symbolizers": [
+        { "kind": "Line", "color": "#20aba8", "width": 3, "opacity": 1 }
+      ]
+    },
+    {
+      "name": "Harder dan 120",
+      "filter": [">", "omschr", 120],
+      "symbolizers": [
+        { "kind": "Line", "color": "#f732b8", "width": 3, "opacity": 1 }
+      ]
+    }
+  ]
+}
+```
+
+
+
+### Zoom-based punten
+
+
+### Line cap
+```
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "PDOK - Maximum snelheden wegvak overdag",
+      "filter": ["==", "$type", "LineString"],
       "symbolizers": [
         {
-          "font": ["georgia"],
+          "cap": "round",
+          "kind": "Line",
+          "color": "blue",
+          "width": 3,
+          "opacity": 1
+        }
+      ]
+    }
+  ]
+}
+```
+![title](lijn_cap.png)
+
+- butt: De lijn wordt recht afgesloten, met het einde van de lijn gelijk aan de lijn zelf.
+- round: De lijn wordt afgerond, met een halve cirkel als einde.
+- square: De lijn wordt vierkant afgesloten, een verlenging van de lijn zelf. 
+(misschien nog een voorbeeld voor duidelijkheid)
+
+### Stippellijn 
+```
+{
+  "rules": [
+    {
+      "name": "",
+      "symbolizers": [
+        { "kind": "Line", "color": "#0000FF", "width": 3, "dasharray": [3, 2] }
+      ]
+    }
+  ]
+}
+```
+![title](stippel_lijn.png)
+
+Door "dasharray" aan te passen wordt de stippellijn aangepast. De oneven getallen in de rij (de eerste, derde, ect.) bepalen de lengte van de lijn en de even getallen (de tweede, vierde, ect.) bepalen de lengte in pixels tussen de lijnen. 
+
+### Offset lijn
+```
+{
+  "rules": [
+    {
+      "name": "",
+      "symbolizers": [
+        {
+          "kind": "Line",
+          "color": "#000000"
+        },
+        {
+          "kind": "Line",
+          "color": "#FF0000",
+          "dasharray": [
+            5,
+            2
+          ],
+          "perpendicularOffset": 5
+        }
+      ]
+    }
+  ]
+}
+```
+![title](lijn_offset.png)
+
+"perpendicularOffset" zorgt ervoor dat er een extra lijn ontstaat die parallel loopt aan de orginele lijn. Het getal wordt gegeven in pixels en bij postitieve waardes wordt de extra lijn linkerkant en bij een negatieve waarde aan de rechterkant. 
+
+### Labels lijn
+```
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "Wegbeheerders provincie",
+      "filter": ["==", "$type", "LineString"],
+      "symbolizers": [
+        { "kind": "Line", "color": "purple", "width": 3, "opacity": 1 }
+      ]
+    },
+    {
+      "name": "Stt naam",
+      "symbolizers": [
+        {
           "kind": "Text",
           "size": 12,
-          "color": "#000000",
-          "label": { "args": ["HFDFUNCTIE"], "name": "property" },
-          "offset": [4, 0],
-          "rotate": -25,
-          "opacity": 1,
+          "color": "red",
+          "label": { "args": ["stt_naam"], "name": "property" },
+          "offset": [0, 2],
           "haloColor": "#FFFFFF",
           "haloWidth": 1,
+          "placement": "line",
           "allowOverlap": true
         }
       ]
     }
   ]
 }
-
 ```
-![title](geavanceerde_label.png)
 
-Deze labels zijn geavandeerder, met meer optie voor persoonlijke voorkeur. Een groot gedeelte komt overeen met de simpele styling van labels. Hieronder worden de verschillende mogelijkheden uitgelegd:
 
--  Door een font te kiezen wordt het lettertype van het label aangepast. Dit zijn de mogelijke lettertypes die worden ondersteund:
-    <ul>
-    <li style="font-family: Arial;">Arial</li>
-    <li style="font-family: Verdana;">Verdana</li>
-    <li style="font-family: Sans-serif;">Sans-serif</li>
-    <li style="font-family: 'Courier New';">Courier New</li>
-     <li style="font-family: 'Lucida Console';">Lucida Console</li>
-     <li style="font-family: Monospace;">Monospace</li>
-     <li style="font-family: 'Times New Roman';">Times New Roman</li>
-     <li style="font-family: Georgia;">Georgia</li>
-     <li style="font-family: Serif;">Serif</li>
-    </ul>
-- Rotate zorgt ervoor dat de tekst schuin staat. "0" betekend dat de tekst recht blijft, bij "100" staat de tekst verticaal. Min getallen zijn ook mogelijk.  
-- De opacity bepaald de transparantie van de tekst. "1" is normaal en "0" is onzichtbaar.
-- De optie allowOverlap bepaalt of de labels elkaar mogen overlappen. Als overlappen niet is toegestaan, verschijnen alle labels pas bij verder inzoomen op de kaart. Als overlappen wel is toegestaan, kunnen sommige labels onzichtbaar zijn doordat ze elkaar bedekken.
-
+|                | offset | Afbeelding |
+|----------------|---------|-------------|
+| Naast de lijn | [0, 2] | ![title](label_lijn_vandelijn.png) |
+| Op de lijn    | [0, 0] | ![title](label_lijn_opdelijn.png) |

@@ -147,4 +147,224 @@ Het is mogelijk om aparte vlakken te genereren voor verschillende categorieën. 
 
 Geavanceerde styling
 ---
-xx
+
+### Geavanceerde labels
+```
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "PDOK - Grenzen Omgevingsdiensten",
+      "filter": ["==", "$type", "Polygon"],
+      "symbolizers": [
+        {
+          "kind": "Fill",
+          "color": "#7561b8",
+          "opacity": 0.5,
+          "outlineColor": "white",
+          "outlineWidth": 2,
+          "outlineOpacity": 1
+        }
+      ]
+    },
+    {
+      "name": "Od naam",
+      "symbolizers": [
+        {
+          "font": ["georgia"],
+          "kind": "Text",
+          "size": 12,
+          "color": "#000000",
+          "label": { "args": ["od_naam"], "name": "property" },
+          "offset": [0, 0],
+          "rotate": -25,
+          "opacity": 1,
+          "haloColor": "#FFFFFF",
+          "haloWidth": 1
+          "allowOverlap": false
+        }
+      ]
+    }
+  ]
+}
+```
+![title](vlak_geavanceerde_labels.png)
+
+Deze labels zijn geavandeerder, met meer optie voor persoonlijke voorkeur. Een groot gedeelte komt overeen met de simpele styling van labels. Hieronder worden de verschillende mogelijkheden uitgelegd:
+
+-  Door een font te kiezen wordt het lettertype van het label aangepast. Dit zijn de mogelijke lettertypes die worden ondersteund:
+    <ul>
+    <li style="font-family: Arial;">Arial</li>
+    <li style="font-family: Verdana;">Verdana</li>
+    <li style="font-family: Sans-serif;">Sans-serif</li>
+    <li style="font-family: 'Courier New';">Courier New</li>
+     <li style="font-family: 'Lucida Console';">Lucida Console</li>
+     <li style="font-family: Monospace;">Monospace</li>
+     <li style="font-family: 'Times New Roman';">Times New Roman</li>
+     <li style="font-family: Georgia;">Georgia</li>
+     <li style="font-family: Serif;">Serif</li>
+    </ul>
+- Rotate zorgt ervoor dat de tekst schuin staat. "0" betekend dat de tekst recht blijft, bij "100" staat de tekst verticaal. Negatieve getallen zijn ook mogelijk.  
+- De opacity bepaald de transparantie/doorzichtigheid. "1" is normaal en "0" is onzichtbaar.
+- De optie allowOverlap bepaalt of de labels elkaar mogen overlappen. Als overlappen niet is toegestaan, verschijnen alle labels pas bij verder inzoomen op de kaart. Als overlappen wel is toegestaan, kunnen sommige labels onzichtbaar zijn doordat ze elkaar bedekken.
+
+### Atribute-based punten
+```
+{
+  "name": "Aantal inwoners",
+  "rules": [
+    {
+      "name": "Klein",
+      "filter": ["<", "aantalInwoners", 5000],
+      "symbolizers": [
+        {
+          "kind": "Fill",
+          "color": "red",
+          "opacity": 1,
+          "outlineColor": "black",
+          "outlineWidth": 2,
+          "outlineOpacity": 1
+        }
+      ]
+    },
+    {
+      "name": "Middel",
+      "filter": [
+        "&&",
+        [">=", "aantalInwoners", 5000],
+        ["<", "aantalInwoners", 10000]
+      ],
+      "symbolizers": [
+        {
+          "kind": "Fill",
+          "color": "orange",
+          "opacity": 1,
+          "outlineColor": "black",
+          "outlineWidth": 2,
+          "outlineOpacity": 1
+        }
+      ]
+    },
+    {
+      "name": "Groot",
+      "filter": [">=", "aantalInwoners", 10000],
+      "symbolizers": [
+        {
+          "kind": "Fill",
+          "color": "yellow",
+          "opacity": 1,
+          "outlineColor": "black",
+          "outlineWidth": 2,
+          "outlineOpacity": 1
+        }
+      ]
+    }
+  ]
+}
+```
+![title](vlak_attribute_based.png)
+Deze stijl definieert hoe punten op een kaart worden weergegeven op basis van het jaartal van "jaar_van_ingebruikstelling"
+
+- Klein → gele vlakken (tot 5.000 inwoners)
+    - ["<", "aantalInwoners", 5000]
+- Middel → oranje vlakken (5.000 tot 10.000 inwoners).
+    - [">=", "aantalInwoners", 5000],
+      ["<", "aantalInwoners", 10000]
+- Groot → rode vlakken (vanaf 10.000 inwoners)
+    - [">=", "aantalInwoners", 10000]
+
+Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze styling niet.
+
+### Zoom-based punten
+```
+{
+  "rules": [
+    {
+      "name": "Groot",
+      "symbolizers": [
+        {
+          "kind": "Mark",
+          "color": "#CC3300",
+          "radius": 6,
+          "wellKnownName": "circle"
+        }
+      ],
+      "scaleDenominator": { "max": 100000 }
+    },
+    {
+      "name": "Middel",
+      "symbolizers": [
+        {
+          "kind": "Mark",
+          "color": "#CC3300",
+          "radius": 4,
+          "wellKnownName": "circle"
+        }
+      ],
+      "scaleDenominator": { "max": 1000000, "min": 100000 }
+    },
+    {
+      "name": "Klein",
+      "symbolizers": [
+        {
+          "kind": "Mark",
+          "color": "#CC3300",
+          "radius": 2,
+          "wellKnownName": "circle"
+        }
+      ],
+      "scaleDenominator": { "min": 1000000 }
+    }
+  ]
+}
+
+```
+| Schaalniveau | Bereik | Afbeelding |
+| ------------- | ------- | ----------- |
+| Klein  | Vanaf 1 000 000 | ![Klein](zoom_based_klein.png) |
+| Middel | 100 000 – 1 000 000 | ![Middel](zoom_based_middel.png) |
+| Groot  | Tot 100 000 | ![Groot](zoom_based_groot.png) |
+
+Met deze styling wordt de weergave van punten afhankelijk van de schaal aangepast. In dit voorbeeld verandert de grootte van het punt, en dit kan worden gestuurd met "scaleDenominator" door een min en/of max waarde te geven.
+
+- "scaleDenominator": { "max": 100000 } betekent dat de stijl zichtbaar is bij een schaal van 1:100.000 of dichterbij (meer ingezoomd).
+- "scaleDenominator": { "min": 50000 } betekent dat de stijl pas zichtbaar wordt bij een schaal van 1:50.000 of dichterbij.
+
+### Lijn met offset
+```
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "PDOK - CBS Bevolkingskernen 2021",
+      "filter": ["==", "$type", "Polygon"],
+      "symbolizers": [
+        {
+          "kind": "Fill",
+          "color": "blue",
+          "opacity": 0.7,
+          "outlineColor": "black",
+          "outlineWidth": 3,
+          "outlineOpacity": 1
+        },
+        {
+          "kind": "Line",
+          "color": "#AAAAAA",
+          "width": 3,
+          "perpendicularOffset": 2
+        },
+        {
+          "kind": "Line",
+          "color": "#AAAAAA",
+          "width": 3,
+          "perpendicularOffset": -2
+        }
+      ]
+    }
+  ]
+}
+````
+![title](vlak_met_offset.png)
+Deze styling laat je een extra bufferlijn in het polygoon tekenen. In dit voorbeeld zijn twee buffers toegevoegd, aan zowel de binnen- als de buitenkant van de lijn een buffer getekend. Door "perpendicularOffset" aantepassen veranderd de buffer. Positieve waarden (bijv. 2) genereren een parallelle lijn aan de linkerkant en negatieve waarden (bijv. -2) aan de rechterkant. 
+
+### 
