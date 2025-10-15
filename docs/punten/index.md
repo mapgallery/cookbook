@@ -181,6 +181,9 @@ Naast het gebruik van symbolen kan er ook informatie weergeven worden met labels
 Het is mogelijk om aparte symbolen te genereren voor verschillende categorieën. Binnen de datasets molens is in dit voorbeeld gekozen voor styling op het veld "HFDFUNCTIE". Het gewenste veld kan geselecteerd worden wanneer men “Weergave op categorie” selecteert binnen het de genereer style functie. 
 Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan uit opeenvolgende blokken bestaat met een verschillende filterwaarde voor het veld "HFDFUNCTIE". Let op, de voorbeeldcode beslaat alleen de eerste 3 types van de categorie.
 
+!!! Note
+    Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.
+
 Geavanceerde styling
 ---
 ### Geavanceerde labels
@@ -354,6 +357,7 @@ Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze
     }
   ]
 }
+```
 
 | Schaalniveau | Bereik | Afbeelding |
 | ------------- | ------- | ----------- |

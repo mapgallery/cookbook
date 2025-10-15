@@ -89,7 +89,7 @@ De code hierboven is het resultaat van het genereren van een eenvoudige vlak wee
 Size en color kunnen net als bij de andere vlakken aangepast worden.
 - Bij “args”, na label: word het veld opgegeven voor de inhoud van de labels, in dit geval ["Name"]
 - Onder offset word de afstand het label tot het vlak bepaald.
-De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hiervan word bepaald met haloColor en haloWidth.'
+- De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hiervan word bepaald met haloColor en haloWidth.'
 
 ### Styling op categorie
 ```
@@ -144,6 +144,9 @@ De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hierv
 ![title](foto_categorie_vlak.png)
 
 Het is mogelijk om aparte vlakken te genereren voor verschillende categorieën. Voor de sluizen dataset is in dit voorbeeld gekozen voor styling op het veld "referencelevelbebu". Het gewenste veld kan geselecteerd worden wanneer men “Weergave op categorie” selecteert binnen het de genereer style functie. Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan uit opeenvolgende blokken bestaat met een verschillende filterwaarde voor het veld "referencelevelbebu". Let op, de voorbeeldcode beslaat alleen de eerste 3 types van de categorie.
+
+!!! Note
+    Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.
 
 Geavanceerde styling
 ---
@@ -208,7 +211,7 @@ Deze labels zijn geavandeerder, met meer optie voor persoonlijke voorkeur. Een g
 - De opacity bepaald de transparantie/doorzichtigheid. "1" is normaal en "0" is onzichtbaar.
 - De optie allowOverlap bepaalt of de labels elkaar mogen overlappen. Als overlappen niet is toegestaan, verschijnen alle labels pas bij verder inzoomen op de kaart. Als overlappen wel is toegestaan, kunnen sommige labels onzichtbaar zijn doordat ze elkaar bedekken.
 
-### Atribute-based punten
+### Atribute-based vlakken
 ```
 {
   "name": "Aantal inwoners",
@@ -275,62 +278,7 @@ Deze stijl definieert hoe punten op een kaart worden weergegeven op basis van he
 
 Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze styling niet.
 
-### Zoom-based punten
-```
-{
-  "rules": [
-    {
-      "name": "Groot",
-      "symbolizers": [
-        {
-          "kind": "Mark",
-          "color": "#CC3300",
-          "radius": 6,
-          "wellKnownName": "circle"
-        }
-      ],
-      "scaleDenominator": { "max": 100000 }
-    },
-    {
-      "name": "Middel",
-      "symbolizers": [
-        {
-          "kind": "Mark",
-          "color": "#CC3300",
-          "radius": 4,
-          "wellKnownName": "circle"
-        }
-      ],
-      "scaleDenominator": { "max": 1000000, "min": 100000 }
-    },
-    {
-      "name": "Klein",
-      "symbolizers": [
-        {
-          "kind": "Mark",
-          "color": "#CC3300",
-          "radius": 2,
-          "wellKnownName": "circle"
-        }
-      ],
-      "scaleDenominator": { "min": 1000000 }
-    }
-  ]
-}
-
-```
-| Schaalniveau | Bereik | Afbeelding |
-| ------------- | ------- | ----------- |
-| Klein  | Vanaf 1 000 000 | ![Klein](zoom_based_klein.png) |
-| Middel | 100 000 – 1 000 000 | ![Middel](zoom_based_middel.png) |
-| Groot  | Tot 100 000 | ![Groot](zoom_based_groot.png) |
-
-Met deze styling wordt de weergave van punten afhankelijk van de schaal aangepast. In dit voorbeeld verandert de grootte van het punt, en dit kan worden gestuurd met "scaleDenominator" door een min en/of max waarde te geven.
-
-- "scaleDenominator": { "max": 100000 } betekent dat de stijl zichtbaar is bij een schaal van 1:100.000 of dichterbij (meer ingezoomd).
-- "scaleDenominator": { "min": 50000 } betekent dat de stijl pas zichtbaar wordt bij een schaal van 1:50.000 of dichterbij.
-
-### Lijn met offset
+### Vlakken met offset
 ```
 {
   "name": "",
@@ -363,8 +311,8 @@ Met deze styling wordt de weergave van punten afhankelijk van de schaal aangepas
     }
   ]
 }
-````
+```
+
 ![title](vlak_met_offset.png)
 Deze styling laat je een extra bufferlijn in het polygoon tekenen. In dit voorbeeld zijn twee buffers toegevoegd, aan zowel de binnen- als de buitenkant van de lijn een buffer getekend. Door "perpendicularOffset" aantepassen veranderd de buffer. Positieve waarden (bijv. 2) genereren een parallelle lijn aan de linkerkant en negatieve waarden (bijv. -2) aan de rechterkant. 
 
-### 

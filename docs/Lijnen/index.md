@@ -42,23 +42,23 @@ De code hierboven is het resultaat van het genereren van een eenvoudige lijn wee
   "name": "",
   "rules": [
     {
-      "name": "PDOK - Maximum snelheden wegvak overdag",
+      "name": "Mirt lijnen fase",
       "filter": ["==", "$type", "LineString"],
       "symbolizers": [
-        { "kind": "Line", "color": "#103ae8", "width": 3, "opacity": 1 }
+        { "kind": "Line", "color": "purple", "width": 3, "opacity": 1 }
       ]
     },
     {
-      "name": "Omschr",
+      "name": "Onderwerp",
       "symbolizers": [
         {
           "kind": "Text",
-          "size": 12,
-          "color": "black",
-          "label": { "args": ["omschr"], "name": "property" },
-          "offset": [0, 0],
+          "size": 15,
+          "color": "darkblue",
+          "label": { "args": ["onderwerp"], "name": "property" },
+          "offset": [0, 2],
           "haloColor": "#FFFFFF",
-          "haloWidth": 1.5
+          "haloWidth": 1,
         }
       ]
     }
@@ -67,13 +67,13 @@ De code hierboven is het resultaat van het genereren van een eenvoudige lijn wee
 ```
 ![title](lijnen_labels.png)
 
-Naast het gebruik van lijnen kan er ook informatie weergeven worden met labels. Hier is gekozen voor gebruik van het veld “omschr” voor de inhoud van de labels.
+Naast het gebruik van lijnen kan er ook informatie weergeven worden met labels. Hier is gekozen voor gebruik van het veld “onderwerp” voor de inhoud van de labels.
 
 - De name bepaald hoe het label heet in de legenda, dit kan naar smaak aangepast worden.
 Size en color kunnen net als bij de andere lijnen aangepast worden.
-- Bij “args”, na label: word het veld opgegeven voor de inhoud van de labels, in dit geval ["omschr"]
+- Bij “args”, na label: word het veld opgegeven voor de inhoud van de labels, in dit geval ["onderwerp"]
 - Onder offset word de afstand het label tot de lijn bepaald.
-De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hiervan word bepaald met haloColor en haloWidth.
+- De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hiervan word bepaald met haloColor en haloWidth.
 
 ### Styling op categorie
 ```
@@ -108,6 +108,61 @@ De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hierv
 
 Het is mogelijk om aparte lijnen te genereren voor verschillende categorieën. Voor de dataset Maximum snelheden wegvak overdag is in dit voorbeeld gekozen voor styling op het veld "omschr". Het gewenste veld kan geselecteerd worden wanneer men “Weergave op categorie” selecteert binnen het de genereer style functie. Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan uit opeenvolgende blokken bestaat met een verschillende filterwaarde voor het veld "omschr". Let op, de voorbeeldcode beslaat alleen de eerste 3 types van de categorie.
 
+!!! Note
+    Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.
+
 Geavanceerde styling
 ---
+
+### Geavanceerde labels
+xxxx
+
+### Atribute-based lijnen
+```
+{
+  "rules": [
+    {
+      "name": "Zachter dan 90",
+      "filter": ["<", "omschr", 90],
+      "symbolizers": [
+        { "kind": "Line", "color": "#6FCF97", "width": 3, "opacity": 1 }
+      ]
+    },
+    {
+      "name": "Tussen 90 en 100",
+      "filter": ["&&", [">=", "omschr", 90], ["<=", "omschr", 100]],
+      "symbolizers": [
+        { "kind": "Line", "color": "#F2C94C", "width": 3, "opacity": 1 }
+      ]
+    },
+    {
+      "name": "Hoger dan 100",
+      "filter": [">", "omschr", 100],
+      "symbolizers": [
+        { "kind": "Line", "color": "#EB5757", "width": 3, "opacity": 1 }
+      ]
+    }
+  ]
+}
+```
+![title](lijn_attributebased.png)
+
+Deze stijl definieert hoe punten op een kaart worden weergegeven op basis van de maximale snelheden van het wegvak overdag van tabel "omschr"
+
+- Voor snelden onder de 90 → een groene lijn. 
+    - ["<", "omschr", 90]
+- 1960–1990 → middelgrote blauwe cirkels (radius: 6).
+    -  [">=", "jaar_van_ingebruikstelling", 1960], ["<", "jaar_van_ingebruikstelling", 1990]
+- Na 1990 → grote donkerblauwe cirkels (radius: 8).
+    - [">=", "jaar_van_ingebruikstelling", 1990]
+
+Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze styling niet.
+
+### Lijn cap
+xxxx
+
+### Stippellijn
+xxx
+
+### Lijn met offset
 xxx
