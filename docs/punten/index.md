@@ -355,7 +355,6 @@ Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze
   ]
 }
 
-```
 | Schaalniveau | Bereik | Afbeelding |
 | ------------- | ------- | ----------- |
 | Klein  | Vanaf 1 000 000 | ![Klein](zoom_based_klein.png) |
