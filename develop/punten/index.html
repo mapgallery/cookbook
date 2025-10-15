@@ -14,7 +14,7 @@
         <link rel="prev" href="..">
       
       
-        <link rel="next" href="../vlakken/">
+        <link rel="next" href="../lijnen/">
       
       
       <link rel="icon" href="../assets/favicon.png">
@@ -506,6 +506,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#zichtbaar-bij-bepaald-niveau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zichtbaar bij bepaald niveau
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -527,11 +536,11 @@
   
   
     <li class="md-nav__item">
-      <a href="../lijnen/index.md" class="md-nav__link">
+      <a href="../lijnen/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
-    None
+    Lijnen
   </span>
   
 
@@ -553,27 +562,6 @@
   
   <span class="md-ellipsis">
     Vlakken
-  </span>
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
-    <li class="md-nav__item">
-      <a href="../geavanceerd/" class="md-nav__link">
-        
-  
-  <span class="md-ellipsis">
-    Geavanceerde styling
   </span>
   
 
@@ -713,6 +701,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#zichtbaar-bij-bepaald-niveau" class="md-nav__link">
+    <span class="md-ellipsis">
+      Zichtbaar bij bepaald niveau
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -751,36 +748,36 @@
 
 <h1 id="mapgallery-geostyler-kookboek">MapGallery GeoStyler kookboek</h1>
 <h2 id="punten">Punten</h2>
-<p>Voor deze handleiding over de styling van punten is gebruik gemaakt van de <a href="https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e">dataset molens</a>. Deze is te vinden in o.a. het nationaal georegister van PDOK.
+<p>Voor deze handleiding over de styling van punten is gebruik gemaakt van de dataset <a href="https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e">molens</a> en <a href="https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/559aec8c-a2e3-472a-9de0-3a4bd365c46d?language=all">vuurtorens</a>. Deze zijn te vinden in <a href="https://www.nationaalgeoregister.nl">het nationaal georegister van PDOK</a>.
 Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de <a href="#geavanceerde-styling">geavanceerde stylingopties</a> besproken.</p>
 <h2 id="simpele-styling">Simpele styling</h2>
 <h3 id="simpele-punt">Simpele punt</h3>
-<pre><code> {
-  &quot;name&quot;: &quot;&quot;,
-  &quot;rules&quot;: [
-    {
-      &quot;name&quot;: &quot;Molens&quot;,
-      &quot;filter&quot;: [&quot;==&quot;, &quot;$type&quot;, &quot;Point&quot;],
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#12cdf3&quot;,
-          &quot;radius&quot;: 7,
-          &quot;strokeColor&quot;: &quot;black&quot;,
-          &quot;strokeWidth&quot;: 2,
-          &quot;strokeOpacity&quot;: 1,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-        }
-      ]
-    }
-  ]
-}
-</code></pre>
-<p><img alt="title" src="foto_simpele_punt.png" /></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a> {
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>  &quot;name&quot;: &quot;&quot;,
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a>  &quot;rules&quot;: [
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>    {
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a>      &quot;name&quot;: &quot;Molens&quot;,
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a>      &quot;filter&quot;: [&quot;==&quot;, &quot;$type&quot;, &quot;Point&quot;],
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-0-8" name="__codelineno-0-8" href="#__codelineno-0-8"></a>        {
+<a id="__codelineno-0-9" name="__codelineno-0-9" href="#__codelineno-0-9"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-0-10" name="__codelineno-0-10" href="#__codelineno-0-10"></a>          &quot;color&quot;: &quot;#12cdf3&quot;,
+<a id="__codelineno-0-11" name="__codelineno-0-11" href="#__codelineno-0-11"></a>          &quot;radius&quot;: 7,
+<a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>          &quot;strokeColor&quot;: &quot;black&quot;,
+<a id="__codelineno-0-13" name="__codelineno-0-13" href="#__codelineno-0-13"></a>          &quot;strokeWidth&quot;: 2,
+<a id="__codelineno-0-14" name="__codelineno-0-14" href="#__codelineno-0-14"></a>          &quot;strokeOpacity&quot;: 1,
+<a id="__codelineno-0-15" name="__codelineno-0-15" href="#__codelineno-0-15"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-0-16" name="__codelineno-0-16" href="#__codelineno-0-16"></a>        }
+<a id="__codelineno-0-17" name="__codelineno-0-17" href="#__codelineno-0-17"></a>      ]
+<a id="__codelineno-0-18" name="__codelineno-0-18" href="#__codelineno-0-18"></a>    }
+<a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a>  ]
+<a id="__codelineno-0-20" name="__codelineno-0-20" href="#__codelineno-0-20"></a>}
+</code></pre></div>
+<img alt="title" src="foto_simpele_punt.png" /></p>
 <p>De code hierboven is het resultaat van het genereren van een eenvoudige punt weergave in MapGallery. Binnen rules zijn de stylingsregels beschreven. In de filter is gekozen voor alle geometrieën van het type "Point".</p>
 <ul>
 <li>Het type symbool is "Mark", ofwel een markering op de kaart. </li>
-<li>De kleur #12cdf3 in hex notatie, de code begint met # gevolgd door 6 tekens, bestaande uit drie paren, die respectievelijk de intensiteit van rood, groen en blauw (RGB) weergeven. Maar de basiskleuren worden ook herkend zoals red, green, indigo ect. </li>
+<li>De kleur #12cdf3 in hex notatie, de code begint met # gevolgd door 6 tekens, bestaande uit drie paren, die respectievelijk de intensiteit van rood, groen en blauw (RGB) weergeven. Maar de basiskleuren worden ook herkend zoals red, green, indigo ect. Naast een hex code kunnen deze manieren ook: RGB, RGBA, HSL, HSLA en de 140 vooraf gedefinieerd <abbr title="Hyper Text Markup Language">HTML</abbr> kleuren (zoals "yellow", "darkblue" en "tomato")  </li>
 <li>De grootte ofwel radius is op het moment 7 pixels.</li>
 <li>De strokeColor, ofwel de omlijning is zwart. Hierbij kan je gebruik maken van de zelfde kleur opties als bij de kleur van de punt. </li>
 <li>De strokeWidth bepaald de dikte van de omlijning.</li>
@@ -788,68 +785,68 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <li>Bij wellKnownName wordt de vorm van het symbool bepaald, in dit geval een cirkel. Alternatieven hiervan zijn bijvoorbeeld square of triangle, maar op het moment wordt alleen de cirkel ondersteund.   </li>
 </ul>
 <h3 id="afbeelding-als-symbool">Afbeelding als symbool</h3>
-<pre><code>{
-  &quot;name&quot;: &quot;&quot;,
-  &quot;rules&quot;: [
-    {
-      &quot;name&quot;: &quot;Molens&quot;,
-      &quot;filter&quot;: [&quot;==&quot;, &quot;$type&quot;, &quot;Point&quot;],
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Icon&quot;,
-          &quot;size&quot;: 7,
-          &quot;image&quot;: &quot;https://upload.wikimedia.org/wikipedia/commons/8/81/Windmill_-_Delapouite_-_game-icons.svg&quot;,
-          &quot;sizeUnit&quot;: &quot;m&quot;,
-          &quot;allowOverlap&quot;: true
-        }
-      ]
-    }
-  ]
-}
-</code></pre>
-<p><img alt="title" src="foto_afbeelding_punt.png" />
-Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om de punten weer te geven met het symbooltype icon.  </p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>{
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>  &quot;name&quot;: &quot;&quot;,
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>  &quot;rules&quot;: [
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>    {
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a>      &quot;name&quot;: &quot;Molens&quot;,
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>      &quot;filter&quot;: [&quot;==&quot;, &quot;$type&quot;, &quot;Point&quot;],
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a>        {
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a>          &quot;kind&quot;: &quot;Icon&quot;,
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a>          &quot;size&quot;: 7,
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a>          &quot;image&quot;: &quot;https://upload.wikimedia.org/wikipedia/commons/8/81/Windmill_-_Delapouite_-_game-icons.svg&quot;,
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a>          &quot;sizeUnit&quot;: &quot;m&quot;,
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a>          &quot;allowOverlap&quot;: true
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a>        }
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a>      ]
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a>    }
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a>  ]
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a>}
+</code></pre></div>
+<img alt="title" src="foto_afbeelding_punt.png" /></p>
+<p>Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om de punten weer te geven met het symbooltype icon.  </p>
 <ul>
 <li>Bij image moet in dit geval de url van de gewenste afbeelding geplaatst worden. Let op dat het een directe link naar de afbeelding is, eindigend op het bestandsformat zoals .jpg/.svg/.png. Een goede bron voor afbeeldingen is <a href="https://commons.wikimedia.org/wiki/Category:Images">Wikimedia</a>.</li>
 <li>De optie allowOverlap bepaalt of de afbeeldingen elkaar mogen overlappen. Als overlappen niet is toegestaan, verschijnen alle symbolen pas bij verder inzoomen op de kaart. Als overlappen wel is toegestaan, kunnen sommige symbolen onzichtbaar zijn doordat ze elkaar bedekken.</li>
 </ul>
 <h3 id="punten-met-labels">Punten met labels</h3>
-<pre><code>{
-  &quot;name&quot;: &quot;&quot;,
-  &quot;rules&quot;: [
-    {
-      &quot;name&quot;: &quot;Molens&quot;,
-      &quot;filter&quot;: [&quot;==&quot;, &quot;$type&quot;, &quot;Point&quot;],
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#12cdf3&quot;,
-          &quot;radius&quot;: 7,
-          &quot;strokeColor&quot;: &quot;black&quot;,
-          &quot;strokeWidth&quot;: 2,
-          &quot;strokeOpacity&quot;: 1,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-        }
-      ]
-    },
-    {
-      &quot;name&quot;: &quot;TYPE&quot;,
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Text&quot;,
-          &quot;size&quot;: 12,
-          &quot;color&quot;: &quot;#111111&quot;,
-          &quot;label&quot;: { &quot;args&quot;: [&quot;TYPE&quot;], &quot;name&quot;: &quot;property&quot; },
-          &quot;offset&quot;: [0, 2],
-          &quot;haloColor&quot;: &quot;#FFFFFF&quot;,
-          &quot;haloWidth&quot;: 1
-        }
-      ]
-    }
-  ]
-}
-</code></pre>
-<p><img alt="title" src="punt_label.png" /></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>{
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>  &quot;name&quot;: &quot;&quot;,
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a>  &quot;rules&quot;: [
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a>    {
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a>      &quot;name&quot;: &quot;Molens&quot;,
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a>      &quot;filter&quot;: [&quot;==&quot;, &quot;$type&quot;, &quot;Point&quot;],
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>        {
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a>          &quot;color&quot;: &quot;#12cdf3&quot;,
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a>          &quot;radius&quot;: 7,
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a>          &quot;strokeColor&quot;: &quot;black&quot;,
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a>          &quot;strokeWidth&quot;: 2,
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a>          &quot;strokeOpacity&quot;: 1,
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a>        }
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a>      ]
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a>    },
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a>    {
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a>      &quot;name&quot;: &quot;TYPE&quot;,
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a>        {
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a>          &quot;kind&quot;: &quot;Text&quot;,
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a>          &quot;size&quot;: 12,
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a>          &quot;color&quot;: &quot;#111111&quot;,
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a>          &quot;label&quot;: { &quot;args&quot;: [&quot;TYPE&quot;], &quot;name&quot;: &quot;property&quot; },
+<a id="__codelineno-2-27" name="__codelineno-2-27" href="#__codelineno-2-27"></a>          &quot;offset&quot;: [0, 2],
+<a id="__codelineno-2-28" name="__codelineno-2-28" href="#__codelineno-2-28"></a>          &quot;haloColor&quot;: &quot;#FFFFFF&quot;,
+<a id="__codelineno-2-29" name="__codelineno-2-29" href="#__codelineno-2-29"></a>          &quot;haloWidth&quot;: 1
+<a id="__codelineno-2-30" name="__codelineno-2-30" href="#__codelineno-2-30"></a>        }
+<a id="__codelineno-2-31" name="__codelineno-2-31" href="#__codelineno-2-31"></a>      ]
+<a id="__codelineno-2-32" name="__codelineno-2-32" href="#__codelineno-2-32"></a>    }
+<a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a>  ]
+<a id="__codelineno-2-34" name="__codelineno-2-34" href="#__codelineno-2-34"></a>}
+</code></pre></div>
+<img alt="title" src="punt_label.png" /></p>
 <p>Naast het gebruik van symbolen kan er ook informatie weergeven worden met labels. Hier is gekozen voor gebruik van het veld “TYPE” voor de inhoud van de labels. </p>
 <ul>
 <li>De name bepaald hoe het label heet in de legenda, dit kan naar smaak aangepast worden. </li>
@@ -859,58 +856,58 @@ Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om de punten weer te
 <li>De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hiervan word bepaald met haloColor en haloWidth.</li>
 </ul>
 <h3 id="syling-op-categorie">Syling op categorie</h3>
-<pre><code>{
-{
-  &quot;name&quot;: &quot;&quot;,
-  &quot;rules&quot;: [
-    {
-      &quot;name&quot;: &quot;Industriemolen&quot;,
-      &quot;filter&quot;: [&quot;==&quot;, &quot;HFDFUNCTIE&quot;, &quot;industriemolen&quot;],
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#a21248&quot;,
-          &quot;radius&quot;: 7,
-          &quot;strokeColor&quot;: &quot;black&quot;,
-          &quot;strokeWidth&quot;: 2,
-          &quot;strokeOpacity&quot;: 1,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-        }
-      ]
-    },
-    {
-      &quot;name&quot;: &quot;Koren-/industriemolen&quot;,
-      &quot;filter&quot;: [&quot;==&quot;, &quot;HFDFUNCTIE&quot;, &quot;koren-/industriemolen&quot;],
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#3ec918&quot;,
-          &quot;radius&quot;: 7,
-          &quot;strokeColor&quot;: &quot;black&quot;,
-          &quot;strokeWidth&quot;: 2,
-          &quot;strokeOpacity&quot;: 1,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-        }
-      ]
-    },
-    {
-      &quot;name&quot;: &quot;Koren-/zaagmolen&quot;,
-      &quot;filter&quot;: [&quot;==&quot;, &quot;HFDFUNCTIE&quot;, &quot;koren-/zaagmolen&quot;],
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#511fbb&quot;,
-          &quot;radius&quot;: 7,
-          &quot;strokeColor&quot;: &quot;black&quot;,
-          &quot;strokeWidth&quot;: 2,
-          &quot;strokeOpacity&quot;: 1,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-      ]
-    }
-  ]
-}
-</code></pre>
-<p><img alt="title" src="punt_categorie.png" /></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>{
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>{
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>  &quot;name&quot;: &quot;&quot;,
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a>  &quot;rules&quot;: [
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a>    {
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a>      &quot;name&quot;: &quot;Industriemolen&quot;,
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a>      &quot;filter&quot;: [&quot;==&quot;, &quot;HFDFUNCTIE&quot;, &quot;industriemolen&quot;],
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a>        {
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a>          &quot;color&quot;: &quot;#a21248&quot;,
+<a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a>          &quot;radius&quot;: 7,
+<a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a>          &quot;strokeColor&quot;: &quot;black&quot;,
+<a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a>          &quot;strokeWidth&quot;: 2,
+<a id="__codelineno-3-15" name="__codelineno-3-15" href="#__codelineno-3-15"></a>          &quot;strokeOpacity&quot;: 1,
+<a id="__codelineno-3-16" name="__codelineno-3-16" href="#__codelineno-3-16"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-3-17" name="__codelineno-3-17" href="#__codelineno-3-17"></a>        }
+<a id="__codelineno-3-18" name="__codelineno-3-18" href="#__codelineno-3-18"></a>      ]
+<a id="__codelineno-3-19" name="__codelineno-3-19" href="#__codelineno-3-19"></a>    },
+<a id="__codelineno-3-20" name="__codelineno-3-20" href="#__codelineno-3-20"></a>    {
+<a id="__codelineno-3-21" name="__codelineno-3-21" href="#__codelineno-3-21"></a>      &quot;name&quot;: &quot;Koren-/industriemolen&quot;,
+<a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a>      &quot;filter&quot;: [&quot;==&quot;, &quot;HFDFUNCTIE&quot;, &quot;koren-/industriemolen&quot;],
+<a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a>        {
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a>          &quot;color&quot;: &quot;#3ec918&quot;,
+<a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a>          &quot;radius&quot;: 7,
+<a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a>          &quot;strokeColor&quot;: &quot;black&quot;,
+<a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a>          &quot;strokeWidth&quot;: 2,
+<a id="__codelineno-3-30" name="__codelineno-3-30" href="#__codelineno-3-30"></a>          &quot;strokeOpacity&quot;: 1,
+<a id="__codelineno-3-31" name="__codelineno-3-31" href="#__codelineno-3-31"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-3-32" name="__codelineno-3-32" href="#__codelineno-3-32"></a>        }
+<a id="__codelineno-3-33" name="__codelineno-3-33" href="#__codelineno-3-33"></a>      ]
+<a id="__codelineno-3-34" name="__codelineno-3-34" href="#__codelineno-3-34"></a>    },
+<a id="__codelineno-3-35" name="__codelineno-3-35" href="#__codelineno-3-35"></a>    {
+<a id="__codelineno-3-36" name="__codelineno-3-36" href="#__codelineno-3-36"></a>      &quot;name&quot;: &quot;Koren-/zaagmolen&quot;,
+<a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a>      &quot;filter&quot;: [&quot;==&quot;, &quot;HFDFUNCTIE&quot;, &quot;koren-/zaagmolen&quot;],
+<a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a>        {
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a>          &quot;color&quot;: &quot;#511fbb&quot;,
+<a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a>          &quot;radius&quot;: 7,
+<a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a>          &quot;strokeColor&quot;: &quot;black&quot;,
+<a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a>          &quot;strokeWidth&quot;: 2,
+<a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a>          &quot;strokeOpacity&quot;: 1,
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a>      ]
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a>    }
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a>  ]
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a>}
+</code></pre></div>
+<img alt="title" src="punt_categorie.png" /></p>
 <p>Het is mogelijk om aparte symbolen te genereren voor verschillende categorieën. Binnen de datasets molens is in dit voorbeeld gekozen voor styling op het veld "HFDFUNCTIE". Het gewenste veld kan geselecteerd worden wanneer men “Weergave op categorie” selecteert binnen het de genereer style functie. 
 Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan uit opeenvolgende blokken bestaat met een verschillende filterwaarde voor het veld "HFDFUNCTIE". Let op, de voorbeeldcode beslaat alleen de eerste 3 types van de categorie.</p>
 <div class="admonition note">
@@ -919,46 +916,46 @@ Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan
 </div>
 <h2 id="geavanceerde-styling">Geavanceerde styling</h2>
 <h3 id="geavanceerde-labels">Geavanceerde labels</h3>
-<pre><code>{
-  &quot;name&quot;: &quot;&quot;,
-  &quot;rules&quot;: [
-    {
-      &quot;name&quot;: &quot;PDOK - Molens&quot;,
-      &quot;filter&quot;: [&quot;==&quot;, &quot;$type&quot;, &quot;Point&quot;],
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#5904c8&quot;,
-          &quot;radius&quot;: 7,
-          &quot;strokeColor&quot;: &quot;gray&quot;,
-          &quot;strokeWidth&quot;: 2,
-          &quot;strokeOpacity&quot;: 1,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-        }
-      ]
-    },
-    {
-      &quot;name&quot;: &quot;HFDFUNCTIE&quot;,
-      &quot;symbolizers&quot;: [
-        {
-          &quot;font&quot;: [&quot;georgia&quot;],
-          &quot;kind&quot;: &quot;Text&quot;,
-          &quot;size&quot;: 12,
-          &quot;color&quot;: &quot;#000000&quot;,
-          &quot;label&quot;: { &quot;args&quot;: [&quot;HFDFUNCTIE&quot;], &quot;name&quot;: &quot;property&quot; },
-          &quot;offset&quot;: [4, 0],
-          &quot;rotate&quot;: -25,
-          &quot;opacity&quot;: 1,
-          &quot;haloColor&quot;: &quot;#FFFFFF&quot;,
-          &quot;haloWidth&quot;: 1,
-          &quot;allowOverlap&quot;: true
-        }
-      ]
-    }
-  ]
-}
-</code></pre>
-<p><img alt="title" src="geavanceerde_label.png" /></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>{
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>  &quot;name&quot;: &quot;&quot;,
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>  &quot;rules&quot;: [
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>    {
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a>      &quot;name&quot;: &quot;PDOK - Molens&quot;,
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a>      &quot;filter&quot;: [&quot;==&quot;, &quot;$type&quot;, &quot;Point&quot;],
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a>        {
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a>          &quot;color&quot;: &quot;#5904c8&quot;,
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a>          &quot;radius&quot;: 7,
+<a id="__codelineno-4-12" name="__codelineno-4-12" href="#__codelineno-4-12"></a>          &quot;strokeColor&quot;: &quot;gray&quot;,
+<a id="__codelineno-4-13" name="__codelineno-4-13" href="#__codelineno-4-13"></a>          &quot;strokeWidth&quot;: 2,
+<a id="__codelineno-4-14" name="__codelineno-4-14" href="#__codelineno-4-14"></a>          &quot;strokeOpacity&quot;: 1,
+<a id="__codelineno-4-15" name="__codelineno-4-15" href="#__codelineno-4-15"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-4-16" name="__codelineno-4-16" href="#__codelineno-4-16"></a>        }
+<a id="__codelineno-4-17" name="__codelineno-4-17" href="#__codelineno-4-17"></a>      ]
+<a id="__codelineno-4-18" name="__codelineno-4-18" href="#__codelineno-4-18"></a>    },
+<a id="__codelineno-4-19" name="__codelineno-4-19" href="#__codelineno-4-19"></a>    {
+<a id="__codelineno-4-20" name="__codelineno-4-20" href="#__codelineno-4-20"></a>      &quot;name&quot;: &quot;HFDFUNCTIE&quot;,
+<a id="__codelineno-4-21" name="__codelineno-4-21" href="#__codelineno-4-21"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-4-22" name="__codelineno-4-22" href="#__codelineno-4-22"></a>        {
+<a id="__codelineno-4-23" name="__codelineno-4-23" href="#__codelineno-4-23"></a>          &quot;font&quot;: [&quot;georgia&quot;],
+<a id="__codelineno-4-24" name="__codelineno-4-24" href="#__codelineno-4-24"></a>          &quot;kind&quot;: &quot;Text&quot;,
+<a id="__codelineno-4-25" name="__codelineno-4-25" href="#__codelineno-4-25"></a>          &quot;size&quot;: 12,
+<a id="__codelineno-4-26" name="__codelineno-4-26" href="#__codelineno-4-26"></a>          &quot;color&quot;: &quot;#000000&quot;,
+<a id="__codelineno-4-27" name="__codelineno-4-27" href="#__codelineno-4-27"></a>          &quot;label&quot;: { &quot;args&quot;: [&quot;HFDFUNCTIE&quot;], &quot;name&quot;: &quot;property&quot; },
+<a id="__codelineno-4-28" name="__codelineno-4-28" href="#__codelineno-4-28"></a>          &quot;offset&quot;: [4, 0],
+<a id="__codelineno-4-29" name="__codelineno-4-29" href="#__codelineno-4-29"></a>          &quot;rotate&quot;: -25,
+<a id="__codelineno-4-30" name="__codelineno-4-30" href="#__codelineno-4-30"></a>          &quot;opacity&quot;: 1,
+<a id="__codelineno-4-31" name="__codelineno-4-31" href="#__codelineno-4-31"></a>          &quot;haloColor&quot;: &quot;#FFFFFF&quot;,
+<a id="__codelineno-4-32" name="__codelineno-4-32" href="#__codelineno-4-32"></a>          &quot;haloWidth&quot;: 1,
+<a id="__codelineno-4-33" name="__codelineno-4-33" href="#__codelineno-4-33"></a>          &quot;allowOverlap&quot;: true
+<a id="__codelineno-4-34" name="__codelineno-4-34" href="#__codelineno-4-34"></a>        }
+<a id="__codelineno-4-35" name="__codelineno-4-35" href="#__codelineno-4-35"></a>      ]
+<a id="__codelineno-4-36" name="__codelineno-4-36" href="#__codelineno-4-36"></a>    }
+<a id="__codelineno-4-37" name="__codelineno-4-37" href="#__codelineno-4-37"></a>  ]
+<a id="__codelineno-4-38" name="__codelineno-4-38" href="#__codelineno-4-38"></a>}
+</code></pre></div>
+<img alt="title" src="geavanceerde_label.png" /></p>
 <p>Deze labels zijn geavandeerder, met meer optie voor persoonlijke voorkeur. Een groot gedeelte komt overeen met de simpele styling van labels. Hieronder worden de verschillende mogelijkheden uitgelegd:</p>
 <ul>
 <li>Door een font te kiezen wordt het lettertype van het label aangepast. Dit zijn de mogelijke lettertypes die worden ondersteund:
@@ -978,59 +975,59 @@ Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan
 <li>De optie allowOverlap bepaalt of de labels elkaar mogen overlappen. Als overlappen niet is toegestaan, verschijnen alle labels pas bij verder inzoomen op de kaart. Als overlappen wel is toegestaan, kunnen sommige labels onzichtbaar zijn doordat ze elkaar bedekken.</li>
 </ul>
 <h3 id="atribute-based-punten">Atribute-based punten</h3>
-<pre><code>{
-  &quot;name&quot;: &quot;Jaar van ingebruikstelling&quot;,
-  &quot;rules&quot;: [
-    {
-      &quot;name&quot;: &quot;Voor 1960&quot;,
-      &quot;filter&quot;: [&quot;&lt;&quot;, &quot;jaar_van_ingebruikstelling&quot;, 1960],
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#66CCFF&quot;,
-          &quot;radius&quot;: 4,
-          &quot;stroke&quot;: &quot;#000000&quot;,
-          &quot;strokeWidth&quot;: 1,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-        }
-      ]
-    },
-    {
-      &quot;name&quot;: &quot;Tussen 1960 en 1990&quot;,
-      &quot;filter&quot;: [
-        &quot;&amp;&amp;&quot;,
-        [&quot;&gt;=&quot;, &quot;jaar_van_ingebruikstelling&quot;, 1960],
-        [&quot;&lt;&quot;, &quot;jaar_van_ingebruikstelling&quot;, 1990]
-      ],
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#3399FF&quot;,
-          &quot;radius&quot;: 6,
-          &quot;stroke&quot;: &quot;#000000&quot;,
-          &quot;strokeWidth&quot;: 1,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-        }
-      ]
-    },
-    {
-      &quot;name&quot;: &quot;Na 1990&quot;,
-      &quot;filter&quot;: [&quot;&gt;=&quot;, &quot;jaar_van_ingebruikstelling&quot;, 1990],
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#0033CC&quot;,
-          &quot;radius&quot;: 8,
-          &quot;stroke&quot;: &quot;#000000&quot;,
-          &quot;strokeWidth&quot;: 1,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-        }
-      ]
-    }
-  ]
-}
-</code></pre>
-<p><img alt="title" src="punt_attribute_based.png" /></p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>{
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>  &quot;name&quot;: &quot;Jaar van ingebruikstelling&quot;,
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>  &quot;rules&quot;: [
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a>    {
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a>      &quot;name&quot;: &quot;Voor 1960&quot;,
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>      &quot;filter&quot;: [&quot;&lt;&quot;, &quot;jaar_van_ingebruikstelling&quot;, 1960],
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a>        {
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a>          &quot;color&quot;: &quot;#66CCFF&quot;,
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a>          &quot;radius&quot;: 4,
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a>          &quot;stroke&quot;: &quot;#000000&quot;,
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a>          &quot;strokeWidth&quot;: 1,
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-5-15" name="__codelineno-5-15" href="#__codelineno-5-15"></a>        }
+<a id="__codelineno-5-16" name="__codelineno-5-16" href="#__codelineno-5-16"></a>      ]
+<a id="__codelineno-5-17" name="__codelineno-5-17" href="#__codelineno-5-17"></a>    },
+<a id="__codelineno-5-18" name="__codelineno-5-18" href="#__codelineno-5-18"></a>    {
+<a id="__codelineno-5-19" name="__codelineno-5-19" href="#__codelineno-5-19"></a>      &quot;name&quot;: &quot;Tussen 1960 en 1990&quot;,
+<a id="__codelineno-5-20" name="__codelineno-5-20" href="#__codelineno-5-20"></a>      &quot;filter&quot;: [
+<a id="__codelineno-5-21" name="__codelineno-5-21" href="#__codelineno-5-21"></a>        &quot;&amp;&amp;&quot;,
+<a id="__codelineno-5-22" name="__codelineno-5-22" href="#__codelineno-5-22"></a>        [&quot;&gt;=&quot;, &quot;jaar_van_ingebruikstelling&quot;, 1960],
+<a id="__codelineno-5-23" name="__codelineno-5-23" href="#__codelineno-5-23"></a>        [&quot;&lt;&quot;, &quot;jaar_van_ingebruikstelling&quot;, 1990]
+<a id="__codelineno-5-24" name="__codelineno-5-24" href="#__codelineno-5-24"></a>      ],
+<a id="__codelineno-5-25" name="__codelineno-5-25" href="#__codelineno-5-25"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-5-26" name="__codelineno-5-26" href="#__codelineno-5-26"></a>        {
+<a id="__codelineno-5-27" name="__codelineno-5-27" href="#__codelineno-5-27"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-5-28" name="__codelineno-5-28" href="#__codelineno-5-28"></a>          &quot;color&quot;: &quot;#3399FF&quot;,
+<a id="__codelineno-5-29" name="__codelineno-5-29" href="#__codelineno-5-29"></a>          &quot;radius&quot;: 6,
+<a id="__codelineno-5-30" name="__codelineno-5-30" href="#__codelineno-5-30"></a>          &quot;stroke&quot;: &quot;#000000&quot;,
+<a id="__codelineno-5-31" name="__codelineno-5-31" href="#__codelineno-5-31"></a>          &quot;strokeWidth&quot;: 1,
+<a id="__codelineno-5-32" name="__codelineno-5-32" href="#__codelineno-5-32"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-5-33" name="__codelineno-5-33" href="#__codelineno-5-33"></a>        }
+<a id="__codelineno-5-34" name="__codelineno-5-34" href="#__codelineno-5-34"></a>      ]
+<a id="__codelineno-5-35" name="__codelineno-5-35" href="#__codelineno-5-35"></a>    },
+<a id="__codelineno-5-36" name="__codelineno-5-36" href="#__codelineno-5-36"></a>    {
+<a id="__codelineno-5-37" name="__codelineno-5-37" href="#__codelineno-5-37"></a>      &quot;name&quot;: &quot;Na 1990&quot;,
+<a id="__codelineno-5-38" name="__codelineno-5-38" href="#__codelineno-5-38"></a>      &quot;filter&quot;: [&quot;&gt;=&quot;, &quot;jaar_van_ingebruikstelling&quot;, 1990],
+<a id="__codelineno-5-39" name="__codelineno-5-39" href="#__codelineno-5-39"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-5-40" name="__codelineno-5-40" href="#__codelineno-5-40"></a>        {
+<a id="__codelineno-5-41" name="__codelineno-5-41" href="#__codelineno-5-41"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-5-42" name="__codelineno-5-42" href="#__codelineno-5-42"></a>          &quot;color&quot;: &quot;#0033CC&quot;,
+<a id="__codelineno-5-43" name="__codelineno-5-43" href="#__codelineno-5-43"></a>          &quot;radius&quot;: 8,
+<a id="__codelineno-5-44" name="__codelineno-5-44" href="#__codelineno-5-44"></a>          &quot;stroke&quot;: &quot;#000000&quot;,
+<a id="__codelineno-5-45" name="__codelineno-5-45" href="#__codelineno-5-45"></a>          &quot;strokeWidth&quot;: 1,
+<a id="__codelineno-5-46" name="__codelineno-5-46" href="#__codelineno-5-46"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-5-47" name="__codelineno-5-47" href="#__codelineno-5-47"></a>        }
+<a id="__codelineno-5-48" name="__codelineno-5-48" href="#__codelineno-5-48"></a>      ]
+<a id="__codelineno-5-49" name="__codelineno-5-49" href="#__codelineno-5-49"></a>    }
+<a id="__codelineno-5-50" name="__codelineno-5-50" href="#__codelineno-5-50"></a>  ]
+<a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a>}
+</code></pre></div>
+<img alt="title" src="punt_attribute_based.png" /></p>
 <p>Deze stijl definieert hoe punten op een kaart worden weergegeven op basis van het jaartal van "jaar_van_ingebruikstelling"</p>
 <ul>
 <li>Voor 1960 → kleine lichtblauwe cirkels (radius: 4).<ul>
@@ -1049,47 +1046,47 @@ Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan
 </ul>
 <p>Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze styling niet. </p>
 <h3 id="zoom-based-punten">Zoom-based punten</h3>
-<pre><code>{
-  &quot;rules&quot;: [
-    {
-      &quot;name&quot;: &quot;Groot&quot;,
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#CC3300&quot;,
-          &quot;radius&quot;: 6,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-        }
-      ],
-      &quot;scaleDenominator&quot;: { &quot;max&quot;: 100000 }
-    },
-    {
-      &quot;name&quot;: &quot;Middel&quot;,
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#CC3300&quot;,
-          &quot;radius&quot;: 4,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-        }
-      ],
-      &quot;scaleDenominator&quot;: { &quot;max&quot;: 1000000, &quot;min&quot;: 100000 }
-    },
-    {
-      &quot;name&quot;: &quot;Klein&quot;,
-      &quot;symbolizers&quot;: [
-        {
-          &quot;kind&quot;: &quot;Mark&quot;,
-          &quot;color&quot;: &quot;#CC3300&quot;,
-          &quot;radius&quot;: 2,
-          &quot;wellKnownName&quot;: &quot;circle&quot;
-        }
-      ],
-      &quot;scaleDenominator&quot;: { &quot;min&quot;: 1000000 }
-    }
-  ]
-}
-</code></pre>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>{
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>  &quot;rules&quot;: [
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>    {
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>      &quot;name&quot;: &quot;Groot&quot;,
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>        {
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a>          &quot;color&quot;: &quot;#CC3300&quot;,
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a>          &quot;radius&quot;: 6,
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a>        }
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a>      ],
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a>      &quot;scaleDenominator&quot;: { &quot;max&quot;: 100000 }
+<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a>    },
+<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a>    {
+<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a>      &quot;name&quot;: &quot;Middel&quot;,
+<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a>        {
+<a id="__codelineno-6-19" name="__codelineno-6-19" href="#__codelineno-6-19"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-6-20" name="__codelineno-6-20" href="#__codelineno-6-20"></a>          &quot;color&quot;: &quot;#CC3300&quot;,
+<a id="__codelineno-6-21" name="__codelineno-6-21" href="#__codelineno-6-21"></a>          &quot;radius&quot;: 4,
+<a id="__codelineno-6-22" name="__codelineno-6-22" href="#__codelineno-6-22"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-6-23" name="__codelineno-6-23" href="#__codelineno-6-23"></a>        }
+<a id="__codelineno-6-24" name="__codelineno-6-24" href="#__codelineno-6-24"></a>      ],
+<a id="__codelineno-6-25" name="__codelineno-6-25" href="#__codelineno-6-25"></a>      &quot;scaleDenominator&quot;: { &quot;max&quot;: 1000000, &quot;min&quot;: 100000 }
+<a id="__codelineno-6-26" name="__codelineno-6-26" href="#__codelineno-6-26"></a>    },
+<a id="__codelineno-6-27" name="__codelineno-6-27" href="#__codelineno-6-27"></a>    {
+<a id="__codelineno-6-28" name="__codelineno-6-28" href="#__codelineno-6-28"></a>      &quot;name&quot;: &quot;Klein&quot;,
+<a id="__codelineno-6-29" name="__codelineno-6-29" href="#__codelineno-6-29"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-6-30" name="__codelineno-6-30" href="#__codelineno-6-30"></a>        {
+<a id="__codelineno-6-31" name="__codelineno-6-31" href="#__codelineno-6-31"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-6-32" name="__codelineno-6-32" href="#__codelineno-6-32"></a>          &quot;color&quot;: &quot;#CC3300&quot;,
+<a id="__codelineno-6-33" name="__codelineno-6-33" href="#__codelineno-6-33"></a>          &quot;radius&quot;: 2,
+<a id="__codelineno-6-34" name="__codelineno-6-34" href="#__codelineno-6-34"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-6-35" name="__codelineno-6-35" href="#__codelineno-6-35"></a>        }
+<a id="__codelineno-6-36" name="__codelineno-6-36" href="#__codelineno-6-36"></a>      ],
+<a id="__codelineno-6-37" name="__codelineno-6-37" href="#__codelineno-6-37"></a>      &quot;scaleDenominator&quot;: { &quot;min&quot;: 1000000 }
+<a id="__codelineno-6-38" name="__codelineno-6-38" href="#__codelineno-6-38"></a>    }
+<a id="__codelineno-6-39" name="__codelineno-6-39" href="#__codelineno-6-39"></a>  ]
+<a id="__codelineno-6-40" name="__codelineno-6-40" href="#__codelineno-6-40"></a>}
+</code></pre></div>
 <table>
 <thead>
 <tr>
@@ -1121,6 +1118,26 @@ Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan
 <li>"scaleDenominator": { "max": 100000 } betekent dat de stijl zichtbaar is bij een schaal van 1:100.000 of dichterbij (meer ingezoomd).</li>
 <li>"scaleDenominator": { "min": 50000 } betekent dat de stijl pas zichtbaar wordt bij een schaal van 1:50.000 of dichterbij.</li>
 </ul>
+<h3 id="zichtbaar-bij-bepaald-niveau">Zichtbaar bij bepaald niveau</h3>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>{
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>  &quot;rules&quot;: [
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>    {
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>      &quot;name&quot;: &quot;Molens&quot;,
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a>      &quot;symbolizers&quot;: [
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a>        {
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a>          &quot;kind&quot;: &quot;Mark&quot;,
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a>          &quot;color&quot;: &quot;#CC3300&quot;,
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a>          &quot;radius&quot;: 7,
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a>          &quot;wellKnownName&quot;: &quot;circle&quot;
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a>        }
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a>      ],
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a>      &quot;scaleDenominator&quot;: { &quot;max&quot;: 1000000 }
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a>    }
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a>  ]
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a>}
+</code></pre></div>
+<img alt="title" src="punt_zichtbaarheid.png" /></p>
+<p>Als er heel veel punten zijn kan het zijn dat je die niet de helet ijd wil laten zien. Maar pas bij een bepaald schaal. Bij deze styling zijn de punten bij 1:1.000.000 niet meer zichtbaar ({ "max": 1000000 }).</p>
 
 
 
@@ -1172,13 +1189,13 @@ Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan
         
         
           
-          <a href="../vlakken/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Vlakken">
+          <a href="../lijnen/" class="md-footer__link md-footer__link--next" aria-label="Volgende: Lijnen">
             <div class="md-footer__title">
               <span class="md-footer__direction">
                 Volgende
               </span>
               <div class="md-ellipsis">
-                Vlakken
+                Lijnen
               </div>
             </div>
             <div class="md-footer__button md-icon">
@@ -1250,7 +1267,7 @@ Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.action.view", "navigation.path", "navigation.footer", "navigation.sections", "navigation.tracking", "search.suggest", "search.highlight"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"provider": "mike"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.action.edit", "content.action.view", "navigation.path", "navigation.footer", "navigation.sections", "navigation.tracking", "search.suggest", "search.highlight", "content.code.copy"], "search": "../assets/javascripts/workers/search.6ce7567c.min.js", "translations": {"clipboard.copied": "Gekopieerd naar klembord", "clipboard.copy": "Kopi\u00ebren naar klembord", "search.result.more.one": "1 extra overeenkomst op deze pagina", "search.result.more.other": "# extra overeenkomsten op deze pagina", "search.result.none": "Geen overeenkomende documenten", "search.result.one": "1 overeenkomende document", "search.result.other": "# overeenkomende documenten", "search.result.placeholder": "Typ om te beginnen met zoeken", "search.result.term.missing": "Ontbreekt", "select.version": "Selecteer versie"}, "version": {"provider": "mike"}}</script>
     
     
       <script src="../assets/javascripts/bundle.525ec568.min.js"></script>
