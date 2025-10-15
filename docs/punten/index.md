@@ -6,7 +6,7 @@ title: "Punten"
 
 Punten
 ---
-Voor deze handleiding over de styling van punten is gebruik gemaakt van de [dataset molens](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e). Deze is te vinden in o.a. het nationaal georegister van PDOK.
+Voor deze handleiding over de styling van punten is gebruik gemaakt van de dataset [molens](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e) en [vuurtorens](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/559aec8c-a2e3-472a-9de0-3a4bd365c46d?language=all). Deze zijn te vinden in [het nationaal georegister van PDOK](https://www.nationaalgeoregister.nl).
 Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
 
 Simpele styling 
@@ -41,7 +41,7 @@ Simpele styling
 De code hierboven is het resultaat van het genereren van een eenvoudige punt weergave in MapGallery. Binnen rules zijn de stylingsregels beschreven. In de filter is gekozen voor alle geometrieën van het type "Point".
 
 - Het type symbool is "Mark", ofwel een markering op de kaart. 
-- De kleur #12cdf3 in hex notatie, de code begint met # gevolgd door 6 tekens, bestaande uit drie paren, die respectievelijk de intensiteit van rood, groen en blauw (RGB) weergeven. Maar de basiskleuren worden ook herkend zoals red, green, indigo ect. 
+- De kleur #12cdf3 in hex notatie, de code begint met # gevolgd door 6 tekens, bestaande uit drie paren, die respectievelijk de intensiteit van rood, groen en blauw (RGB) weergeven. Maar de basiskleuren worden ook herkend zoals red, green, indigo ect. Naast een hex code kunnen deze manieren ook: RGB, RGBA, HSL, HSLA en de 140 vooraf gedefinieerd HTML kleuren (zoals "yellow", "darkblue" en "tomato")  
 -	De grootte ofwel radius is op het moment 7 pixels.
 -	De strokeColor, ofwel de omlijning is zwart. Hierbij kan je gebruik maken van de zelfde kleur opties als bij de kleur van de punt. 
 -	De strokeWidth bepaald de dikte van de omlijning.
@@ -70,6 +70,7 @@ De code hierboven is het resultaat van het genereren van een eenvoudige punt wee
 }
 ```
 ![title](foto_afbeelding_punt.png)
+
 Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om de punten weer te geven met het symbooltype icon.  
 
 -	Bij image moet in dit geval de url van de gewenste afbeelding geplaatst worden. Let op dat het een directe link naar de afbeelding is, eindigend op het bestandsformat zoals .jpg/.svg/.png. Een goede bron voor afbeeldingen is [Wikimedia](https://commons.wikimedia.org/wiki/Category:Images).
@@ -113,6 +114,7 @@ Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om de punten weer te
 }
 ```
 ![title](punt_label.png)
+
 
 Naast het gebruik van symbolen kan er ook informatie weergeven worden met labels. Hier is gekozen voor gebruik van het veld “TYPE” voor de inhoud van de labels. 
 
@@ -370,4 +372,25 @@ Met deze styling wordt de weergave van punten afhankelijk van de schaal aangepas
 - "scaleDenominator": { "max": 100000 } betekent dat de stijl zichtbaar is bij een schaal van 1:100.000 of dichterbij (meer ingezoomd).
 - "scaleDenominator": { "min": 50000 } betekent dat de stijl pas zichtbaar wordt bij een schaal van 1:50.000 of dichterbij.
 
+### Zichtbaar bij bepaald niveau
+```
+{
+  "rules": [
+    {
+      "name": "Molens",
+      "symbolizers": [
+        {
+          "kind": "Mark",
+          "color": "#CC3300",
+          "radius": 7,
+          "wellKnownName": "circle"
+        }
+      ],
+      "scaleDenominator": { "max": 1000000 }
+    }
+  ]
+}
+```
+![title](punt_zichtbaarheid.png)
 
+Als er heel veel punten zijn kan het zijn dat je die niet de helet ijd wil laten zien. Maar pas bij een bepaald schaal. Bij deze styling zijn de punten bij 1:1.000.000 niet meer zichtbaar ({ "max": 1000000 }).

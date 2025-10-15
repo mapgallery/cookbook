@@ -29,13 +29,18 @@ markdown_extensions:
         - includes/abbreviations.md
   - tables
   - toc
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.highlight
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences
 nav:
   - Kookboek:
       - index.md
       - punten/index.md
       - lijnen/index.md
       - vlakken/index.md
-      - geavanceerd/index.md
 
 plugins:
   - macros:
@@ -60,6 +65,7 @@ theme:
     - navigation.tracking
     - search.suggest
     - search.highlight
+    - content.code.copy
 #    - toc.follow
 #    - toc.integrate
   language: nl

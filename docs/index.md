@@ -40,3 +40,17 @@ Een style maken kan direct binnen MapGallery, maar het kan handig zijn om te wer
 ### Geostyler Demo 
 
 Handig gereedschap voor het maken van een style is de demo van GeoStyler. Hier kunnen verschillende styling opties verkend worden voor punten, lijnen en polygonen. Bij de code editor aan de rechterkant kan gelijk de bijbehorende code bekeken worden.
+
+### Gallerij
+
+| **Punt**                                         | **Lijn**                                        | **Vlak**                                        |
+|-------------------------------------------------|------------------------------------------------|------------------------------------------------|
+| [Simpele punt](punten/#simpele_punt)<br>![Simpele punt](punten/foto_simpele_punt.png) | [Simpele lijn](lijnen/#simpele_lijn)<br>![Simpele lijn](lijnen/foto_simpele_lijn.png) | [Simpel vlak](vlakken/#simpel_vlak)<br>![Simpel vlak](vlakken/foto_simpel_vlak.png) |
+| [Punten met labels](punten/#punten_met_labels)<br>![Punten met labels](punten/punt_label.png) | [Lijnen met labels](lijnen/#lijnen_met_labels)<br>![Lijnen met labels](lijnen/lijnen_labels.png) | [Vlakken met labels](vlakken/#vlakken_met_labels)<br>![Vlakken met labels](vlakken/foto_vlakken_labels.png) |
+| [Afbeelding als symbool](punten/#afbeelding_symbool)<br>![Afbeelding als symbool](punten/foto_afbeelding_punt.png) | [Styling op categorie](lijnen/#styling_categorie)<br>![Styling op categorie](lijnen/foto_lijnen_categorie.png) | [Styling op categorie](vlakken/#styling_categorie)<br>![Styling op categorie](vlakken/foto_categorie_vlak.png) |
+| [Styling op categorie](punten/#styling_categorie)<br>![Styling op categorie](punten/punt_categorie.png) | [Geavanceerde labels](lijnen/#geavanceerde_labels)<br>![Geavanceerde labels](lijnen/lijn_geavanceerd_label_00.png) | [Geavanceerde labels](vlakken/#geavanceerde_labels)<br>![Geavanceerde labels](vlakken/vlak_geavanceerde_labels.png) |
+| [Geavanceerde labels](punten/#geavanceerde_labels)<br>![Geavanceerde labels](punten/geavanceerde_label.png) | [Attribute-based lijnen](lijnen/#attribute_based)<br>![Attribute-based lijnen](lijnen/lijn_attributebased.png) | [Attribute-based vlakken](vlakken/#attribute_based) <br>![Attribute-based vlakken](vlakken/vlak_attribute_based.png) |
+| [Attribute-based punten](punten/#attribute_based)<br>![Attribute-based punten](punten/punt_attribute_based.png) | [Zoom-based lijnen](lijnen/#zoom_based)<br>![Zoom-based lijnen](lijnen/lijn_zoom_klein.png) | [Vlakken met offset](vlakken/#vlakken_offset)<br>![Vlakken met offset](vlakken/vlak_met_offset.png) |
+| [Zoom-based punten](zoom)<br>![Zoom-based punten](punten/zoom_based_klein.png) | [Lijn cap](lijnen/#lijn_cap)<br>![Lijn cap](lijnen/lijn_cap.png) |                                                |
+|                                                 | [Stippellijn](lijnen/#stippellijn)<br>![Stippellijn](lijnen/stippel_lijn.png) |                                                |
+|                                                 | [Lijn met offset](lijnen/#lijn_offset)<br>![Lijn met offset](lijnen/lijn_offset.png) |                                                |

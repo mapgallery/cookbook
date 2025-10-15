@@ -6,7 +6,7 @@ title: "Vlakken"
 
 Vlakken
 ---
-Voor deze handleiding over de styling van vlakken is gebruik gemaakt van de [dataset suizen](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/35f04ee9-6499-4fef-837e-12b81b6374b5). Deze is te vinden in o.a. het nationaal georegister van PDOK.
+Voor deze handleiding over de styling van de vlakken is gebruik gemaakt van de dataset [molens](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e) en [vuurtorens](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/559aec8c-a2e3-472a-9de0-3a4bd365c46d?language=all). Deze zijn te vinden in [het nationaal georegister van PDOK](https://www.nationaalgeoregister.nl).
 Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
 
 Simpele styling
@@ -39,7 +39,7 @@ Simpele styling
 De code hierboven is het resultaat van het genereren van een eenvoudige vlak weergave in MapGallery. Binnen rules zijn de stylingsregels beschreven. In de filter is gekozen voor alle geometrieën van het type "Polygon".
 
 - Het type symbool is "fill", ofwel een vlak op de kaart. 
-- De kleur #47bea3 in hex notatie, de code begint met # gevolgd door 6 tekens, bestaande uit drie paren, die respectievelijk de intensiteit van rood, groen en blauw (RGB) weergeven. Maar de basiskleuren worden ook herkend zoals red, green, indigo ect. 
+- De kleur #47bea3 in hex notatie, de code begint met # gevolgd door 6 tekens, bestaande uit drie paren, die respectievelijk de intensiteit van rood, groen en blauw (RGB) weergeven. Maar de basiskleuren worden ook herkend zoals red, green, indigo ect. Naast een hex code kunnen deze manieren ook: RGB, RGBA, HSL, HSLA en de 140 vooraf gedefinieerd HTML kleuren (zoals "yellow", "darkblue" en "tomato")  
 -	De opacity bepaald de transparantie van het vlak. 
 -	De outlineColor, ofwel de omlijning is zwart. Hierbij kan je gebruik maken van de zelfde kleur opties als bij de kleur van de vlak. 
 -	De outlineWidth bepaald de dikte van de omlijning.
@@ -316,3 +316,31 @@ Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze
 ![title](vlak_met_offset.png)
 Deze styling laat je een extra bufferlijn in het polygoon tekenen. In dit voorbeeld zijn twee buffers toegevoegd, aan zowel de binnen- als de buitenkant van de lijn een buffer getekend. Door "perpendicularOffset" aantepassen veranderd de buffer. Positieve waarden (bijv. 2) genereren een parallelle lijn aan de linkerkant en negatieve waarden (bijv. -2) aan de rechterkant. 
 
+
+### Zichtbaar bij bepaald niveau
+```
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "PDOK - CBS Bevolkingskernen 2021",
+      "filter": ["==", "$type", "Polygon"],
+      "symbolizers": [
+        {
+          "kind": "Fill",
+          "color": "tomato",
+          "opacity": 1,
+          "outlineColor": "gray",
+          "outlineWidth": 1,
+          "outlineOpacity": 1
+        }
+      ],
+      "scaleDenominator": { "max": 700000 }
+    }
+  ]
+}
+
+```
+![title](vlakken_zichtbaarheid.png)
+
+Als er heel veel vlakken zijn kan het zijn dat je die niet de hele tijd wil laten zien. Maar pas bij een bepaald schaal. Bij deze styling zijn de vlakken bij 1:700.000 niet meer zichtbaar ({ "max": 700000 }).
