@@ -414,6 +414,27 @@
 
               
             
+              
+                
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../geavanceerd/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    Geavanceerde styling
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
+            
           </ul>
         </nav>
       
@@ -456,6 +477,108 @@
   
 </li>
       
+        <li class="md-nav__item">
+  <a href="#simpele-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simpele styling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Simpele styling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#simpele-lijn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Simpele lijn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lijnen-met-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lijnen met labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#styling-op-categorie" class="md-nav__link">
+    <span class="md-ellipsis">
+      Styling op categorie
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#geavanceerde-styling" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geavanceerde styling
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Geavanceerde styling">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#geavanceerde-labels" class="md-nav__link">
+    <span class="md-ellipsis">
+      Geavanceerde labels
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#atribute-based-lijnen" class="md-nav__link">
+    <span class="md-ellipsis">
+      Atribute-based lijnen
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lijn-cap" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lijn cap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#stippellijn" class="md-nav__link">
+    <span class="md-ellipsis">
+      Stippellijn
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lijn-met-offset" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lijn met offset
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
     </ul>
   
 </nav>
@@ -489,8 +612,155 @@
 
 <h1 id="mapgallery-geostyler-kookboek">MapGallery GeoStyler kookboek</h1>
 <h2 id="lijnen">Lijnen</h2>
-<p>Voor de handleiding over de styling van punten is gebruik gemaakt van de <a href="https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/abbf1e22-55aa-4a11-a855-7ac963e4a82c">dataset maximale snelheid</a>. Deze is te vinden in o.a. het nationaal georegister van PDOK.
-Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery.</p>
+<p>Voor deze handleiding over de styling van lijnen is gebruik gemaakt van de <a href="https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/abbf1e22-55aa-4a11-a855-7ac963e4a82c">dataset maximum snelheden wegvak overdag</a>. Deze is te vinden in o.a. het nationaal georegister van PDOK.
+Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de <a href="#geavanceerde-styling">geavanceerde stylingopties</a> besproken.</p>
+<h2 id="simpele-styling">Simpele styling</h2>
+<h3 id="simpele-lijn">Simpele lijn</h3>
+<pre><code>{
+  &quot;name&quot;: &quot;&quot;,
+  &quot;rules&quot;: [
+    {
+      &quot;name&quot;: &quot;PDOK - Maximum snelheden wegvak overdag&quot;,
+      &quot;filter&quot;: [&quot;==&quot;, &quot;$type&quot;, &quot;LineString&quot;],
+      &quot;symbolizers&quot;: [
+        { &quot;kind&quot;: &quot;Line&quot;, &quot;color&quot;: &quot;#8e0d56&quot;, &quot;width&quot;: 2, &quot;opacity&quot;: 1 }
+      ]
+    }
+  ]
+}
+</code></pre>
+<p><img alt="title" src="foto_simpele_lijn.png" /></p>
+<p>De code hierboven is het resultaat van het genereren van een eenvoudige lijn weergave in MapGallery. Binnen rules zijn de stylingsregels beschreven. In de filter is gekozen voor alle geometrieën van het type "lineString".</p>
+<ul>
+<li>Het type symbool is "Line", ofwel een lijn op de kaart.</li>
+<li>De _kleur #8e0d56 in hex notatie, de code begint met # gevolgd door 6 tekens, bestaande uit drie paren, die respectievelijk de intensiteit van rood, groen en blauw (RGB) weergeven. Maar de basiskleuren worden ook herkend zoals red, green, indigo ect.</li>
+<li>De width bepaald de dikte van de lijn.</li>
+<li>De opacity bepaald de transparantie van de lijn.</li>
+</ul>
+<h3 id="lijnen-met-labels">Lijnen met labels</h3>
+<pre><code>{
+  &quot;name&quot;: &quot;&quot;,
+  &quot;rules&quot;: [
+    {
+      &quot;name&quot;: &quot;Mirt lijnen fase&quot;,
+      &quot;filter&quot;: [&quot;==&quot;, &quot;$type&quot;, &quot;LineString&quot;],
+      &quot;symbolizers&quot;: [
+        { &quot;kind&quot;: &quot;Line&quot;, &quot;color&quot;: &quot;purple&quot;, &quot;width&quot;: 3, &quot;opacity&quot;: 1 }
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;Onderwerp&quot;,
+      &quot;symbolizers&quot;: [
+        {
+          &quot;kind&quot;: &quot;Text&quot;,
+          &quot;size&quot;: 15,
+          &quot;color&quot;: &quot;darkblue&quot;,
+          &quot;label&quot;: { &quot;args&quot;: [&quot;onderwerp&quot;], &quot;name&quot;: &quot;property&quot; },
+          &quot;offset&quot;: [0, 2],
+          &quot;haloColor&quot;: &quot;#FFFFFF&quot;,
+          &quot;haloWidth&quot;: 1,
+        }
+      ]
+    }
+  ]
+}
+</code></pre>
+<p><img alt="title" src="lijnen_labels.png" /></p>
+<p>Naast het gebruik van lijnen kan er ook informatie weergeven worden met labels. Hier is gekozen voor gebruik van het veld “onderwerp” voor de inhoud van de labels.</p>
+<ul>
+<li>De name bepaald hoe het label heet in de legenda, dit kan naar smaak aangepast worden.
+Size en color kunnen net als bij de andere lijnen aangepast worden.</li>
+<li>Bij “args”, na label: word het veld opgegeven voor de inhoud van de labels, in dit geval ["onderwerp"]</li>
+<li>Onder offset word de afstand het label tot de lijn bepaald.</li>
+<li>De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hiervan word bepaald met haloColor en haloWidth.</li>
+</ul>
+<h3 id="styling-op-categorie">Styling op categorie</h3>
+<pre><code>{
+  &quot;name&quot;: &quot;&quot;,
+  &quot;rules&quot;: [
+    {
+      &quot;name&quot;: &quot;30&quot;,
+      &quot;filter&quot;: [&quot;==&quot;, &quot;omschr&quot;, 30],
+      &quot;symbolizers&quot;: [
+        { &quot;kind&quot;: &quot;Line&quot;, &quot;color&quot;: &quot;#1E90FF&quot;, &quot;width&quot;: 3, &quot;opacity&quot;: 1 }
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;40&quot;,
+      &quot;filter&quot;: [&quot;==&quot;, &quot;omschr&quot;, 40],
+      &quot;symbolizers&quot;: [
+        { &quot;kind&quot;: &quot;Line&quot;, &quot;color&quot;: &quot;#00CED1&quot;, &quot;width&quot;: 3, &quot;opacity&quot;: 1 }
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;50&quot;,
+      &quot;filter&quot;: [&quot;==&quot;, &quot;omschr&quot;, 50],
+      &quot;symbolizers&quot;: [
+        { &quot;kind&quot;: &quot;Line&quot;, &quot;color&quot;: &quot;#32CD32&quot;, &quot;width&quot;: 3, &quot;opacity&quot;: 1 }
+      ]
+    }
+  ]
+}
+</code></pre>
+<p><img alt="title" src="foto_lijnen_categorie.png" /></p>
+<p>Het is mogelijk om aparte lijnen te genereren voor verschillende categorieën. Voor de dataset Maximum snelheden wegvak overdag is in dit voorbeeld gekozen voor styling op het veld "omschr". Het gewenste veld kan geselecteerd worden wanneer men “Weergave op categorie” selecteert binnen het de genereer style functie. Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan uit opeenvolgende blokken bestaat met een verschillende filterwaarde voor het veld "omschr". Let op, de voorbeeldcode beslaat alleen de eerste 3 types van de categorie.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.</p>
+</div>
+<h2 id="geavanceerde-styling">Geavanceerde styling</h2>
+<h3 id="geavanceerde-labels">Geavanceerde labels</h3>
+<p>xxxx</p>
+<h3 id="atribute-based-lijnen">Atribute-based lijnen</h3>
+<pre><code>{
+  &quot;rules&quot;: [
+    {
+      &quot;name&quot;: &quot;Zachter dan 90&quot;,
+      &quot;filter&quot;: [&quot;&lt;&quot;, &quot;omschr&quot;, 90],
+      &quot;symbolizers&quot;: [
+        { &quot;kind&quot;: &quot;Line&quot;, &quot;color&quot;: &quot;#6FCF97&quot;, &quot;width&quot;: 3, &quot;opacity&quot;: 1 }
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;Tussen 90 en 100&quot;,
+      &quot;filter&quot;: [&quot;&amp;&amp;&quot;, [&quot;&gt;=&quot;, &quot;omschr&quot;, 90], [&quot;&lt;=&quot;, &quot;omschr&quot;, 100]],
+      &quot;symbolizers&quot;: [
+        { &quot;kind&quot;: &quot;Line&quot;, &quot;color&quot;: &quot;#F2C94C&quot;, &quot;width&quot;: 3, &quot;opacity&quot;: 1 }
+      ]
+    },
+    {
+      &quot;name&quot;: &quot;Hoger dan 100&quot;,
+      &quot;filter&quot;: [&quot;&gt;&quot;, &quot;omschr&quot;, 100],
+      &quot;symbolizers&quot;: [
+        { &quot;kind&quot;: &quot;Line&quot;, &quot;color&quot;: &quot;#EB5757&quot;, &quot;width&quot;: 3, &quot;opacity&quot;: 1 }
+      ]
+    }
+  ]
+}
+</code></pre>
+<p><img alt="title" src="lijn_attributebased.png" /></p>
+<p>Deze stijl definieert hoe punten op een kaart worden weergegeven op basis van de maximale snelheden van het wegvak overdag van tabel "omschr"</p>
+<ul>
+<li>Voor snelden onder de 90 → een groene lijn. <ul>
+<li>["&lt;", "omschr", 90]</li>
+</ul>
+</li>
+<li>1960–1990 → middelgrote blauwe cirkels (radius: 6).<ul>
+<li>["&gt;=", "jaar_van_ingebruikstelling", 1960], ["&lt;", "jaar_van_ingebruikstelling", 1990]</li>
+</ul>
+</li>
+<li>Na 1990 → grote donkerblauwe cirkels (radius: 8).<ul>
+<li>["&gt;=", "jaar_van_ingebruikstelling", 1990]</li>
+</ul>
+</li>
+</ul>
+<p>Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze styling niet.</p>
+<h3 id="lijn-cap">Lijn cap</h3>
+<p>xxxx</p>
+<h3 id="stippellijn">Stippellijn</h3>
+<p>xxx</p>
+<h3 id="lijn-met-offset">Lijn met offset</h3>
+<p>xxx</p>
 
 
 
