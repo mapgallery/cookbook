@@ -31,13 +31,16 @@ markdown_extensions:
   - toc
   - pymdownx.highlight:
       anchor_linenums: true
-  - pymdownx.highlight
+      use_pygments: true
+  - pymdownx.superfences
   - pymdownx.inlinehilite
   - pymdownx.snippets
-  - pymdownx.superfences
+  - attr_list
+  
 nav:
   - Kookboek:
       - index.md
+      -  gallerij/index.md
       - punten/index.md
       - lijnen/index.md
       - vlakken/index.md
@@ -49,6 +52,9 @@ plugins:
   - search
   - social
   - tags
+  - glightbox:
+      zoomable: true
+
 theme:
   name: material
   favicon: assets/favicon.png

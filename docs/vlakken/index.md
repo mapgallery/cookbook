@@ -6,14 +6,14 @@ title: "Vlakken"
 
 Vlakken
 ---
-Voor deze handleiding over de styling van de vlakken is gebruik gemaakt van de dataset [molens](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e) en [vuurtorens](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/559aec8c-a2e3-472a-9de0-3a4bd365c46d?language=all). Deze zijn te vinden in [het nationaal georegister van PDOK](https://www.nationaalgeoregister.nl).
+Voor deze handleiding over de styling van de vlakken is gebruik gemaakt van de dataset [Sluizen](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/ff62a030-bdd2-436a-9cea-8c83ccfa19f9?language=all), [Grenzen Omgevingsdiensten](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/6bda10cf-9648-4d17-af55-72fdf22193f6?language=all) en [Bevolkingskernen 2021](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/9b795b71-e772-4315-a087-a2560343e2fe?language=all). Deze zijn te vinden in [het nationaal georegister van PDOK](https://www.nationaalgeoregister.nl).
 Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
 
 Simpele styling
 ---
 
 ### Simpel vlak
-```
+```json
 {
   "name": "",
   "rules": [
@@ -36,17 +36,17 @@ Simpele styling
 ```
 ![title](foto_simpel_vlak.png)
 
-De code hierboven is het resultaat van het genereren van een eenvoudige vlak weergave in MapGallery. Binnen rules zijn de stylingsregels beschreven. In de filter is gekozen voor alle geometrieën van het type "Polygon".
+De code hierboven is het resultaat van het genereren van een eenvoudige vlakweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type "Polygon".
 
-- Het type symbool is "fill", ofwel een vlak op de kaart. 
-- De kleur #47bea3 in hex notatie, de code begint met # gevolgd door 6 tekens, bestaande uit drie paren, die respectievelijk de intensiteit van rood, groen en blauw (RGB) weergeven. Maar de basiskleuren worden ook herkend zoals red, green, indigo ect. Naast een hex code kunnen deze manieren ook: RGB, RGBA, HSL, HSLA en de 140 vooraf gedefinieerd HTML kleuren (zoals "yellow", "darkblue" en "tomato")  
+- Het type symbool is "Fill", oftewel een vlak op de kaart.
+- De kleur #47bea3 is weergegeven in hex-notatie. De code begint met een hekje (#) gevolgd door zes tekens, bestaande uit drie paren die de intensiteit van rood, groen en blauw (RGB) weergeven. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde HTML-kleuren (bijvoorbeeld yellow, darkblue of tomato)
+- De outlineColor bepaalt de kleur van de omlijning, die in dit geval zwart is. Hiervoor kunnen dezelfde kleurnotaties worden toegepast als bij de vulling van het vlak.
+- De outlineWidth bepaalt de dikte van de omlijning.
+- De outlineOpacity bepaalt de transparantie van het vlak.
 -	De opacity bepaald de transparantie van het vlak. 
--	De outlineColor, ofwel de omlijning is zwart. Hierbij kan je gebruik maken van de zelfde kleur opties als bij de kleur van de vlak. 
--	De outlineWidth bepaald de dikte van de omlijning.
--	De outlineOpacity bepaald de transparantie van de omlijning.
 
 ### Vlakken met labels 
-```
+```json
 {
   "name": "",
   "rules": [
@@ -83,16 +83,16 @@ De code hierboven is het resultaat van het genereren van een eenvoudige vlak wee
 ```
 ![title](foto_vlakken_labels.png)
 
- Naast het gebruik van vlakken kan er ook informatie weergeven worden met labels. Hier is gekozen voor gebruik van het veld "Name" voor de inhoud van de labels.
+Naast het gebruik van vlakken kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt het veld “Name” gebruikt als inhoud van de labels.
 
-- De name bepaald hoe het label heet in de legenda, dit kan naar smaak aangepast worden.
-Size en color kunnen net als bij de andere vlakken aangepast worden.
-- Bij “args”, na label: word het veld opgegeven voor de inhoud van de labels, in dit geval ["Name"]
-- Onder offset word de afstand het label tot het vlak bepaald.
-- De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hiervan word bepaald met haloColor en haloWidth.'
+- name bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.
+- size en color kunnen, net als bij symbolen, vrij worden aangepast.
+- Bij args, na label, wordt het veld opgegeven dat de labeltekst bevat, in dit geval "Name".
+- Onder offset wordt de afstand van het label tot het vlak ingesteld.
+- Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met haloColor en haloWidth.
 
 ### Styling op categorie
-```
+```json
 {
   "name": "",
   "rules": [
@@ -143,16 +143,19 @@ Size en color kunnen net als bij de andere vlakken aangepast worden.
 ```
 ![title](foto_categorie_vlak.png)
 
-Het is mogelijk om aparte vlakken te genereren voor verschillende categorieën. Voor de sluizen dataset is in dit voorbeeld gekozen voor styling op het veld "referencelevelbebu". Het gewenste veld kan geselecteerd worden wanneer men “Weergave op categorie” selecteert binnen het de genereer style functie. Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan uit opeenvolgende blokken bestaat met een verschillende filterwaarde voor het veld "referencelevelbebu". Let op, de voorbeeldcode beslaat alleen de eerste 3 types van de categorie.
+Het is mogelijk om aparte vlakken te genereren voor verschillende categorieën. In dit voorbeeld, binnen deze dataset is gekozen voor een styling op het veld "referencelevelbebu". Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld "referencelevelbebu".
 
-!!! Note
-    Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.
+Let op: de onderstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
+
+!!! Info 
+
+    Als er geen velden zichtbaar zijn in het dropdownmenu van “Categorie veld”, controleer dan of in het tabblad “Velden” de optie “Aanpassen van velden” is aangevinkt.
 
 Geavanceerde styling
 ---
 
 ### Geavanceerde labels
-```
+```json
 {
   "name": "",
   "rules": [
@@ -193,9 +196,9 @@ Geavanceerde styling
 ```
 ![title](vlak_geavanceerde_labels.png)
 
-Deze labels zijn geavandeerder, met meer optie voor persoonlijke voorkeur. Een groot gedeelte komt overeen met de simpele styling van labels. Hieronder worden de verschillende mogelijkheden uitgelegd:
+Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke voorkeur. Een groot deel van de instellingen komt overeen met de eenvoudige labelstyling. Hieronder worden de verschillende opties toegelicht:
 
--  Door een font te kiezen wordt het lettertype van het label aangepast. Dit zijn de mogelijke lettertypes die worden ondersteund:
+-  Door een font te kiezen wordt het lettertype van het label aangepast. De volgende lettertypen worden ondersteund:
     <ul>
     <li style="font-family: Arial;">Arial</li>
     <li style="font-family: Verdana;">Verdana</li>
@@ -207,12 +210,22 @@ Deze labels zijn geavandeerder, met meer optie voor persoonlijke voorkeur. Een g
      <li style="font-family: Georgia;">Georgia</li>
      <li style="font-family: Serif;">Serif</li>
     </ul>
-- Rotate zorgt ervoor dat de tekst schuin staat. "0" betekend dat de tekst recht blijft, bij "100" staat de tekst verticaal. Negatieve getallen zijn ook mogelijk.  
-- De opacity bepaald de transparantie/doorzichtigheid. "1" is normaal en "0" is onzichtbaar.
-- De optie allowOverlap bepaalt of de labels elkaar mogen overlappen. Als overlappen niet is toegestaan, verschijnen alle labels pas bij verder inzoomen op de kaart. Als overlappen wel is toegestaan, kunnen sommige labels onzichtbaar zijn doordat ze elkaar bedekken.
+
+- rotate bepaalt de hoek waarin de tekst wordt weergegeven.
+    - De waarde 0 betekent dat de tekst horizontaal blijft staan.
+    - Een waarde rond 100 resulteert in een verticale plaatsing.
+    - Ook negatieve waarden zijn mogelijk, waarmee de tekst de andere kant op helt.
+- opacity bepaalt de transparantie van het label.
+    - Een waarde van 1 betekent volledig zichtbaar.
+    - Een waarde van 0 maakt het label volledig onzichtbaar.
+- allowOverlap bepaalt of labels elkaar mogen overlappen.
+    - Wanneer overlappen niet is toegestaan, verschijnen labels pas bij verder inzoomen op de kaart.
+    - Wanneer overlappen wel is toegestaan, kunnen labels gedeeltelijk of volledig overlapt worden door andere labels.
+- Onder offset wordt de afstand van het label tot het vlak bepaald.
+
 
 ### Atribute-based vlakken
-```
+```json
 {
   "name": "Aantal inwoners",
   "rules": [
@@ -266,20 +279,25 @@ Deze labels zijn geavandeerder, met meer optie voor persoonlijke voorkeur. Een g
 }
 ```
 ![title](vlak_attribute_based.png)
-Deze stijl definieert hoe punten op een kaart worden weergegeven op basis van het jaartal van "jaar_van_ingebruikstelling"
+
+Deze stijl bepaalt hoe de  op de kaart worden weergegeven op basis van het jaartal van “aantalInwoners”.
 
 - Klein → gele vlakken (tot 5.000 inwoners)
     - ["<", "aantalInwoners", 5000]
 - Middel → oranje vlakken (5.000 tot 10.000 inwoners).
-    - [">=", "aantalInwoners", 5000],
-      ["<", "aantalInwoners", 10000]
+    - [
+        "&&",
+        [">=", "aantalInwoners", 5000],
+        ["<", "aantalInwoners", 10000]]
 - Groot → rode vlakken (vanaf 10.000 inwoners)
     - [">=", "aantalInwoners", 10000]
 
-Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze styling niet.
+!!! warning
+
+    Let op: deze stijl kan alleen worden toegepast als het datatype van het veld numeriek (number) is. Wanneer het veld een ander datatype heeft, werkt deze vorm van styling niet.
 
 ### Vlakken met offset
-```
+```json
 {
   "name": "",
   "rules": [
@@ -314,11 +332,14 @@ Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze
 ```
 
 ![title](vlak_met_offset.png)
-Deze styling laat je een extra bufferlijn in het polygoon tekenen. In dit voorbeeld zijn twee buffers toegevoegd, aan zowel de binnen- als de buitenkant van de lijn een buffer getekend. Door "perpendicularOffset" aantepassen veranderd de buffer. Positieve waarden (bijv. 2) genereren een parallelle lijn aan de linkerkant en negatieve waarden (bijv. -2) aan de rechterkant. 
+
+Deze styling maakt het mogelijk om een extra bufferlijn binnen een vlak weer te geven. In dit voorbeeld zijn twee buffers toegevoegd: één aan de buitenzijde en één aan de binnenzijde van de oorspronkelijke lijn.
+
+De positie van deze bufferlijnen wordt bepaald met de eigenschap "perpendicularOffset". Door de waarde hiervan aan te passen, verandert de afstand en richting van de bufferlijn. Positieve waarden (bijvoorbeeld 2) tekenen een parallelle lijn aan de linkerkant, terwijl negatieve waarden (bijvoorbeeld -2) een parallelle lijn aan de rechterkant genereren.
 
 
 ### Zichtbaar bij bepaald niveau
-```
+```json
 {
   "name": "",
   "rules": [
@@ -343,4 +364,6 @@ Deze styling laat je een extra bufferlijn in het polygoon tekenen. In dit voorbe
 ```
 ![title](vlakken_zichtbaarheid.png)
 
-Als er heel veel vlakken zijn kan het zijn dat je die niet de hele tijd wil laten zien. Maar pas bij een bepaald schaal. Bij deze styling zijn de vlakken bij 1:700.000 niet meer zichtbaar ({ "max": 700000 }).
+Wanneer er veel vlakken op de kaart staan, is het vaak niet wenselijk om deze voortdurend zichtbaar te houden. Het kan overzichtelijker zijn om ze pas weer te geven vanaf een bepaald schaalniveau. In dit voorbeeld zijn de vlakken niet zichtbaar bij een schaal van 1:700.000 of kleiner, door de instelling: "scaleDenominator": { "max": 700000 }
+
+Hierdoor worden de vlakken alleen weergegeven bij verder inzoomen (dus bij een schaal kleiner dan 1:700.000). Op die manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.

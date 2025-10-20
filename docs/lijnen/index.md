@@ -6,10 +6,10 @@ title: "Lijnen"
 
 Lijnen
 ---
-Voor deze handleiding over de styling van de lijnen is gebruik gemaakt van de dataset [maximum snelheden wegvak overdag](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/abbf1e22-55aa-4a11-a855-7ac963e4a82c), [MIRT](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/0dacfa79-c2de-4927-bc97-d36a11c3cf14?language=all) en [waterbeheergrens](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/ec6d6451-7ecd-4c25-b3ee-85845b01b513?language=all). Deze zijn te vinden in [het nationaal georegister van PDOK](https://www.nationaalgeoregister.nl).
+Voor deze handleiding over de styling van de lijnen is gebruik gemaakt van de dataset [Maximum snelheden wegvak overdag](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/abbf1e22-55aa-4a11-a855-7ac963e4a82c), [MIRT](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/0dacfa79-c2de-4927-bc97-d36a11c3cf14?language=all) en [Waterbeheergrens](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/ec6d6451-7ecd-4c25-b3ee-85845b01b513?language=all). Deze zijn te vinden in [het nationaal georegister van PDOK](https://www.nationaalgeoregister.nl).
 Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
 
-Simpele styling 
+Simpele styling
 ---
 
 ### Simpele lijn
@@ -29,15 +29,16 @@ Simpele styling
 ```
 ![title](foto_simpele_lijn.png)
 
-De code hierboven is het resultaat van het genereren van een eenvoudige lijn weergave in MapGallery. Binnen rules zijn de stylingsregels beschreven. In de filter is gekozen voor alle geometrieën van het type "lineString".
+De code hierboven is het resultaat van het genereren van een eenvoudige lijnweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type "lineString".
 
-- Het type symbool is "Line", ofwel een lijn op de kaart.
-- De _kleur #8e0d56 in hex notatie, de code begint met # gevolgd door 6 tekens, bestaande uit drie paren, die respectievelijk de intensiteit van rood, groen en blauw (RGB) weergeven. Maar de basiskleuren worden ook herkend zoals red, green, indigo ect. Naast een hex code kunnen deze manieren ook: RGB, RGBA, HSL, HSLA en de 140 vooraf gedefinieerd HTML kleuren (zoals "yellow", "darkblue" en "tomato")  
-- De width bepaald de dikte van de lijn.
-- De opacity bepaald de transparantie van de lijn.
+  - Het type symbool is "Mark", oftewel een markering op de kaart.
+  - De kleur #8e0d56 is weergegeven in hex-notatie. De code begint met een hekje (#) gevolgd door zes tekens, bestaande uit drie paren die de intensiteit van rood, groen en blauw (RGB) weergeven. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde HTML-kleuren (bijvoorbeeld yellow, darkblue of tomato)
+  - De width bepaalt de dikte van de lijn.
+  - De opacity bepaalt de transparantie van de lijn.
 
 ### Lijnen met labels
-```
+
+```json
 {
   "name": "",
   "rules": [
@@ -67,16 +68,17 @@ De code hierboven is het resultaat van het genereren van een eenvoudige lijn wee
 ```
 ![title](lijnen_labels.png)
 
-Naast het gebruik van lijnen kan er ook informatie weergeven worden met labels. Hier is gekozen voor gebruik van het veld “onderwerp” voor de inhoud van de labels.
+Naast het gebruik van lijnen kan er ook informatie worden weergegeven met labels. In dit voorbeeld wordt het veld “onderwerp” gebruikt als inhoud van de labels.
 
-- De name bepaald hoe het label heet in de legenda, dit kan naar smaak aangepast worden.
-Size en color kunnen net als bij de andere lijnen aangepast worden.
-- Bij “args”, na label: word het veld opgegeven voor de inhoud van de labels, in dit geval ["onderwerp"]
-- Onder offset word de afstand het label tot de lijn bepaald.
-- De labels hebben ook een omlijning of zogeheten gloed, de kleur en grootte hiervan word bepaald met haloColor en haloWidth.
+  - name bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.
+  - size en color kunnen, net als bij de simpele lijn, vrij worden aangepast.
+  - Bij args, na label, wordt het veld opgegeven dat de labeltekst bevat, in dit geval "onderwerp".
+  - Onder offset wordt de afstand van het label tot de lijn ingesteld.
+  - Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met haloColor en haloWidth.
+
 
 ### Styling op categorie
-```
+```json
 {
   "name": "",
   "rules": [
@@ -106,9 +108,11 @@ Size en color kunnen net als bij de andere lijnen aangepast worden.
 ```
 ![title](foto_lijnen_categorie.png)
 
-Het is mogelijk om aparte lijnen te genereren voor verschillende categorieën. Voor de dataset Maximum snelheden wegvak overdag is in dit voorbeeld gekozen voor styling op het veld "omschr". Het gewenste veld kan geselecteerd worden wanneer men “Weergave op categorie” selecteert binnen het de genereer style functie. Qua code verschilt er niet veel met voorgaande voorbeelden, behalve dat deze dan uit opeenvolgende blokken bestaat met een verschillende filterwaarde voor het veld "omschr". Let op, de voorbeeldcode beslaat alleen de eerste 3 types van de categorie.
+Het is mogelijk om aparte lijnen te genereren voor verschillende categorieën. In dit voorbeeld is er gekozen voor een styling op het veld "omschr". Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld "omschr".
 
-!!! Note
+Let op: de onderstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
+
+!!! Info
     Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.
 
 Geavanceerde styling
@@ -116,7 +120,7 @@ Geavanceerde styling
 
 ### Geavanceerde labels
 
-```
+```json
 {
   "name": "",
   "rules": [
@@ -147,9 +151,9 @@ Geavanceerde styling
   ]
 }
 ```
-Deze labels zijn geavandeerder, met meer optie voor persoonlijke voorkeur. Een groot gedeelte komt overeen met de simpele styling van labels. Hieronder worden de verschillende mogelijkheden uitgelegd:
+Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke voorkeur. Een groot deel van de instellingen komt overeen met de eenvoudige labelstyling. Hieronder worden de verschillende opties toegelicht:
 
--  Door een font te kiezen wordt het lettertype van het label aangepast. Dit zijn de mogelijke lettertypes die worden ondersteund:
+-  Door een font te kiezen wordt het lettertype van het label aangepast. De volgende lettertypen worden ondersteund:
     <ul>
     <li style="font-family: Arial;">Arial</li>
     <li style="font-family: Verdana;">Verdana</li>
@@ -161,9 +165,19 @@ Deze labels zijn geavandeerder, met meer optie voor persoonlijke voorkeur. Een g
      <li style="font-family: Georgia;">Georgia</li>
      <li style="font-family: Serif;">Serif</li>
     </ul>
-- De opacity bepaald de transparantie/doorzichtigheid. "1" is normaal en "0" is onzichtbaar.
-- De optie allowOverlap bepaalt of de labels elkaar mogen overlappen. Als overlappen niet is toegestaan, verschijnen alle labels pas bij verder inzoomen op de kaart. Als overlappen wel is toegestaan, kunnen sommige labels onzichtbaar zijn doordat ze elkaar bedekken.
-- Onder offset word de afstand het label tot de lijn bepaald. Door de offset aan te passen naar [0, 0] staat het label op de lijn. Bij [0. 1] staat label er naast. 
+- rotate bepaalt de hoek waarin de tekst wordt weergegeven.
+    - De waarde 0 betekent dat de tekst horizontaal blijft staan.
+    - Een waarde rond 100 resulteert in een verticale plaatsing.
+    - Ook negatieve waarden zijn mogelijk, waarmee de tekst de andere kant op helt.
+- opacity bepaalt de transparantie van het label.
+    - Een waarde van 1 betekent volledig zichtbaar.
+    - Een waarde van 0 maakt het label volledig onzichtbaar.
+- allowOverlap bepaalt of labels elkaar mogen overlappen.
+    - Wanneer overlappen niet is toegestaan, verschijnen labels pas bij verder inzoomen op de kaart.
+    - Wanneer overlappen wel is toegestaan, kunnen labels gedeeltelijk of volledig overlapt worden door andere labels.
+- Onder offset wordt de afstand van het label tot de lijn bepaald.
+    - Bij een instelling van [0, 0] staat het label recht op de lijn.
+    - Bij een instelling van bijvoorbeeld [0, 1] wordt het label naast de lijn geplaatst.
 
 
 |                | offset | Afbeelding |
@@ -173,7 +187,7 @@ Deze labels zijn geavandeerder, met meer optie voor persoonlijke voorkeur. Een g
 
 
 ### Atribute-based lijnen
-```
+```json
 {
   "rules": [
     {
@@ -202,7 +216,7 @@ Deze labels zijn geavandeerder, met meer optie voor persoonlijke voorkeur. Een g
 ```
 ![title](lijn_attributebased.png)
 
-Deze stijl definieert hoe punten op een kaart worden weergegeven op basis van de maximale snelheden van het wegvak overdag van tabel "omschr"
+Deze stijl bepaalt hoe de lijnen op de kaart worden weergegeven op basis van de kolom "omschr". 
 
 - Voor snelheden onder de 90 km/u → een groene lijn. 
     - ["<", "omschr", 90]
@@ -211,10 +225,12 @@ Deze stijl definieert hoe punten op een kaart worden weergegeven op basis van de
 - Voor snelheden boven de 100 km/u → een rode lijn. 
     - [">", "omschr", 100]
 
-Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze styling niet.
+!!! warning
+
+    Let op: deze stijl kan alleen worden toegepast als het datatype van het veld numeriek (number) is. Wanneer het veld een ander datatype heeft, werkt deze vorm van styling niet.
 
 ### Zoom-based lijnen
-```
+```json
 {
   "rules": [
     {
@@ -243,14 +259,15 @@ Let op! Dit kan alleen worden gedaan als het datatype number is, anders kan deze
 | Middel | 100 000 – 1 000 000 | ![title](lijn_zoom_middel.png)  |
 | Groot  | Tot 100 000 |  ![title](lijn_zoom_groot.png) |
 
-Met deze styling wordt de weergave van de lijnen afhankelijk van de schaal aangepast. In dit voorbeeld verandert de grootte van de lijn, en dit kan worden gestuurd met "scaleDenominator" door een min en/of max waarde te geven.
+Met deze styling wordt de weergave van de lijnen afhankelijk gemaakt van de schaal. In dit voorbeeld verandert de grootte van het lijn op basis van het zoomniveau. Dit gedrag wordt geregeld met "scaleDenominator", waarin een minimale en/of maximale waarde kan worden opgegeven.
 
-- "scaleDenominator": { "max": 100000 } betekent dat de stijl zichtbaar is bij een schaal van 1:100.000 of dichterbij (meer ingezoomd).
-- "scaleDenominator": { "min": 50000 } betekent dat de stijl pas zichtbaar wordt bij een schaal van 1:50.000 of dichterbij.
+- "scaleDenominator": { "max": 100000 }: De stijl is zichtbaar bij een schaal van 1:100.000 of dichterbij (meer ingezoomd).
+- "scaleDenominator": { "min": 50000 }: De stijl wordt pas zichtbaar bij een schaal van 1:50.000 of dichterbij (dus alleen wanneer verder is ingezoomd).
 
+Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie.
 
 ### Lijn cap
-```
+```json
 {
   "name": "",
   "rules": [
@@ -271,17 +288,16 @@ Met deze styling wordt de weergave van de lijnen afhankelijk van de schaal aange
 }
 ```
 ![title](lijn_cap.png)
+De manier waarop een lijn eindigt wordt bepaald met de eigenschap "cap". Er zijn drie mogelijke instellingen:
 
-- Butt: De lijn wordt recht afgesloten, met het einde van de lijn gelijk aan de lijn zelf. Dit is de default keuze
+- Butt: De lijn wordt recht afgesloten, met het einde van de lijn gelijk aan de lijn zelf. Dit is de default keuze.
 - Square: De lijn wordt vierkant afgesloten, een verlenging van de lijn zelf. 
 - Round: De lijn wordt afgerond, met een halve cirkel als einde.
-
-
 
 ![title](lijncap_uitleg.png)
 
 ### Stippellijn
-```
+```json
 {
   "rules": [
     {
@@ -295,10 +311,13 @@ Met deze styling wordt de weergave van de lijnen afhankelijk van de schaal aange
 ```
 ![title](stippel_lijn.png)
 
-Door "dasharray" aan te passen wordt de stippellijn aangepast. De oneven getallen in de rij (de eerste, derde, ect.) bepalen de lengte van de lijn en de even getallen (de tweede, vierde, ect.) bepalen de lengte in pixels tussen de lijnen. 
+Met de eigenschap "dasharray" wordt de stijl van een stippellijn bepaald. De waarden in de reeks bestaan uit afwisselend lijnlengtes en tussenruimtes, uitgedrukt in pixels. De oneven getallen (de eerste, derde, enzovoort) geven de lengte van de lijnsegmenten aan, terwijl de even getallen (de tweede, vierde, enzovoort) de afstand tussen de segmenten bepalen.
+
+"dasharray": [3, 2] maakt een patroon van drie pixels lijn gevolgd door twee pixels ruimte, dat zich herhaalt over de hele lijn.
+
 
 ### Lijn met offset
-```
+```json
 {
   "rules": [
     {
@@ -324,32 +343,27 @@ Door "dasharray" aan te passen wordt de stippellijn aangepast. De oneven getalle
 ```
 ![title](lijn_offset.png)
 
-"perpendicularOffset" zorgt ervoor dat er een extra lijn ontstaat die parallel loopt aan de orginele lijn. Het getal wordt gegeven in pixels en bij postitieve waardes (bijv. 5) wordt de extra lijn linkerkant en bij een negatieve waarde (bijv. -5) aan de rechterkant. 
+De eigenschap "perpendicularOffset" zorgt ervoor dat er een extra lijn wordt weergegeven die parallel loopt aan de oorspronkelijke lijn. De waarde wordt opgegeven in pixels. Bij een positieve waarde (bijvoorbeeld 5) verschijnt de extra lijn aan de linkerkant van de originele lijn, terwijl bij een negatieve waarde (bijvoorbeeld -5) de extra lijn aan de rechterkant wordt geplaatst.
+
 
 ### Zichtbaar bij bepaald niveau
-```
+```json
 {
   "name": "",
   "rules": [
     {
-      "name": "PDOK - CBS Bevolkingskernen 2021",
-      "filter": ["==", "$type", "Polygon"],
+      "name": "PDOK - Maximum snelheden wegvak overdag",
+      "filter": ["==", "$type", "LineString"],
       "symbolizers": [
-        {
-          "kind": "Fill",
-          "color": "tomato",
-          "opacity": 1,
-          "outlineColor": "gray",
-          "outlineWidth": 1,
-          "outlineOpacity": 1
-        }
+        { "kind": "Line", "color": "#ae4ffb", "width": 5, "opacity": 1 }
       ],
-"scaleDenominator": { "max": 700000 }
+      "scaleDenominator": { "max": 700000 }
     }
   ]
 }
-
 ```
-![title](punt_zichtbaarheid.png)
+![title](lijn_zichtbaar_vanaf.png)
 
-Als er heel veel punten zijn kan het zijn dat je die niet de helet ijd wil laten zien. Maar pas bij een bepaald schaal. Bij deze styling zijn de punten bij 1:1.000.000 niet meer zichtbaar ({ "max": 1000000 }).
+Wanneer er veel lijnen op de kaart staan, is het vaak niet wenselijk om deze voortdurend zichtbaar te houden. Het kan overzichtelijker zijn om ze pas weer te geven vanaf een bepaald schaalniveau. In dit voorbeeld zijn de lijnen niet zichtbaar bij een schaal van 1:700.000 of kleiner, door de instelling: "scaleDenominator": { "max": 700000 }
+
+Hierdoor worden de lijnen alleen weergegeven bij verder inzoomen (dus bij een schaal kleiner dan 1:700.000). Op die manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.

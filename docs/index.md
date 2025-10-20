@@ -4,53 +4,43 @@ title: "Introductie"
 
 # {{ config.site_name }}
 
-Het MapGallery GeoStyler kookboek bestaat uit verschillende 'recepten' voor de styling van de kaarten. We hopen dat deze handleiding je helpt om het meeste uit MapGallery te halen. Veel succes met het ontdekken van de wereld van geografische informatie!
+Het MapGallery GeoStyler Kookboek bevat diverse ‘recepten’ voor het stylen van kaartlagen binnen MapGallery. Deze handleiding is bedoeld om gebruikers te ondersteunen bij het optimaal benutten van de mogelijkheden binnen het platform. Veel succes met het ontdekken van de wereld van geografische informatie!
 
-Het MapGallery Team
+– Het MapGallery Team
 
 Styling van kaartlagen
 ---
-Bij sommige services, zoals WMS, is de styling van de laag al inbegrepen en ook niet aan te passen.
-Bij het gebruik van services waarbij de features apart worden opgehaald, zoals WFS/GEOJSON/REST/TileJSON, is er nog geen style inbegrepen en deze kan naar wens aangepast worden. 
-Een style word gedefinieerd aan de hand van een styling format. Er zijn veel verschillende formats in gebruik zoals bijvoorbeeld: SLD, QGIS, Mapbox. MapGallery maakt gebruik van het [GeoStyler](https://geostyler.org/) format. Dit format is gecreëerd om goed leesbaar te zijn en om makkelijk over en weer te kunnen converteren naar de andere bestaande formats. 
-Vector features bestaan uit punten, lijnen of polygonen. Deze handleiding zal voor ieder van deze features de stylingsmogelijkheden behandelen, met daarbij voorbeelden van de bijbehorende GeoStyler code.  
+
+Bij bepaalde services, zoals WMS, is de stijl van de kaartlaag vooraf ingesteld en niet aanpasbaar. Bij gebruik van services waarbij de features afzonderlijk worden opgehaald, zoals WFS, GeoJSON, REST of TileJSON is standaard geen stijl aanwezig, waardoor een eigen stijl kan worden toegepast.
+
+De stijl wordt vastgelegd in een zogenaamd styling-formaat. Er bestaan verschillende formaten, zoals SLD, QGIS en Mapbox. MapGallery maakt gebruik van het [GeoStyler](https://geostyler.org/) formaat, dat is ontworpen voor leesbaarheid en eenvoudige conversie naar andere stijlvormen. Vectorfeatures bestaan uit punten, lijnen of vlakken. Deze handleiding behandelt per featuretype de mogelijkheden voor styling, met voorbeelden in GeoStyler-code.
 
 
 Stylen binnen MapGallery
 ---
-Ga naar beheer > kaartlagen en kies een geschikte kaartlaag of voeg er zelf een toe. Als je de kaartlaag selecteerd, zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt, dit is nodig om geavanceerde styling mogelijk te maken. 
-Het stylen zelf gebeurt bij het tabje “Style”. Zorg dat “Style aanpassen” is aangevinkt. 
-Hierdoor verschijnt er een veld voor de code die de style definieert, met daarnaast de legenda met de styling van de features. 
-De knop “genereer style” is het makkelijkst om een begin te maken wanneer je blanco begint. 
-Onder het kopje extra is het ook mogelijk om een bestaande style in SLD of Json formaat te importeren, dan wel je huidige style te exporteren.
+- Ga naar Beheer > Kaartlagen en selecteer een bestaande laag of voeg een nieuwe toe.
+- In het tabblad "Velden", moet de optie "Velden aanpassen" worden ingeschakeld om geavanceerde styling toe te staan.
+- Open het tabblad "Style" en vink "Style aanpassen" aan.
+- Er verschijnt een veld voor het invoeren van de code, met daarnaast een legenda waarin de toegepaste stijl zichtbaar is.
+- Gebruik de knop "Genereer style" om een basisstijl aan te maken.
+- Onder het kopje "Extra" is het mogelijk om een bestaande stijl in SLD- of JSON-formaat te importeren of de huidige stijl te exporteren.
 
 ### Style genereren
 
-Binnen het genereren van een style zijn er enkele opties:
+Bij het genereren van een stijl zijn de volgende keuzes van belang:
 
--   Ten eerste is het belangrijk het juist geometry type van de betreffende kaartlaag te kiezen (punt, lijn, vlak)
--	Bij punten is het mogelijk om te kiezen voor een symbool of afbeelding (via hyperlink).
--	Kies voor “Weergave op categorie” voor het gebruik van meerdere categorieën/symbolen. Kies hierbij het veld dat gebruikt moet worden voor categorisatie.
--	Kies voor “Labels tonen” en het veld wat als label moet dienen voor het gebruik van labels op de kaart. Deze hebben op zichzelf ook weer styling opties. 
+- Selecteer het juiste geometrie-type van de kaartlaag: punt, lijn of vlak.
+- Voor punten kan worden gekozen tussen een symbool of een afbeelding via een hyperlink.
+- Bij keuze voor "Weergave op categorie" kan een veld worden geselecteerd waarop de symbolisatie wordt gebaseerd.
+- Het is mogelijk om labels weer te geven. Hierbij wordt een veld gekozen dat als label dient, ook labels kunnen afzonderlijk gestyled worden.
 
 ### Gebruik van een tekst / code editor
 
-Een style maken kan direct binnen MapGallery, maar het kan handig zijn om te werken met een tekst editor, zoals word of kladblok, zodat je een plek hebt om te experimenteren of om stukken code te bewaren. Een aanrader is het gebruik van een speciale code editor zoals Visual Studio Code, door toepassing van kleur wordt de code beter leesbaar.
+Het is mogelijk om stijlen direct binnen MapGallery op te stellen, maar voor meer overzicht of het bewaren van codefragmenten kan gebruik worden gemaakt van een teksteditor zoals Kladblok of Word. Een betere optie is een gespecialiseerde code-editor, zoals Visual Studio Code. Dankzij kleurcodering wordt de stijlcode beter leesbaar en overzichtelijker.
 
-### Geostyler Demo 
+### Geostyler demo 
 
-Handig gereedschap voor het maken van een style is de demo van GeoStyler. Hier kunnen verschillende styling opties verkend worden voor punten, lijnen en polygonen. Bij de code editor aan de rechterkant kan gelijk de bijbehorende code bekeken worden.
+Handig hulpmiddel voor het maken van een style is de [demo van GeoStyler](https://demo.geostyler.org/). Hier kunnen verschillende styling opties verkend worden voor punten, lijnen en vlakken. In de code-editor aan de rechterkant is direct de bijbehorende code te bekijken en de toegepaste stijl op de kaart te zien. Dit maakt het eenvoudig om te experimenteren en snel te zien welk effect aanpassingen hebben.
 
-### Gallerij
-
-| **Punt**                                         | **Lijn**                                        | **Vlak**                                        |
-|-------------------------------------------------|------------------------------------------------|------------------------------------------------|
-| [Simpele punt](punten/#simpele_punt)<br>![Simpele punt](punten/foto_simpele_punt.png) | [Simpele lijn](lijnen/#simpele_lijn)<br>![Simpele lijn](lijnen/foto_simpele_lijn.png) | [Simpel vlak](vlakken/#simpel_vlak)<br>![Simpel vlak](vlakken/foto_simpel_vlak.png) |
-| [Punten met labels](punten/#punten_met_labels)<br>![Punten met labels](punten/punt_label.png) | [Lijnen met labels](lijnen/#lijnen_met_labels)<br>![Lijnen met labels](lijnen/lijnen_labels.png) | [Vlakken met labels](vlakken/#vlakken_met_labels)<br>![Vlakken met labels](vlakken/foto_vlakken_labels.png) |
-| [Afbeelding als symbool](punten/#afbeelding_symbool)<br>![Afbeelding als symbool](punten/foto_afbeelding_punt.png) | [Styling op categorie](lijnen/#styling_categorie)<br>![Styling op categorie](lijnen/foto_lijnen_categorie.png) | [Styling op categorie](vlakken/#styling_categorie)<br>![Styling op categorie](vlakken/foto_categorie_vlak.png) |
-| [Styling op categorie](punten/#styling_categorie)<br>![Styling op categorie](punten/punt_categorie.png) | [Geavanceerde labels](lijnen/#geavanceerde_labels)<br>![Geavanceerde labels](lijnen/lijn_geavanceerd_label_00.png) | [Geavanceerde labels](vlakken/#geavanceerde_labels)<br>![Geavanceerde labels](vlakken/vlak_geavanceerde_labels.png) |
-| [Geavanceerde labels](punten/#geavanceerde_labels)<br>![Geavanceerde labels](punten/geavanceerde_label.png) | [Attribute-based lijnen](lijnen/#attribute_based)<br>![Attribute-based lijnen](lijnen/lijn_attributebased.png) | [Attribute-based vlakken](vlakken/#attribute_based) <br>![Attribute-based vlakken](vlakken/vlak_attribute_based.png) |
-| [Attribute-based punten](punten/#attribute_based)<br>![Attribute-based punten](punten/punt_attribute_based.png) | [Zoom-based lijnen](lijnen/#zoom_based)<br>![Zoom-based lijnen](lijnen/lijn_zoom_klein.png) | [Vlakken met offset](vlakken/#vlakken_offset)<br>![Vlakken met offset](vlakken/vlak_met_offset.png) |
-| [Zoom-based punten](zoom)<br>![Zoom-based punten](punten/zoom_based_klein.png) | [Lijn cap](lijnen/#lijn_cap)<br>![Lijn cap](lijnen/lijn_cap.png) |                                                |
-|                                                 | [Stippellijn](lijnen/#stippellijn)<br>![Stippellijn](lijnen/stippel_lijn.png) |                                                |
-|                                                 | [Lijn met offset](lijnen/#lijn_offset)<br>![Lijn met offset](lijnen/lijn_offset.png) |                                                |
+### Geostyler Documentatie
+Naast de GeoStyler-demo kan ook de [documentatie](https://geostyler.github.io/geostyler-style/docs/master/index.html) van GeoStyler van pas komen. Daar worden de verschillende mogelijkheden van GeoStyler uitgebreid toegelicht voor meer verdieping. 
