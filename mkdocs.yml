@@ -24,6 +24,7 @@ markdown_extensions:
   - admonition
   - meta
   - pymdownx.keys
+  - pymdownx.details
   - pymdownx.snippets:
       auto_append:
         - includes/abbreviations.md
@@ -44,6 +45,7 @@ nav:
       - punten/index.md
       - lijnen/index.md
       - vlakken/index.md
+      - faq/index.md
 
 plugins:
   - macros:

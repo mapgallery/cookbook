@@ -6,7 +6,7 @@ title: "Punten"
 
 Punten
 ---
-Voor deze handleiding over de styling van punten is gebruik gemaakt van de dataset [Molens](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e) en [Vuurtorens](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/559aec8c-a2e3-472a-9de0-3a4bd365c46d?language=all). Deze zijn te vinden in [het nationaal georegister van PDOK](https://www.nationaalgeoregister.nl).
+Voor deze handleiding over de styling van punten is gebruik gemaakt van de dataset [Molens](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e), [Vuurtorens](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/559aec8c-a2e3-472a-9de0-3a4bd365c46d?language=all) en ROI voorzieningen.
 Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
 
 Simpele styling 
@@ -37,15 +37,15 @@ Simpele styling
 ```
 ![title](foto_simpele_punt.png)
 
-De code hierboven is het resultaat van het genereren van een eenvoudige puntweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type "Point".
+De code hierboven is het resultaat van het genereren van een eenvoudige puntweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `Point`.
 
-- Het type symbool is "Mark", oftewel een markering op de kaart.
+- Het type symbool is `Mark`, oftewel een markering op de kaart.
 - De kleur #12cdf3 is weergegeven in hex-notatie. De code begint met een hekje (#) gevolgd door zes tekens, bestaande uit drie paren die de intensiteit van rood, groen en blauw (RGB) weergeven. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde HTML-kleuren (bijvoorbeeld yellow, darkblue of tomato).
-- De grootte (radius) bedraagt op dit moment 7 pixels.
-- De strokeColor bepaalt de kleur van de omlijning, die in dit geval zwart is. Hiervoor kunnen dezelfde kleurnotaties worden toegepast als bij de vulling van het punt.
-- De strokeWidth bepaalt de dikte van de omlijning.
-- De strokeOpacity bepaalt de transparantie van het punt.
-- Met wellKnownName wordt de vorm van het symbool vastgelegd. In dit geval betreft het een cirkel. Alternatieven zijn bijvoorbeeld vierkant of driehoek, al wordt momenteel alleen de cirkel ondersteund.
+- De grootte (`radius`) bedraagt op dit moment 7 pixels.
+- De `strokeColor` bepaalt de kleur van de omlijning, die in dit geval zwart is. Hiervoor kunnen dezelfde kleurnotaties worden toegepast als bij de vulling van het punt.
+- De `strokeWidth` bepaalt de dikte van de omlijning.
+- De `strokeOpacity` bepaalt de transparantie van het punt.
+- Met `wellKnownName` wordt de vorm van het symbool vastgelegd. In dit geval betreft het een cirkel. Alternatieven zijn bijvoorbeeld vierkant of driehoek, al wordt momenteel alleen de cirkel ondersteund.
 
 ### Afbeelding als symbool
 ```json
@@ -71,11 +71,11 @@ De code hierboven is het resultaat van het genereren van een eenvoudige puntweer
 ![title](foto_afbeelding_punt.png)
   
 Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om punten weer te geven met het symbooltype Icon.
-
-- Bij image wordt de URL van de gewenste afbeelding opgegeven. Dit moet een directe link zijn die eindigt op het bestandsformaat, zoals .jpg, .svg of .png. Een betrouwbare bron voor geschikte afbeeldingen is bijvoorbeeld [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Images).
-- De optie allowOverlap bepaalt of de afbeeldingen elkaar mogen overlappen.
-  - Wanneer overlappen niet is toegestaan, worden symbolen pas zichtbaar bij verder inzoomen op de kaart.
-  - Wanneer overlappen wel is toegestaan, kunnen symbolen gedeeltelijk of volledig bedekt worden door andere symbolen.
+- `kind` is in plaats van `Mark` nu `Icon`.
+- Bij `image` wordt de URL van de gewenste afbeelding opgegeven. Dit moet een directe link zijn die eindigt op het bestandsformaat, zoals .jpg, .svg of .png. Een betrouwbare bron voor geschikte afbeeldingen is bijvoorbeeld [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Images).
+- De optie `allowOverlap` bepaalt of de afbeeldingen elkaar mogen overlappen.
+    - Wanneer overlappen niet is toegestaan, worden symbolen pas zichtbaar bij verder inzoomen op de kaart.
+    - Wanneer overlappen wel is toegestaan, kunnen symbolen gedeeltelijk of volledig bedekt worden door andere symbolen.
 
 ### Punten met labels 
 ```json
@@ -116,15 +116,15 @@ Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om punten weer te ge
 ```
 ![title](punt_label.png)
 
-Naast het gebruik van symbolen kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt het veld “TYPE” gebruikt als inhoud van de labels.
+Naast het gebruik van symbolen kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt `"TYPE"` gebruikt als inhoud van de labels.
 
-- name bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast. In dit voorbeeld bijvoorbeeld naar "Type molen"
-- size en color kunnen, net als bij symbolen, vrij worden aangepast.
-- Bij args, na label, wordt het veld opgegeven dat de labeltekst bevat, in dit geval "TYPE".
-- Onder offset wordt de afstand van het label tot het punt ingesteld.
-- Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met haloColor en haloWidth.
+- `name` bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.
+- `size` en `color` kunnen, net als bij symbolen, vrij worden aangepast.
+- Bij `args` wordt het veld opgegeven dat de labeltekst bevat, in dit geval `"TYPE"`.
+- Onder `offset` wordt de afstand van het label tot het punt ingesteld.
+- Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met `haloColor` en `haloWidth`.
 
-### Syling op categorie 
+### Styling op categorie 
 ```json
 {
   "name": "",
@@ -178,7 +178,7 @@ Naast het gebruik van symbolen kan ook informatie worden weergegeven met labels.
 ```
 ![title](punt_categorie.png)
 
-Het is mogelijk om aparte symbolen te genereren voor verschillende categorieën. In dit voorbeeld, binnen de dataset Molens, is gekozen voor een styling op het veld "HFDFUNCTIE". Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld "HFDFUNCTIE".
+Het is mogelijk om aparte symbolen te genereren voor verschillende categorieën. In dit voorbeeld, binnen de dataset Molens, is gekozen voor een styling op het veld `"HFDFUNCTIE"`. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld `"HFDFUNCTIE"`.
 
 Let op: de onderstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
 
@@ -233,7 +233,7 @@ Geavanceerde styling
 
 Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke voorkeur. Een groot deel van de instellingen komt overeen met de eenvoudige labelstyling. Hieronder worden de verschillende opties toegelicht:
 
--  Door een font te kiezen wordt het lettertype van het label aangepast. De volgende lettertypen worden ondersteund:
+-  Door een `font` te kiezen wordt het lettertype van het label aangepast. De volgende lettertypen worden ondersteund:
     <ul>
     <li style="font-family: Arial;">Arial</li>
     <li style="font-family: Verdana;">Verdana</li>
@@ -246,17 +246,17 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
      <li style="font-family: Serif;">Serif</li>
     </ul>
 
-- rotate bepaalt de hoek waarin de tekst wordt weergegeven.
+- `rotate` bepaalt de hoek waarin de tekst wordt weergegeven.
     - De waarde 0 betekent dat de tekst horizontaal blijft staan.
     - Een waarde rond 100 resulteert in een verticale plaatsing.
     - Ook negatieve waarden zijn mogelijk, waarmee de tekst de andere kant op helt.
-- opacity bepaalt de transparantie van het label.
+- `opacity` bepaalt de transparantie van het label.
     - Een waarde van 1 betekent volledig zichtbaar.
     - Een waarde van 0 maakt het label volledig onzichtbaar.
-- allowOverlap bepaalt of labels elkaar mogen overlappen.
+- `allowOverlap` bepaalt of labels elkaar mogen overlappen.
     - Wanneer overlappen niet is toegestaan, verschijnen labels pas bij verder inzoomen op de kaart.
     - Wanneer overlappen wel is toegestaan, kunnen labels gedeeltelijk of volledig overlapt worden door andere labels.
-- Onder offset wordt de afstand van het label tot het punt bepaald.
+- Onder `offset` wordt de afstand van het label tot het punt bepaald.
 
 ### Atribute-based punten
 ```json
@@ -314,17 +314,14 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
 ```
 ![title](punt_attribute_based.png)
 
-Deze stijl bepaalt hoe punten op de kaart worden weergegeven op basis van het jaartal van “jaar_van_ingebruikstelling”. Hoe ouder de molen, hoe kleiner het punt. 
+Deze stijl bepaalt hoe punten op de kaart worden weergegeven op basis van het jaartal van `“jaar_van_ingebruikstelling”`. Hoe ouder de molen, hoe kleiner het punt. 
 
-- Voor 1960 → kleine lichtblauwe cirkels (radius: 4).
-    - ["<", "jaar_van_ingebruikstelling", 1960]
-- 1960–1990 → middelgrote blauwe cirkels (radius: 6).
-    - [
-        "&&",
-        [">=", "jaar_van_ingebruikstelling", 1960],
-        ["<", "jaar_van_ingebruikstelling", 1990]]
-- Na 1990 → grote donkerblauwe cirkels (radius: 8).
-    - [">=", "jaar_van_ingebruikstelling", 1990]
+- Voor 1960 → kleine lichtblauwe cirkels (`radius: 4`).
+    - `["<", "jaar_van_ingebruikstelling", 1960]`
+- 1960–1990 → middelgrote blauwe cirkels (`radius: 6`).
+    - `["&&",[">=", "jaar_van_ingebruikstelling", 1960],["<", "jaar_van_ingebruikstelling", 1990]]`
+- Na 1990 → grote donkerblauwe cirkels (`radius: 8`).
+    - `[">=", "jaar_van_ingebruikstelling", 1990]`
 
 !!! warning
 
@@ -382,10 +379,10 @@ Deze stijl bepaalt hoe punten op de kaart worden weergegeven op basis van het ja
 | Middel | 100 000 – 1 000 000 | ![Middel](zoom_based_middel.png) |
 | Groot  | Tot 100 000 | ![Groot](zoom_based_groot.png) |
 
-Met deze styling wordt de weergave van punten afhankelijk gemaakt van de schaal. In dit voorbeeld verandert de grootte van het punt op basis van het zoomniveau. Dit gedrag wordt geregeld met "scaleDenominator", waarin een minimale en/of maximale waarde kan worden opgegeven.
+Met deze styling wordt de weergave van punten afhankelijk gemaakt van de schaal. In dit voorbeeld verandert de grootte van het punt op basis van het zoomniveau. Dit gedrag wordt geregeld met de `scaleDenominator`, waarin een minimale en/of maximale waarde kan worden opgegeven.
 
-- "scaleDenominator": { "max": 100000 }: De stijl is zichtbaar bij een schaal van 1:100.000 of dichterbij (meer ingezoomd).
-- "scaleDenominator": { "min": 50000 }: De stijl wordt pas zichtbaar bij een schaal van 1:50.000 of dichterbij (dus alleen wanneer verder is ingezoomd).
+- `"scaleDenominator": { "max": 100000 }`: De stijl is zichtbaar bij een schaal van 1:100.000 of dichterbij (meer ingezoomd).
+- `"scaleDenominator": { "min": 50000 }`: De stijl wordt pas zichtbaar bij een schaal van 1:50.000 of dichterbij (dus alleen wanneer verder is ingezoomd).
 
 Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie.
 
@@ -412,7 +409,7 @@ Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomn
 
 Wanneer er veel punten op de kaart aanwezig zijn, is het vaak wenselijk om deze niet continu zichtbaar te houden. In plaats daarvan kunnen ze pas worden weergegeven vanaf een bepaald schaalniveau.
 
-In dit voorbeeld zijn de punten niet zichtbaar bij een schaal van 1:1.000.000 of kleiner, doordat de volgende instelling is gebruikt: "scaleDenominator": { "max": 1000000 }
+In dit voorbeeld zijn de punten niet zichtbaar bij een schaal van 1:1.000.000 of kleiner, doordat de volgende instelling is gebruikt: `"scaleDenominator": { "max": 1000000 }`.
 Dit betekent dat de punten alleen zichtbaar zijn bij verder inzoomen (dus bij een schaal kleiner dan 1:1.000.000).Op deze manier blijft de kaart overzichtelijk en worden te veel symbolen op grote schaalniveaus voorkomen.
 
 ### Punt met buffer
@@ -426,7 +423,7 @@ Dit betekent dat de punten alleen zichtbaar zijn bij verder inzoomen (dus bij ee
           "kind": "Mark",
           "color": "#cfeefe",
           "radius": 23,
-          "opacity": 0.5,
+          "opacity": 0.7,
           "strokeColor": "#12cdf3",
           "strokeWidth": 0.5,
           "strokeOpacity": 0.8,
@@ -450,10 +447,13 @@ Dit betekent dat de punten alleen zichtbaar zijn bij verder inzoomen (dus bij ee
     }
   ]
 }
+
 ```
 ![title](punt_buffer.png)
 
 Om een buffer rond een punt weer te geven, wordt een extra, grotere cirkel achter het oorspronkelijke punt geplaatst. Deze grotere cirkel fungeert als  buffer en kan bijvoorbeeld half transparant worden gemaakt door de opacity aan te passen. 
+
+
 
 ### Eigen icoon toevoegen
 ```json
@@ -476,12 +476,115 @@ Om een buffer rond een punt weer te geven, wordt een extra, grotere cirkel achte
   ]
 }
 ```
-![title](punten_eigen_icoon.png)
 
-Het is ook mogelijk om een eigen icoon te gebruiken als symbool van een andere site te gebruiken. Naar Wikicoms is het noodzakkelijk om de website eerst toetevoegen anders kan de afbeelding niet gebruikt worden. In dit voorbeeld wordt de [Tokyo Tower](https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/1f5fc.svg) emoji gebruikt van de website [EmojiTerra](https://emojiterra.com)
+<div style="display: flex; justify-content: center; gap: 10px;">
+  <img src="3d_vuurtoren_afbeelding.png" alt="Eigen icoon">
+  <img src="2d_vuurtoren_afbeelding.png" alt="Vuurtoren">
+</div>
+
+
+Het is ook mogelijk om een eigen icoon te gebruiken of een symbool van een andere website te hergebruiken. Om een afbeelding te gebruiken van een externe bron (anders dan Wikimedia Commons), moet de betreffende website eerst worden toegevoegd. Anders kan de afbeelding niet worden geladen.
+
+In dit voorbeeld wordt de [Tokyo Tower](https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/1f5fc.svg) emoji gebruikt van de website [EmojiTerra](https://emojiterra.com)
 
 - Ga naar de services en druk op de knop "toevoegen" op een service toetevoegen:
-    - De URL is https://images.emojiterra.com/
-    - Het protocol is HTTP - Assets web URL
-    - En de naam is zelf te bedenken. 
-    
+    - URL: https://images.emojiterra.com/
+    - Protocol: HTTP - Assets web URL
+- Ga naar de kaartlaag waar de afbeelding gebruikt moet worden:
+    - Bij `image` wordt de URL van de gewenste afbeelding opgegeven. Dit moet een directe link zijn die eindigt op het bestandsformaat, zoals .jpg, .svg of .png. In dit voorbeeld is dit: [Tokyo Tower](https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/1f5fc.svg).
+- - `kind` is in plaats van `Mark` nu `Icon`.
+- De optie `allowOverlap` bepaalt of de afbeeldingen elkaar mogen overlappen:
+    - Wanneer overlappen niet is toegestaan, worden symbolen pas zichtbaar bij verder inzoomen op de kaart.
+    - Wanneer overlappen wel is toegestaan, kunnen symbolen gedeeltelijk of volledig bedekt worden door andere symbolen.
+
+!!! warning 
+
+    Let op: Sommige websites blokkeren het gebruik van hun afbeeldingen buiten hun eigen domein. Daardoor worden de afbeeldingen niet weergegeven, ook niet als de website is toegevoegd aan de services in MapGallery. Dit komt doordat de website het extern laden van bestanden beperkt om ongewenst gebruik te voorkomen.
+
+
+
+### Rotatie op basis van data
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "Voorziening",
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 14,
+          "image": "https://imroi.github.io/kaartsymbolen/iconen/voorziening/{symbool_id}.svg",
+          "rotate": { "args": ["rotatie"], "name": "property" },
+          "sizeUnit": "m",
+          "allowOverlap": true,
+          "defaultImage": "https://imroi.github.io/kaartsymbolen/iconen/voorziening/172.svg"
+        }
+      ]
+    }
+  ]
+}
+```
+![title](rotatie.png)
+
+In MapGallery kunnen waarden uit de dataset worden gebruikt om de stijl aan te passen. In dit voorbeeld wordt het veld `rotatie` gebruikt om de draaiing van een symbool te bepalen.
+
+De regel `"rotate": { "args": ["rotatie"], "name": "property" }` geeft aan dat de rotatiehoek van elk object wordt opgehaald uit het veld `rotatie` in de dataset. MapGallery gebruikt deze waarde om elk icoon individueel te roteren, bijvoorbeeld om pijlen of symbolen in de juiste richting te laten wijzen.
+
+### Afbeelding op basis van data
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "Voorziening",
+      "symbolizers": [
+        {
+          "kind": "Icon",
+          "size": 14,
+          "image": "https://imroi.github.io/kaartsymbolen/iconen/voorziening/{symbool_id}.svg",
+          "rotate": { "args": ["rotatie"], "name": "property" },
+          "sizeUnit": "m",
+          "allowOverlap": true,
+          "defaultImage": "https://imroi.github.io/kaartsymbolen/iconen/voorziening/172.svg"
+        }
+      ]
+    }
+  ]
+}
+```
+![title](voorzieningen_afbeelding_icon_v2.jpg)
+
+In MapGallery kun je ook dynamisch afbeeldingen gebruiken op basis van waarden in de dataset. In dit voorbeeld wordt bij `image` een link opgegeven naar een .svg-bestand, waarin `{symbool_id}` een variabele is.
+
+Tijdens het laden van de kaart wordt `{symbool_id}` automatisch vervangen door de waarde uit het veld `symbool_id` van elk object. Zo krijgt elk punt het juiste icoon. De parameter `defaultImage` wordt gebruikt als er voor een object geen geldige symbool_id-waarde is, zodat er altijd een symbool zichtbaar blijft.
+
+### Kleur op basis van data 
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "filter": ["==", "$type", "Point"],
+      "symbolizers": [
+        {
+          "kind": "Mark",
+          "color": { "name": "property", "args": ["kleurcode"] },
+          "radius": 7,
+          "strokeColor": "black",
+          "strokeWidth": 2,
+          "strokeOpacity": 1,
+          "wellKnownName": "circle"
+        }
+      ]
+    }
+  ]
+}
+```
+![title](data_kleur.png)
+
+In MapGallery kun je ook kleuren dynamisch instellen op basis van waarden in de dataset. Dit maakt het mogelijk om objecten automatisch een kleur te geven die direct uit een veld in de data komt, zonder dat je voor elke categorie een aparte regel hoeft te maken.
+
+In dit voorbeeld wordt het veld `kleurcode` gebruikt om de kleur van elk punt te bepalen. De regel `"color": { "name": "property", "args": ["kleur"] }` geeft aan dat de waarde uit het veld `kleurcode` wordt opgehaald en toegepast als vulkleur van het symbool.
+
+De dataset moet hiervoor geldige kleurwaarden bevatten, bijvoorbeeld in HTML-formaat ("red", "orange", "red") of hexadecimaal ("#ff0000", "#00ffcc"). 

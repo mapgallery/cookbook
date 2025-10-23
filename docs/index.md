@@ -13,7 +13,7 @@ Styling van kaartlagen
 
 Bij bepaalde services, zoals WMS, is de stijl van de kaartlaag vooraf ingesteld en niet aanpasbaar. Bij gebruik van services waarbij de features afzonderlijk worden opgehaald, zoals WFS, GeoJSON, REST of TileJSON is standaard geen stijl aanwezig, waardoor een eigen stijl kan worden toegepast.
 
-De stijl wordt vastgelegd in een zogenaamd styling-formaat. Er bestaan verschillende formaten, zoals SLD, QGIS en Mapbox. MapGallery maakt gebruik van het [GeoStyler](https://geostyler.org/) formaat, dat is ontworpen voor leesbaarheid en eenvoudige conversie naar andere stijlvormen. Vectorfeatures bestaan uit punten, lijnen of vlakken. Deze handleiding behandelt per featuretype de mogelijkheden voor styling, met voorbeelden in GeoStyler-code.
+De stijl wordt vastgelegd in een zogenaamd styling-formaat. Er bestaan verschillende formaten, zoals SLD, QGIS en Mapbox. MapGallery maakt gebruik van het [GeoStyler](https://geostyler.org/) formaat, dat is ontworpen voor leesbaarheid en eenvoudige conversie naar andere stijlvormen. Vectorfeatures bestaan uit punten, lijnen of vlakken. Deze handleiding behandelt per featuretype de stylingsmogelijkheden, met voorbeelden in GeoStyler-code.
 
 
 Stylen binnen MapGallery
@@ -33,6 +33,17 @@ Bij het genereren van een stijl zijn de volgende keuzes van belang:
 - Voor punten kan worden gekozen tussen een symbool of een afbeelding via een hyperlink.
 - Bij keuze voor "Weergave op categorie" kan een veld worden geselecteerd waarop de symbolisatie wordt gebaseerd.
 - Het is mogelijk om labels weer te geven. Hierbij wordt een veld gekozen dat als label dient, ook labels kunnen afzonderlijk gestyled worden.
+
+### GeoStyler structuur
+GeoStyler gebruikt JSON om vast te leggen hoe geografische objecten (punten, lijnen of vlakken) op een kaart worden weergegeven. Hieronder wordt de opbouw van een GeoStyler-stijl uitgelegd.
+
+- `name`: Hiermee begint een GeoStyler-stijl. Dit is een optioneel onderdeel en dient als titel in de legenda.
+- `rules`: Dit is het belangrijkste onderdeel van de stijl. De regels bepalen wanneer en hoe objecten worden gevisualiseerd. Binnen een regel kunnen drie onderdelen voorkomen:
+    - `name`: De naam van de specifieke regel, bijvoorbeeld `"Watermolen"`. Zo blijven de verschillende categorieën herkenbaar in de legenda.
+    - `filter`: Hiermee wordt bepaald op welke objecten in de dataset de regel van toepassing is. Met `["==", "$type", "Point"]` worden bijvoorbeeld alleen de punten gestyled. Filters kunnen ook gebaseerd zijn op attribuutwaarden, zoals `["==", "CATEGORIE", "windmolen"]`. In dat geval geldt de stijl alleen voor objecten waarvan het veld `CATEGORIE` de waarde *windmolen* heeft.
+    - `symbolizers`: Dit is een lijst van stijlelementen die bepaalt hoe het object eruitziet, bijvoorbeeld de kleur, grootte, omlijning of vorm. Afhankelijk van het type symbool (`"Mark"`, `"Line"`, `"Fill"` of `"Text"`) kunnen hier verschillende eigenschappen worden ingesteld.
+
+
 
 ### Gebruik van een tekst / code editor
 
