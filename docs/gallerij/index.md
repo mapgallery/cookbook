@@ -6,10 +6,10 @@ title: "Gallerij"
 
 Gallerij
 ---
-Hieronder staan alle stylingopties voor punten, lijnen en vlakken die in dit GeoStyler kookboek worden toegelicht. Klik op de link om direct naar het bijbehorende voorbeeld en de code te gaan.
+Hieronder staan alle stylingopties voor de punten, lijnen en vlakken die in dit GeoStyler kookboek worden toegelicht. Klik op de link om direct naar het bijbehorende code en uitleg te gaan.
 
 ### Punten
-GeoStyler voorbeelden voor punten
+GeoStyler voorbeelden voor punten:
 
 | | |
 |--|--|
@@ -23,7 +23,7 @@ GeoStyler voorbeelden voor punten
 
 
 ### Lijnen
-GeoStyler voorbeelden voor lijnen
+GeoStyler voorbeelden voor lijnen:
 
 | | |
 |--|--|
@@ -34,7 +34,7 @@ GeoStyler voorbeelden voor lijnen
 | [Lijn met offset](../lijnen/#lijn-met-offset)<br>![Lijn met offset](../lijnen/lijn_offset.png) | [Zichtbaar bij bepaald niveau](../lijnen/#zichtbaar-bij-bepaald-niveau)<br>![Zichtbaar bij bepaald niveau](../lijnen/lijn_zichtbaar_vanaf.png) |
 
 ### Vlakken
-GeoStyler voorbeelden voor vlakken
+GeoStyler voorbeelden voor vlakken:
 
 | | |
 |--|--|
