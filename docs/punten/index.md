@@ -181,7 +181,7 @@ Naast het gebruik van symbolen kan ook informatie worden weergegeven met labels.
 
 Het is mogelijk om aparte symbolen te genereren voor verschillende categorieën. In dit voorbeeld is gekozen voor een styling op het veld `"HFDFUNCTIE"`. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie "Genereer stijl". Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld `"HFDFUNCTIE"`.
 
-Let op: de onderstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
+Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
 
 !!! Info 
 
@@ -408,10 +408,9 @@ Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomn
 ```
 ![title](punt_zichtbaarheid.png)
 
-Wanneer een kaart veel punten bevat, kan dit het overzicht verminderen. Daarom kan het wenselijk zijn om punten pas zichtbaar te maken vanaf een bepaald schaalniveau. Zo blijft de kaart overzichtelijk op grotere schaal (uitgezoomd), terwijl de details pas verschijnen wanneer verder wordt ingezoomd.
+Wanneer er veel punten op de kaart staan, is het niet altijd wenselijk om deze op alle schaalniveaus zichtbaar te houden. Het kan overzichtelijker zijn om ze pas te tonen vanaf een bepaald zoomniveau. In dit voorbeeld worden de punten alleen weergegeven bij een schaal kleiner dan 1:1.000.000. Dat is ingesteld met de eigenschap: `"scaleDenominator": { "max": 1000000 }`.
 
-In dit voorbeeld zijn de punten niet zichtbaar bij een schaal van 1:1.000.000 of kleiner, door de volgende instelling: `"scaleDenominator": { "max": 1000000 }`.
-Dit betekent dat de punten alleen zichtbaar zijn bij verder inzoomen (dus bij een schaal kleiner dan 1:1.000.000).Op deze manier blijft de kaart overzichtelijk en worden te veel symbolen op grote schaalniveaus voorkomen.
+Hierdoor zijn de punten zichtbaar wanneer verder wordt ingezoomd, maar verdwijnen ze automatisch bij het uitzoomen naar 1:1.000.000 of kleiner detailniveau. Op deze manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.
 
 ### Punt met buffer
 ```json

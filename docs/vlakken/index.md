@@ -6,7 +6,7 @@ title: "Vlakken"
 
 Vlakken
 ---
-Voor deze handleiding over de styling van de vlakken is gebruik gemaakt van de dataset [Sluizen](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/ff62a030-bdd2-436a-9cea-8c83ccfa19f9?language=all), [Grenzen Omgevingsdiensten](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/6bda10cf-9648-4d17-af55-72fdf22193f6?language=all), [Luchthaveninformatie](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/7256a0a2-5712-4751-926e-88e9975edf7f?language=all), [Bevolkingskernen 2021](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/9b795b71-e772-4315-a087-a2560343e2fe?language=all) en 3D panden (SPOTinfo). Deze zijn te vinden in [het nationaal georegister van PDOK](https://www.nationaalgeoregister.nl).
+Voor deze handleiding over de styling van de vlakken is gebruik gemaakt van de dataset [Sluizen](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/ff62a030-bdd2-436a-9cea-8c83ccfa19f9?language=all), [Grenzen Omgevingsdiensten](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/6bda10cf-9648-4d17-af55-72fdf22193f6?language=all), [Luchthaveninformatie](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/7256a0a2-5712-4751-926e-88e9975edf7f?language=all), [Bevolkingskernen 2021](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/9b795b71-e772-4315-a087-a2560343e2fe?language=all) en 3D panden. Deze zijn te vinden in [het nationaal georegister van PDOK](https://www.nationaalgeoregister.nl).
 Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
 
 Simpele styling
@@ -39,10 +39,9 @@ Simpele styling
 De code hierboven is het resultaat van het genereren van een eenvoudige vlakweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `Polygon`.
 
 - Het type symbool is `Fill`, oftewel een vlak op de kaart.
-- De kleur #47bea3 is weergegeven in hex-notatie. De code begint met een hekje (#) gevolgd door zes tekens, bestaande uit drie paren die de intensiteit van rood, groen en blauw (RGB) weergeven. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde HTML-kleuren (bijvoorbeeld yellow, darkblue of tomato)
+- De kleur #47bea3 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde HTML-kleuren (bijvoorbeeld yellow, darkblue of tomato).
 - De `outlineColor` bepaalt de kleur van de omlijning, die in dit geval zwart is. Hiervoor kunnen dezelfde kleurnotaties worden toegepast als bij de vulling van het vlak.
 - De `outlineWidth` bepaalt de dikte van de omlijning.
-- De `outlineOpacity` bepaalt de transparantie van het vlak.
 -	De `opacity` bepaald de transparantie van het vlak. 
 
 ### Vlakken met labels 
@@ -86,9 +85,9 @@ De code hierboven is het resultaat van het genereren van een eenvoudige vlakweer
 Naast het gebruik van vlakken kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt het veld `“Name”` gebruikt als inhoud van de labels.
 
 - `name` bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.
-- `size` en `color` kunnen, net als bij symbolen, vrij worden aangepast.
+- `size` en `color` kunnen, net als bij de simpele vlakken, vrij worden aangepast.
 - Bij `args` wordt het veld opgegeven dat de labeltekst bevat, in dit geval `"Name"`.
-- Onder `offset` wordt de afstand van het label tot het vlak ingesteld.
+- Onder `offset` wordt de afstand van het label tot het vlak ingesteld. Dit zijn [x, y] coördinaten. Positieve waarden geven rechts en omlaag aan, terwijl negatieve waarden links en omhoog aangeven.
 - Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met `haloColor` en `haloWidth`.
 
 ### Styling op categorie
@@ -145,7 +144,7 @@ Naast het gebruik van vlakken kan ook informatie worden weergegeven met labels. 
 
 Het is mogelijk om aparte vlakken te genereren voor verschillende categorieën. In dit voorbeeld, binnen deze dataset is gekozen voor een styling op het veld `"referencelevelbebu"`. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld `"referencelevelbebu"`.
 
-Let op: de onderstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
+Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
 
 !!! Info 
 
@@ -221,7 +220,7 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
 - `allowOverlap` bepaalt of labels elkaar mogen overlappen.
     - Wanneer overlappen niet is toegestaan, verschijnen labels pas bij verder inzoomen op de kaart.
     - Wanneer overlappen wel is toegestaan, kunnen labels gedeeltelijk of volledig overlapt worden door andere labels.
-- Onder `offset` wordt de afstand van het label tot het vlak bepaald.
+- Onder `offset` wordt de afstand van het label tot het vlak bepaald. Dit zijn [x, y] coördinaten. Positieve waarden geven rechts en omlaag aan, terwijl negatieve waarden links en omhoog aangeven.
 
 
 ### Atribute-based vlakken
@@ -361,9 +360,9 @@ De positie van deze bufferlijnen wordt bepaald met de eigenschap `perpendicularO
 ```
 ![title](vlakken_zichtbaarheid.png)
 
-Wanneer er veel vlakken op de kaart staan, is het vaak niet wenselijk om deze voortdurend zichtbaar te houden. Het kan overzichtelijker zijn om ze pas weer te geven vanaf een bepaald schaalniveau. In dit voorbeeld zijn de vlakken niet zichtbaar bij een schaal van 1:700.000 of kleiner, door de instelling: `"scaleDenominator": { "max": 700000 }`.
+Wanneer een kaart veel vlakken bevat, kan dit het overzicht verminderen. Daarom kan het wenselijk zijn om vlakken pas zichtbaar te maken vanaf een bepaald schaalniveau. Zo blijft de kaart overzichtelijk op grotere schaal (uitgezoomd), terwijl de details pas verschijnen wanneer verder wordt ingezoomd.
 
-Hierdoor worden de vlakken alleen weergegeven bij verder inzoomen (dus bij een schaal kleiner dan 1:700.000). Op die manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.
+In dit voorbeeld zijn de vlakken niet zichtbaar bij een schaal van 1:700.000 of kleiner, door de volgende instelling: `"scaleDenominator": { "max": 700000 }`. Dit betekent dat de vlakken alleen zichtbaar zijn bij verder inzoomen (dus bij een schaal kleiner dan 1:700.000).Op deze manier blijft de kaart overzichtelijk en worden te veel vlakken op grote schaalniveaus voorkomen.
 
 ### 3D vlakken
 ```json

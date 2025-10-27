@@ -32,7 +32,7 @@ Simpele styling
 De code hierboven is het resultaat van het genereren van een eenvoudige lijnweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `lineString`.
 
   - Het type symbool is `Mark`, oftewel een markering op de kaart.
-  - De kleur #8e0d56 is weergegeven in hex-notatie. De code begint met een hekje (#) gevolgd door zes tekens, bestaande uit drie paren die de intensiteit van rood, groen en blauw (RGB) weergeven. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde HTML-kleuren (bijvoorbeeld yellow, darkblue of tomato)
+  - De kleur #8e0d56 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde HTML-kleuren (bijvoorbeeld yellow, darkblue of tomato).
   - De `width` bepaalt de dikte van de lijn.
   - De `opacity` bepaalt de transparantie van de lijn.
 
@@ -73,7 +73,7 @@ Naast het gebruik van lijnen kan er ook informatie worden weergegeven met labels
   - `name` bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.
   - `size` en `color` kunnen, net als bij de simpele lijn, vrij worden aangepast.
   - Bij `args` wordt het veld opgegeven dat de labeltekst bevat, in dit geval `"onderwerp"`.
-  - Onder `offset` wordt de afstand van het label tot de lijn ingesteld.
+  - Onder `offset` wordt de afstand van het label tot de lijn ingesteld. Dit zijn [x, y] coördinaten. Positieve waarden geven rechts en omlaag aan, terwijl negatieve waarden links en omhoog aangeven.
   - Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met `haloColor` en `haloWidth`.
 
 
@@ -110,10 +110,10 @@ Naast het gebruik van lijnen kan er ook informatie worden weergegeven met labels
 
 Het is mogelijk om aparte lijnen te genereren voor verschillende categorieën. In dit voorbeeld is er gekozen voor een styling op het veld `"omschr"`. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld `"omschr"`.
 
-Let op: de onderstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
+Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
 
 !!! Info
-    Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.!
+    Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.
 
 Geavanceerde styling
 ---
@@ -175,7 +175,7 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
 - `allowOverlap` bepaalt of labels elkaar mogen overlappen.
     - Wanneer overlappen niet is toegestaan, verschijnen labels pas bij verder inzoomen op de kaart.
     - Wanneer overlappen wel is toegestaan, kunnen labels gedeeltelijk of volledig overlapt worden door andere labels.
-- Onder `offset` wordt de afstand van het label tot de lijn bepaald.
+- Onder `offset` wordt de afstand van het label tot de lijn bepaald. Dit zijn [x, y] coördinaten. Positieve waarden geven rechts en omlaag aan, terwijl negatieve waarden links en omhoog aangeven.
     - Bij een instelling van [0, 0] staat het label recht op de lijn.
     - Bij een instelling van bijvoorbeeld [0, 1] wordt het label naast de lijn geplaatst.
 
@@ -261,8 +261,8 @@ Deze stijl bepaalt hoe de lijnen op de kaart worden weergegeven op basis van de 
 
 Met deze styling wordt de weergave van de lijnen afhankelijk gemaakt van de schaal. In dit voorbeeld verandert de grootte van het lijn op basis van het zoomniveau. Dit gedrag wordt geregeld met de `scaleDenominator`, waarin een minimale en/of maximale waarde kan worden opgegeven.
 
-- `"scaleDenominator": { "max": 100000 }`: De stijl is zichtbaar bij een schaal van 1:100.000 of dichterbij (meer ingezoomd).
-- `"scaleDenominator": { "min": 50000 }`: De stijl wordt pas zichtbaar bij een schaal van 1:50.000 of dichterbij (dus alleen wanneer verder is ingezoomd).
+- `"scaleDenominator": { "max": 100000 }`: De stijl is zichtbaar tot een schaal van 1:100.000, dus wanneer je dichterbij bent (meer ingezoomd).
+- `"scaleDenominator": { "min": 50000 }`: De stijl wordt zichtbaar vanaf een schaal van 1:50.000, dus wanneer je verder uitzoomt.
 
 Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie.
 
@@ -291,8 +291,8 @@ Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomn
 De manier waarop een lijn eindigt wordt bepaald met de eigenschap `cap`. Er zijn drie mogelijke instellingen:
 
 - `Butt`: De lijn wordt recht afgesloten, met het einde van de lijn gelijk aan de lijn zelf. Dit is de default keuze.
-- `Square`: De lijn wordt vierkant afgesloten, een verlenging van de lijn zelf. 
 - `Round`: De lijn wordt afgerond, met een halve cirkel als einde.
+- `Square`: De lijn wordt vierkant afgesloten, een verlenging van de lijn zelf. 
 
 ![title](lijncap_uitleg.png)
 
@@ -311,7 +311,7 @@ De manier waarop een lijn eindigt wordt bepaald met de eigenschap `cap`. Er zijn
 ```
 ![title](stippel_lijn.png)
 
-Met de eigenschap `dasharray` wordt de stijl van een stippellijn bepaald. De waarden in de reeks bestaan uit afwisselend lijnlengtes en tussenruimtes, uitgedrukt in pixels. De oneven getallen (de eerste, derde, enzovoort) geven de lengte van de lijnsegmenten aan, terwijl de even getallen (de tweede, vierde, enzovoort) de afstand tussen de segmenten bepalen.
+Met de eigenschap `dasharray` wordt de stijl van een stippellijn bepaald. De waarden in de reeks bestaan uit afwisselend lijnlengtes en tussenruimtes. De oneven getallen (de eerste, derde, enzovoort) geven de lengte van de lijnsegmenten aan, terwijl de even getallen (de tweede, vierde, enzovoort) de afstand tussen de segmenten bepalen.
 
 `"dasharray": [3, 2]` maakt een patroon van drie pixels lijn gevolgd door twee pixels ruimte, dat zich herhaalt over de hele lijn.
 
@@ -364,6 +364,6 @@ De eigenschap `perpendicularOffset` zorgt ervoor dat er een extra lijn wordt wee
 ```
 ![title](lijn_zichtbaar_vanaf.png)
 
-Wanneer er veel lijnen op de kaart staan, is het vaak niet wenselijk om deze voortdurend zichtbaar te houden. Het kan overzichtelijker zijn om ze pas weer te geven vanaf een bepaald schaalniveau. In dit voorbeeld zijn de lijnen niet zichtbaar bij een schaal van 1:700.000 of kleiner, door de instelling: `"scaleDenominator": { "max": 700000 }`.
+Wanneer er veel lijnen op de kaart staan, is het niet altijd wenselijk om deze op alle schaalniveaus zichtbaar te houden. Het kan overzichtelijker zijn om ze pas te tonen vanaf een bepaald zoomniveau. In dit voorbeeld worden de lijnen alleen weergegeven bij een schaal kleiner dan 1:700.000. Dat is ingesteld met de eigenschap: `"scaleDenominator": { "max": 700000 }`.
 
-Hierdoor worden de lijnen alleen weergegeven bij verder inzoomen (dus bij een schaal kleiner dan 1:700.000). Op die manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.
+Hierdoor zijn de lijnen zichtbaar wanneer verder wordt ingezoomd, maar verdwijnen ze automatisch bij het uitzoomen naar 1:700.000 of kleiner detailniveau. Op deze manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.
