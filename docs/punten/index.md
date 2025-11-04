@@ -40,14 +40,14 @@ Simpele styling
 De code hierboven is het resultaat van het genereren van een eenvoudige puntweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `Point`.
 
 - Het type symbool is `Mark`, oftewel een markering op de kaart (een punt).
-- De kleur #12cdf3 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde HTML-kleuren (bijvoorbeeld yellow, darkblue of tomato).
+- De kleur #12cdf3 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde [HTML-kleuren](https://www.w3schools.com/colors/colors_names.asp) (bijvoorbeeld yellow, darkblue of tomato).
 - De grootte (`radius`) bedraagt op dit moment 7 pixels.
 - De `strokeColor` bepaalt de kleur van de omlijning, die in dit geval zwart is. Hiervoor kunnen dezelfde kleurnotaties worden toegepast als bij de vulling van het punt.
 - De `strokeWidth` bepaalt de dikte van de omlijning.
 - De `strokeOpacity` bepaalt de transparantie van de omlijning.
 - Met `wellKnownName` wordt de vorm van het symbool vastgelegd. In dit geval betreft het een cirkel.
 
-### Afbeelding als symbool
+### Punt als afbeelding
 ```json
 {
   "name": "",
@@ -136,8 +136,8 @@ Naast het gebruik van symbolen kan ook informatie worden weergegeven met labels.
       "symbolizers": [
         {
           "kind": "Mark",
-          "color": "#a21248",
-          "radius": 7,
+          "color": "#e07a5f",
+          "radius": 9,
           "strokeColor": "black",
           "strokeWidth": 2,
           "strokeOpacity": 1,
@@ -151,8 +151,8 @@ Naast het gebruik van symbolen kan ook informatie worden weergegeven met labels.
       "symbolizers": [
         {
           "kind": "Mark",
-          "color": "#3ec918",
-          "radius": 7,
+          "color": "#f2cc8f",
+          "radius": 9,
           "strokeColor": "black",
           "strokeWidth": 2,
           "strokeOpacity": 1,
@@ -166,18 +166,20 @@ Naast het gebruik van symbolen kan ook informatie worden weergegeven met labels.
       "symbolizers": [
         {
           "kind": "Mark",
-          "color": "#511fbb",
-          "radius": 7,
+          "color": "#81b29a",
+          "radius": 9,
           "strokeColor": "black",
           "strokeWidth": 2,
           "strokeOpacity": 1,
           "wellKnownName": "circle"
+        }
       ]
     }
   ]
 }
 ```
-![title](punt_categorie.png)
+![title](v2_punt_categorie.png)
+
 
 Het is mogelijk om aparte symbolen te genereren voor verschillende categorieën. In dit voorbeeld is gekozen voor een styling op het veld `"HFDFUNCTIE"`. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie "Genereer stijl". Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld `"HFDFUNCTIE"`.
 
@@ -315,7 +317,7 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
 ```
 ![title](punt_attribute_based.png)
 
-Deze stijl bepaalt hoe punten op de kaart worden weergegeven op basis van het jaartal van het veld: `“jaar_van_ingebruikstelling”`. Hoe ouder de molen, hoe kleiner het punt. 
+Deze stijl bepaalt hoe punten op de kaart worden weergegeven op basis van het jaartal van het veld: `“jaar_van_ingebruikstelling”`. Hoe hoger het jaartal van de ingebruikstelling van de vuurtoren, hoe groter het punt. 
 
 - Voor 1960 → kleine lichtblauwe cirkels (`radius: 4`).
     - `["<", "jaar_van_ingebruikstelling", 1960]`
@@ -385,7 +387,7 @@ Met deze styling wordt de weergave van punten afhankelijk gemaakt van de schaal.
 - `"scaleDenominator": { "max": 100000 }`: De stijl is zichtbaar tot een schaal van 1:100.000, dus wanneer je dichterbij bent (meer ingezoomd).
 - `"scaleDenominator": { "min": 50000 }`: De stijl wordt zichtbaar vanaf een schaal van 1:50.000, dus wanneer je verder uitzoomt.
 
-Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie.
+Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie. Dit voorbeeld kan ook goed worden gecombineerd met andere voorbeelden uit dit kookboek: bij een hoge schaal kan een icoon als marker dienen, terwijl dit bij uitzoomen verandert in een eenvoudig punt.
 
 ### Zichtbaar bij bepaald niveau
 ```json
@@ -530,6 +532,11 @@ In MapGallery kunnen waarden uit de dataset worden gebruikt om de stijl aan te p
 
 De regel `"rotate": { "args": ["rotatie"], "name": "property" }` geeft aan dat de rotatiehoek van elk object wordt opgehaald uit het veld `rotatie` in de dataset. MapGallery gebruikt deze waarde om elk icoon individueel te roteren, bijvoorbeeld om pijlen of symbolen in de juiste richting te laten wijzen.
 
+!!! warning
+
+    Let op: deze stijl kan alleen worden toegepast als het datatype van het veld numeriek (number) is. Wanneer het veld een ander datatype heeft, werkt deze vorm van styling niet.
+
+
 ### Afbeelding op basis van data
 ```json
 {
@@ -556,7 +563,13 @@ De regel `"rotate": { "args": ["rotatie"], "name": "property" }` geeft aan dat d
 
 In MapGallery kun je ook dynamisch afbeeldingen gebruiken op basis van waarden in de dataset. In dit voorbeeld wordt bij `image` een link opgegeven naar een svg-bestand, waarin `{symbool_id}` een variabele is.
 
-Tijdens het laden van de kaart wordt `{symbool_id}` automatisch vervangen door de waarde uit het veld `symbool_id` van elk object. Zo krijgt elk punt het juiste icoon. De parameter `defaultImage` wordt gebruikt als er voor een object geen geldige symbool_id-waarde is, zodat er altijd een symbool zichtbaar blijft.
+Tijdens het laden van de kaart wordt `{symbool_id}` automatisch vervangen door de waarde uit het veld `symbool_id` van elk object. Zo krijgt elk punt het juiste icoon. De parameter `defaultImage` wordt gebruikt als er voor een object geen geldige symbool_id-waarde is, zodat er altijd een symbool zichtbaar blijft. 
+
+
+!!! warning
+
+    Let op: deze stijl kan alleen worden toegepast als er een symbool 
+
 
 ### Kleur op basis van data 
 ```json
@@ -586,4 +599,35 @@ In MapGallery kun je ook kleuren dynamisch instellen op basis van waarden in de 
 
 In dit voorbeeld wordt het veld `kleurcode` gebruikt om de kleur van elk punt te bepalen. De regel `"color": { "name": "property", "args": ["kleurcode"] }` geeft aan dat de waarde uit het veld `kleurcode` wordt opgehaald en toegepast als vulkleur van het symbool.
 
-De dataset moet hiervoor geldige kleurwaarden bevatten, bijvoorbeeld in HTML-formaat ("red", "orange", "red") of hexadecimaal ("#ff0000", "#00ffcc"). 
+De dataset moet hiervoor geldige kleurwaarden bevatten, bijvoorbeeld in [HTML-formaat](https://www.w3schools.com/colors/colors_names.asp) ("red", "orange", "red") of hex-notitie ("#ff0000", "#00ffcc"). 
+
+
+### Transparant punt
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "Molens",
+      "filter": ["==", "$type", "Point"],
+      "symbolizers": [
+        {
+          "kind": "Mark",
+          "color": "olive",
+          "radius": 6,
+          "opacity": 0.7,
+          "strokeColor": "black",
+          "strokeWidth": 1,
+          "strokeOpacity": 0.8,
+          "wellKnownName": "circle"
+        }
+      ]
+    }
+  ]
+}
+```
+![title](transparant_punt.png)
+
+Door de waarde van de eigenschap `opacity` aan te passen, kun je de doorzichtigheid van een punt bepalen. Bij een waarde van 1 is het punt volledig ondoorzichtig, terwijl een waarde van 0 het punt volledig transparant maakt. Met een waarde van 0.5 is het punt half doorzichtig, zodat onderliggende objecten gedeeltelijk zichtbaar blijven.
+
+Door de eigenschap `strokeOpacity` aan te passen, kun je op dezelfde manier de doorzichtigheid van de omlijning van het punt regelen. Deze instelling heeft dus invloed op de rand, niet op de vulling van het punt.

@@ -32,7 +32,7 @@ Simpele styling
 De code hierboven is het resultaat van het genereren van een eenvoudige lijnweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `lineString`.
 
   - Het type symbool is `Mark`, oftewel een markering op de kaart.
-  - De kleur #8e0d56 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde HTML-kleuren (bijvoorbeeld yellow, darkblue of tomato).
+  - De kleur #8e0d56 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde [HTML-kleuren](https://www.w3schools.com/colors/colors_names.asp) (bijvoorbeeld yellow, darkblue of tomato).
   - De `width` bepaalt de dikte van de lijn.
   - De `opacity` bepaalt de transparantie van de lijn.
 
@@ -165,10 +165,6 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
      <li style="font-family: Georgia;">Georgia</li>
      <li style="font-family: Serif;">Serif</li>
     </ul>
-- `rotate` bepaalt de hoek waarin de tekst wordt weergegeven.
-    - De waarde 0 betekent dat de tekst horizontaal blijft staan.
-    - Een waarde rond 100 resulteert in een verticale plaatsing.
-    - Ook negatieve waarden zijn mogelijk, waarmee de tekst de andere kant op helt.
 - `opacity` bepaalt de transparantie van het label.
     - Een waarde van 1 betekent volledig zichtbaar.
     - Een waarde van 0 maakt het label volledig onzichtbaar.
@@ -264,7 +260,7 @@ Met deze styling wordt de weergave van de lijnen afhankelijk gemaakt van de scha
 - `"scaleDenominator": { "max": 100000 }`: De stijl is zichtbaar tot een schaal van 1:100.000, dus wanneer je dichterbij bent (meer ingezoomd).
 - `"scaleDenominator": { "min": 50000 }`: De stijl wordt zichtbaar vanaf een schaal van 1:50.000, dus wanneer je verder uitzoomt.
 
-Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie.
+Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie. Dit voorbeeld kan goed worden gecombineerd met andere voorbeelden uit dit kookboek: bij een hoge schaal kan een stippellijn worden weergegeven, terwijl deze bij uitzoomen wordt vereenvoudigd tot een eenvoudige lijn.
 
 ### Lijn cap
 ```json
@@ -367,3 +363,25 @@ De eigenschap `perpendicularOffset` zorgt ervoor dat er een extra lijn wordt wee
 Wanneer er veel lijnen op de kaart staan, is het niet altijd wenselijk om deze op alle schaalniveaus zichtbaar te houden. Het kan overzichtelijker zijn om ze pas te tonen vanaf een bepaald zoomniveau. In dit voorbeeld worden de lijnen alleen weergegeven bij een schaal kleiner dan 1:700.000. Dat is ingesteld met de eigenschap: `"scaleDenominator": { "max": 700000 }`.
 
 Hierdoor zijn de lijnen zichtbaar wanneer verder wordt ingezoomd, maar verdwijnen ze automatisch bij het uitzoomen naar 1:700.000 of kleiner detailniveau. Op deze manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.
+
+### Lijn met omlijning
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "Mirt",
+      "filter": ["==", "$type", "LineString"],
+      "symbolizers": [
+        { "kind": "Line", "color": "#800080", "width": 6, "opacity": 1 },
+        { "kind": "Line", "color": "#9190f8", "width": 3, "opacity": 1 }
+      ]
+    }
+  ]
+}
+```
+![title](lijn_omlijning.png)
+
+Om een lijn met een omlijning te maken, worden twee lijnlagen boven elkaar gebruikt met verschillende diktes en kleuren, zodat de omlijning duidelijk zichtbaar is. Het bovenstaande voorbeeld laat zien hoe dit kan worden toegepast:
+- Eerste lijn: tekent de onderliggende lijn iets breder (`width`: 6) en vormt zo de omlijning.
+- Tweede lijn: tekent de dunnere lijn erbovenop (`width`: 3), die de hoofdvorm van de lijn bepaalt.

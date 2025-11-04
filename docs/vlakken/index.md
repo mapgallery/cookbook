@@ -39,56 +39,10 @@ Simpele styling
 De code hierboven is het resultaat van het genereren van een eenvoudige vlakweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `Polygon`.
 
 - Het type symbool is `Fill`, oftewel een vlak op de kaart.
-- De kleur #47bea3 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde HTML-kleuren (bijvoorbeeld yellow, darkblue of tomato).
+- De kleur #47bea3 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde [HTML-kleuren](https://www.w3schools.com/colors/colors_names.asp) (bijvoorbeeld yellow, darkblue of tomato).
 - De `outlineColor` bepaalt de kleur van de omlijning, die in dit geval zwart is. Hiervoor kunnen dezelfde kleurnotaties worden toegepast als bij de vulling van het vlak.
 - De `outlineWidth` bepaalt de dikte van de omlijning.
--	De `opacity` bepaald de transparantie van het vlak. 
-
-### Vlakken met labels 
-```json
-{
-  "name": "",
-  "rules": [
-    {
-      "name": "Sluizen PDOK",
-      "filter": ["==", "$type", "Polygon"],
-      "symbolizers": [
-        {
-          "kind": "Fill",
-          "color": "#9015b2",
-          "opacity": 1,
-          "outlineColor": "black",
-          "outlineWidth": 2,
-          "outlineOpacity": 1
-        }
-      ]
-    },
-    {
-      "name": "Name",
-      "symbolizers": [
-        {
-          "kind": "Text",
-          "size": 12,
-          "color": "#111111",
-          "label": { "args": ["name"], "name": "property" },
-          "offset": [0, 2],
-          "haloColor": "#FFFFFF",
-          "haloWidth": 1
-        }
-      ]
-    }
-  ]
-}
-```
-![title](foto_vlakken_labels.png)
-
-Naast het gebruik van vlakken kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt het veld `“Name”` gebruikt als inhoud van de labels.
-
-- `name` bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.
-- `size` en `color` kunnen, net als bij de simpele vlakken, vrij worden aangepast.
-- Bij `args` wordt het veld opgegeven dat de labeltekst bevat, in dit geval `"Name"`.
-- Onder `offset` wordt de afstand van het label tot het vlak ingesteld. Dit zijn [x, y] coördinaten. Positieve waarden geven rechts en omlaag aan, terwijl negatieve waarden links en omhoog aangeven.
-- Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met `haloColor` en `haloWidth`.
+-	De `opacity` bepaald de transparantie van het vlak. Een waarde kleiner dan 1 maakt de vlakken transparanter, zodat onderliggende kaartdetails zichtbaar blijven.
 
 ### Styling op categorie
 ```json
@@ -149,6 +103,54 @@ Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de 
 !!! Info 
 
     Als er geen velden zichtbaar zijn in het dropdownmenu van “Categorie veld”, controleer dan of in het tabblad “Velden” de optie “Aanpassen van velden” is aangevinkt.
+
+### Vlakken met labels 
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "Sluizen PDOK",
+      "filter": ["==", "$type", "Polygon"],
+      "symbolizers": [
+        {
+          "kind": "Fill",
+          "color": "#9015b2",
+          "opacity": 1,
+          "outlineColor": "black",
+          "outlineWidth": 2,
+          "outlineOpacity": 1
+        }
+      ]
+    },
+    {
+      "name": "Name",
+      "symbolizers": [
+        {
+          "kind": "Text",
+          "size": 12,
+          "color": "#111111",
+          "label": { "args": ["name"], "name": "property" },
+          "offset": [0, 2],
+          "haloColor": "#FFFFFF",
+          "haloWidth": 1
+        }
+      ]
+    }
+  ]
+}
+```
+![title](foto_vlakken_labels.png)
+
+Naast het gebruik van vlakken kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt het veld `“Name”` gebruikt als inhoud van de labels.
+
+- `name` bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.
+- `size` en `color` kunnen, net als bij de simpele vlakken, vrij worden aangepast.
+- Bij `args` wordt het veld opgegeven dat de labeltekst bevat, in dit geval `"Name"`.
+- Onder `offset` wordt de afstand van het label tot het vlak ingesteld. Dit zijn [x, y] coördinaten. Positieve waarden geven rechts en omlaag aan, terwijl negatieve waarden links en omhoog aangeven.
+- Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met `haloColor` en `haloWidth`.
+
+
 
 Geavanceerde styling
 ---
@@ -292,7 +294,37 @@ Deze stijl bepaalt hoe de  op de kaart worden weergegeven op basis van `“aanta
 
     Let op: deze stijl kan alleen worden toegepast als het datatype van het veld numeriek (number) is. Wanneer het veld een ander datatype heeft, werkt deze vorm van styling niet.
 
-### Vlakken met offset
+### Zichtbaar bij bepaald niveau
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "PDOK - CBS Bevolkingskernen 2021",
+      "filter": ["==", "$type", "Polygon"],
+      "symbolizers": [
+        {
+          "kind": "Fill",
+          "color": "tomato",
+          "opacity": 1,
+          "outlineColor": "gray",
+          "outlineWidth": 1,
+          "outlineOpacity": 1
+        }
+      ],
+      "scaleDenominator": { "max": 700000 }
+    }
+  ]
+}
+
+```
+![title](vlakken_zichtbaarheid.png)
+
+Wanneer een kaart veel vlakken bevat, kan dit het overzicht verminderen. Daarom kan het wenselijk zijn om vlakken pas zichtbaar te maken vanaf een bepaald schaalniveau. Zo blijft de kaart overzichtelijk op grotere schaal (uitgezoomd), terwijl de details pas verschijnen wanneer verder wordt ingezoomd.
+
+In dit voorbeeld zijn de vlakken niet zichtbaar bij een schaal van 1:700.000 of kleiner, door de volgende instelling: `"scaleDenominator": { "max": 700000 }`. Dit betekent dat de vlakken alleen zichtbaar zijn bij verder inzoomen (dus bij een schaal kleiner dan 1:700.000).Op deze manier blijft de kaart overzichtelijk en worden te veel vlakken op grote schaalniveaus voorkomen.
+
+### Vlakken met omlijning
 ```json
 {
   "name": "",
@@ -334,42 +366,12 @@ Deze styling maakt het mogelijk om een extra bufferlijn binnen een vlak weer te 
 De positie van deze bufferlijnen wordt bepaald met de eigenschap `perpendicularOffset`. Door de waarde hiervan aan te passen, verandert de afstand en richting van de bufferlijn. Positieve waarden (bijvoorbeeld 2) tekenen een parallelle lijn aan de linkerkant, terwijl negatieve waarden (bijvoorbeeld -2) een parallelle lijn aan de rechterkant genereren.
 
 
-### Zichtbaar bij bepaald niveau
-```json
-{
-  "name": "",
-  "rules": [
-    {
-      "name": "PDOK - CBS Bevolkingskernen 2021",
-      "filter": ["==", "$type", "Polygon"],
-      "symbolizers": [
-        {
-          "kind": "Fill",
-          "color": "tomato",
-          "opacity": 1,
-          "outlineColor": "gray",
-          "outlineWidth": 1,
-          "outlineOpacity": 1
-        }
-      ],
-      "scaleDenominator": { "max": 700000 }
-    }
-  ]
-}
-
-```
-![title](vlakken_zichtbaarheid.png)
-
-Wanneer een kaart veel vlakken bevat, kan dit het overzicht verminderen. Daarom kan het wenselijk zijn om vlakken pas zichtbaar te maken vanaf een bepaald schaalniveau. Zo blijft de kaart overzichtelijk op grotere schaal (uitgezoomd), terwijl de details pas verschijnen wanneer verder wordt ingezoomd.
-
-In dit voorbeeld zijn de vlakken niet zichtbaar bij een schaal van 1:700.000 of kleiner, door de volgende instelling: `"scaleDenominator": { "max": 700000 }`. Dit betekent dat de vlakken alleen zichtbaar zijn bij verder inzoomen (dus bij een schaal kleiner dan 1:700.000).Op deze manier blijft de kaart overzichtelijk en worden te veel vlakken op grote schaalniveaus voorkomen.
-
 ### 3D vlakken
 ```json
 {
   "rules": [
     {
-      "name": "3d pand",
+      "name": "Bouwhoogte pand",
       "symbolizers": [
         {
           "kind": "Fill",
