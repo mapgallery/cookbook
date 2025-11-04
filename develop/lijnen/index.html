@@ -578,6 +578,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lijn-met-omlijning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lijn met omlijning
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -791,6 +800,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lijn-met-omlijning" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lijn met omlijning
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -850,7 +868,7 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <p>De code hierboven is het resultaat van het genereren van een eenvoudige lijnweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type <code>lineString</code>.</p>
 <ul>
 <li>Het type symbool is <code>Mark</code>, oftewel een markering op de kaart.</li>
-<li>De kleur #8e0d56 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde <abbr title="Hyper Text Markup Language">HTML</abbr>-kleuren (bijvoorbeeld yellow, darkblue of tomato).</li>
+<li>De kleur #8e0d56 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde <a href="https://www.w3schools.com/colors/colors_names.asp"><abbr title="Hyper Text Markup Language">HTML</abbr>-kleuren</a> (bijvoorbeeld yellow, darkblue of tomato).</li>
 <li>De <code>width</code> bepaalt de dikte van de lijn.</li>
 <li>De <code>opacity</code> bepaalt de transparantie van de lijn.</li>
 </ul>
@@ -972,12 +990,6 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
      <li style="font-family: Georgia;">Georgia</li>
      <li style="font-family: Serif;">Serif</li>
     </ul></li>
-<li><code>rotate</code> bepaalt de hoek waarin de tekst wordt weergegeven.<ul>
-<li>De waarde 0 betekent dat de tekst horizontaal blijft staan.</li>
-<li>Een waarde rond 100 resulteert in een verticale plaatsing.</li>
-<li>Ook negatieve waarden zijn mogelijk, waarmee de tekst de andere kant op helt.</li>
-</ul>
-</li>
 <li><code>opacity</code> bepaalt de transparantie van het label.<ul>
 <li>Een waarde van 1 betekent volledig zichtbaar.</li>
 <li>Een waarde van 0 maakt het label volledig onzichtbaar.</li>
@@ -1114,7 +1126,7 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
 <li><code>"scaleDenominator": { "max": 100000 }</code>: De stijl is zichtbaar tot een schaal van 1:100.000, dus wanneer je dichterbij bent (meer ingezoomd).</li>
 <li><code>"scaleDenominator": { "min": 50000 }</code>: De stijl wordt zichtbaar vanaf een schaal van 1:50.000, dus wanneer je verder uitzoomt.</li>
 </ul>
-<p>Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie.</p>
+<p>Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie. Dit voorbeeld kan goed worden gecombineerd met andere voorbeelden uit dit kookboek: bij een hoge schaal kan een stippellijn worden weergegeven, terwijl deze bij uitzoomen wordt vereenvoudigd tot een eenvoudige lijn.</p>
 <h3 id="lijn-cap">Lijn cap</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
@@ -1202,6 +1214,25 @@ De manier waarop een lijn eindigt wordt bepaald met de eigenschap <code>cap</cod
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijn_zichtbaar_vanaf.png" data-desc-position="bottom"><img alt="title" src="lijn_zichtbaar_vanaf.png"></a><p></p>
 <p>Wanneer er veel lijnen op de kaart staan, is het niet altijd wenselijk om deze op alle schaalniveaus zichtbaar te houden. Het kan overzichtelijker zijn om ze pas te tonen vanaf een bepaald zoomniveau. In dit voorbeeld worden de lijnen alleen weergegeven bij een schaal kleiner dan 1:700.000. Dat is ingesteld met de eigenschap: <code>"scaleDenominator": { "max": 700000 }</code>.</p>
 <p>Hierdoor zijn de lijnen zichtbaar wanneer verder wordt ingezoomd, maar verdwijnen ze automatisch bij het uitzoomen naar 1:700.000 of kleiner detailniveau. Op deze manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.</p>
+<h3 id="lijn-met-omlijning">Lijn met omlijning</h3>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mirt"</span><span class="p">,</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"LineString"</span><span class="p">],</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#800080"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#9190f8"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">}</span>
+</code></pre></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijn_omlijning.png" data-desc-position="bottom"><img alt="title" src="lijn_omlijning.png"></a><p></p>
+<p>Om een lijn met een omlijning te maken, worden twee lijnlagen boven elkaar gebruikt met verschillende diktes en kleuren, zodat de omlijning duidelijk zichtbaar is. Het bovenstaande voorbeeld laat zien hoe dit kan worden toegepast:
+- Eerste lijn: tekent de onderliggende lijn iets breder (<code>width</code>: 6) en vormt zo de omlijning.
+- Tweede lijn: tekent de dunnere lijn erbovenop (<code>width</code>: 3), die de hoofdvorm van de lijn bepaalt.</p>
 
 
 

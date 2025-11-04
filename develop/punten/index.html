@@ -462,9 +462,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#afbeelding-als-symbool" class="md-nav__link">
+  <a href="#punt-als-afbeelding" class="md-nav__link">
     <span class="md-ellipsis">
-      Afbeelding als symbool
+      Punt als afbeelding
     </span>
   </a>
   
@@ -579,6 +579,15 @@
   <a href="#kleur-op-basis-van-data" class="md-nav__link">
     <span class="md-ellipsis">
       Kleur op basis van data
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#transparant-punt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transparant punt
     </span>
   </a>
   
@@ -723,9 +732,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#afbeelding-als-symbool" class="md-nav__link">
+  <a href="#punt-als-afbeelding" class="md-nav__link">
     <span class="md-ellipsis">
-      Afbeelding als symbool
+      Punt als afbeelding
     </span>
   </a>
   
@@ -845,6 +854,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#transparant-punt" class="md-nav__link">
+    <span class="md-ellipsis">
+      Transparant punt
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -912,14 +930,14 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <p>De code hierboven is het resultaat van het genereren van een eenvoudige puntweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type <code>Point</code>.</p>
 <ul>
 <li>Het type symbool is <code>Mark</code>, oftewel een markering op de kaart (een punt).</li>
-<li>De kleur #12cdf3 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde <abbr title="Hyper Text Markup Language">HTML</abbr>-kleuren (bijvoorbeeld yellow, darkblue of tomato).</li>
+<li>De kleur #12cdf3 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde <a href="https://www.w3schools.com/colors/colors_names.asp"><abbr title="Hyper Text Markup Language">HTML</abbr>-kleuren</a> (bijvoorbeeld yellow, darkblue of tomato).</li>
 <li>De grootte (<code>radius</code>) bedraagt op dit moment 7 pixels.</li>
 <li>De <code>strokeColor</code> bepaalt de kleur van de omlijning, die in dit geval zwart is. Hiervoor kunnen dezelfde kleurnotaties worden toegepast als bij de vulling van het punt.</li>
 <li>De <code>strokeWidth</code> bepaalt de dikte van de omlijning.</li>
 <li>De <code>strokeOpacity</code> bepaalt de transparantie van de omlijning.</li>
 <li>Met <code>wellKnownName</code> wordt de vorm van het symbool vastgelegd. In dit geval betreft het een cirkel.</li>
 </ul>
-<h3 id="afbeelding-als-symbool">Afbeelding als symbool</h3>
+<h3 id="punt-als-afbeelding">Punt als afbeelding</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1005,8 +1023,8 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">        </span><span class="p">{</span>
 <a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mark"</span><span class="p">,</span>
-<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#a21248"</span><span class="p">,</span>
-<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">          </span><span class="nt">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#e07a5f"</span><span class="p">,</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="w">          </span><span class="nt">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
 <a id="__codelineno-3-12" name="__codelineno-3-12" href="#__codelineno-3-12"></a><span class="w">          </span><span class="nt">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"black"</span><span class="p">,</span>
 <a id="__codelineno-3-13" name="__codelineno-3-13" href="#__codelineno-3-13"></a><span class="w">          </span><span class="nt">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <a id="__codelineno-3-14" name="__codelineno-3-14" href="#__codelineno-3-14"></a><span class="w">          </span><span class="nt">"strokeOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
@@ -1020,8 +1038,8 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <a id="__codelineno-3-22" name="__codelineno-3-22" href="#__codelineno-3-22"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-3-23" name="__codelineno-3-23" href="#__codelineno-3-23"></a><span class="w">        </span><span class="p">{</span>
 <a id="__codelineno-3-24" name="__codelineno-3-24" href="#__codelineno-3-24"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mark"</span><span class="p">,</span>
-<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#3ec918"</span><span class="p">,</span>
-<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">          </span><span class="nt">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+<a id="__codelineno-3-25" name="__codelineno-3-25" href="#__codelineno-3-25"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#f2cc8f"</span><span class="p">,</span>
+<a id="__codelineno-3-26" name="__codelineno-3-26" href="#__codelineno-3-26"></a><span class="w">          </span><span class="nt">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
 <a id="__codelineno-3-27" name="__codelineno-3-27" href="#__codelineno-3-27"></a><span class="w">          </span><span class="nt">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"black"</span><span class="p">,</span>
 <a id="__codelineno-3-28" name="__codelineno-3-28" href="#__codelineno-3-28"></a><span class="w">          </span><span class="nt">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <a id="__codelineno-3-29" name="__codelineno-3-29" href="#__codelineno-3-29"></a><span class="w">          </span><span class="nt">"strokeOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
@@ -1035,18 +1053,19 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <a id="__codelineno-3-37" name="__codelineno-3-37" href="#__codelineno-3-37"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-3-38" name="__codelineno-3-38" href="#__codelineno-3-38"></a><span class="w">        </span><span class="p">{</span>
 <a id="__codelineno-3-39" name="__codelineno-3-39" href="#__codelineno-3-39"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mark"</span><span class="p">,</span>
-<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#511fbb"</span><span class="p">,</span>
-<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">          </span><span class="nt">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+<a id="__codelineno-3-40" name="__codelineno-3-40" href="#__codelineno-3-40"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#81b29a"</span><span class="p">,</span>
+<a id="__codelineno-3-41" name="__codelineno-3-41" href="#__codelineno-3-41"></a><span class="w">          </span><span class="nt">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">9</span><span class="p">,</span>
 <a id="__codelineno-3-42" name="__codelineno-3-42" href="#__codelineno-3-42"></a><span class="w">          </span><span class="nt">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"black"</span><span class="p">,</span>
 <a id="__codelineno-3-43" name="__codelineno-3-43" href="#__codelineno-3-43"></a><span class="w">          </span><span class="nt">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">,</span>
 <a id="__codelineno-3-44" name="__codelineno-3-44" href="#__codelineno-3-44"></a><span class="w">          </span><span class="nt">"strokeOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
 <a id="__codelineno-3-45" name="__codelineno-3-45" href="#__codelineno-3-45"></a><span class="w">          </span><span class="nt">"wellKnownName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"circle"</span>
-<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">      </span><span class="p">]</span>
-<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="p">}</span>
+<a id="__codelineno-3-46" name="__codelineno-3-46" href="#__codelineno-3-46"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-3-47" name="__codelineno-3-47" href="#__codelineno-3-47"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-3-48" name="__codelineno-3-48" href="#__codelineno-3-48"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-3-49" name="__codelineno-3-49" href="#__codelineno-3-49"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-3-50" name="__codelineno-3-50" href="#__codelineno-3-50"></a><span class="p">}</span>
 </code></pre></div>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="punt_categorie.png" data-desc-position="bottom"><img alt="title" src="punt_categorie.png"></a><p></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="v2_punt_categorie.png" data-desc-position="bottom"><img alt="title" src="v2_punt_categorie.png"></a><p></p>
 <p>Het is mogelijk om aparte symbolen te genereren voor verschillende categorieën. In dit voorbeeld is gekozen voor een styling op het veld <code>"HFDFUNCTIE"</code>. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie "Genereer stijl". Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld <code>"HFDFUNCTIE"</code>.</p>
 <p>Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.</p>
 <div class="admonition info">
@@ -1185,7 +1204,7 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <a id="__codelineno-5-51" name="__codelineno-5-51" href="#__codelineno-5-51"></a><span class="p">}</span>
 </code></pre></div>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="punt_attribute_based.png" data-desc-position="bottom"><img alt="title" src="punt_attribute_based.png"></a><p></p>
-<p>Deze stijl bepaalt hoe punten op de kaart worden weergegeven op basis van het jaartal van het veld: <code>“jaar_van_ingebruikstelling”</code>. Hoe ouder de molen, hoe kleiner het punt. </p>
+<p>Deze stijl bepaalt hoe punten op de kaart worden weergegeven op basis van het jaartal van het veld: <code>“jaar_van_ingebruikstelling”</code>. Hoe hoger het jaartal van de ingebruikstelling van de vuurtoren, hoe groter het punt. </p>
 <ul>
 <li>Voor 1960 → kleine lichtblauwe cirkels (<code>radius: 4</code>).<ul>
 <li><code>["&lt;", "jaar_van_ingebruikstelling", 1960]</code></li>
@@ -1277,7 +1296,7 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <li><code>"scaleDenominator": { "max": 100000 }</code>: De stijl is zichtbaar tot een schaal van 1:100.000, dus wanneer je dichterbij bent (meer ingezoomd).</li>
 <li><code>"scaleDenominator": { "min": 50000 }</code>: De stijl wordt zichtbaar vanaf een schaal van 1:50.000, dus wanneer je verder uitzoomt.</li>
 </ul>
-<p>Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie.</p>
+<p>Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie. Dit voorbeeld kan ook goed worden gecombineerd met andere voorbeelden uit dit kookboek: bij een hoge schaal kan een icoon als marker dienen, terwijl dit bij uitzoomen verandert in een eenvoudig punt.</p>
 <h3 id="zichtbaar-bij-bepaald-niveau">Zichtbaar bij bepaald niveau</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1412,6 +1431,10 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="rotatie.png" data-desc-position="bottom"><img alt="title" src="rotatie.png"></a><p></p>
 <p>In MapGallery kunnen waarden uit de dataset worden gebruikt om de stijl aan te passen. In dit voorbeeld wordt het veld <code>rotatie</code> gebruikt om de draaiing van een symbool te bepalen.</p>
 <p>De regel <code>"rotate": { "args": ["rotatie"], "name": "property" }</code> geeft aan dat de rotatiehoek van elk object wordt opgehaald uit het veld <code>rotatie</code> in de dataset. MapGallery gebruikt deze waarde om elk icoon individueel te roteren, bijvoorbeeld om pijlen of symbolen in de juiste richting te laten wijzen.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Let op: deze stijl kan alleen worden toegepast als het datatype van het veld numeriek (number) is. Wanneer het veld een ander datatype heeft, werkt deze vorm van styling niet.</p>
+</div>
 <h3 id="afbeelding-op-basis-van-data">Afbeelding op basis van data</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">{</span>
 <a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
@@ -1435,7 +1458,11 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 </code></pre></div>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="voorzieningen_afbeelding_icon_v2.jpg" data-desc-position="bottom"><img alt="title" src="voorzieningen_afbeelding_icon_v2.jpg"></a><p></p>
 <p>In MapGallery kun je ook dynamisch afbeeldingen gebruiken op basis van waarden in de dataset. In dit voorbeeld wordt bij <code>image</code> een link opgegeven naar een svg-bestand, waarin <code>{symbool_id}</code> een variabele is.</p>
-<p>Tijdens het laden van de kaart wordt <code>{symbool_id}</code> automatisch vervangen door de waarde uit het veld <code>symbool_id</code> van elk object. Zo krijgt elk punt het juiste icoon. De parameter <code>defaultImage</code> wordt gebruikt als er voor een object geen geldige symbool_id-waarde is, zodat er altijd een symbool zichtbaar blijft.</p>
+<p>Tijdens het laden van de kaart wordt <code>{symbool_id}</code> automatisch vervangen door de waarde uit het veld <code>symbool_id</code> van elk object. Zo krijgt elk punt het juiste icoon. De parameter <code>defaultImage</code> wordt gebruikt als er voor een object geen geldige symbool_id-waarde is, zodat er altijd een symbool zichtbaar blijft. </p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Let op: deze stijl kan alleen worden toegepast als er een symbool </p>
+</div>
 <h3 id="kleur-op-basis-van-data">Kleur op basis van data</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">{</span>
 <a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
@@ -1460,7 +1487,33 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="data_kleur.png" data-desc-position="bottom"><img alt="title" src="data_kleur.png"></a><p></p>
 <p>In MapGallery kun je ook kleuren dynamisch instellen op basis van waarden in de dataset. Dit maakt het mogelijk om objecten automatisch een kleur te geven die direct uit een veld in de data komt, zonder dat je voor elke categorie een aparte regel hoeft te maken.</p>
 <p>In dit voorbeeld wordt het veld <code>kleurcode</code> gebruikt om de kleur van elk punt te bepalen. De regel <code>"color": { "name": "property", "args": ["kleurcode"] }</code> geeft aan dat de waarde uit het veld <code>kleurcode</code> wordt opgehaald en toegepast als vulkleur van het symbool.</p>
-<p>De dataset moet hiervoor geldige kleurwaarden bevatten, bijvoorbeeld in <abbr title="Hyper Text Markup Language">HTML</abbr>-formaat ("red", "orange", "red") of hexadecimaal ("#ff0000", "#00ffcc"). </p>
+<p>De dataset moet hiervoor geldige kleurwaarden bevatten, bijvoorbeeld in <a href="https://www.w3schools.com/colors/colors_names.asp"><abbr title="Hyper Text Markup Language">HTML</abbr>-formaat</a> ("red", "orange", "red") of hex-notitie ("#ff0000", "#00ffcc"). </p>
+<h3 id="transparant-punt">Transparant punt</h3>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="p">{</span>
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Molens"</span><span class="p">,</span>
+<a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">],</span>
+<a id="__codelineno-13-7" name="__codelineno-13-7" href="#__codelineno-13-7"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-13-8" name="__codelineno-13-8" href="#__codelineno-13-8"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-13-9" name="__codelineno-13-9" href="#__codelineno-13-9"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mark"</span><span class="p">,</span>
+<a id="__codelineno-13-10" name="__codelineno-13-10" href="#__codelineno-13-10"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"olive"</span><span class="p">,</span>
+<a id="__codelineno-13-11" name="__codelineno-13-11" href="#__codelineno-13-11"></a><span class="w">          </span><span class="nt">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span>
+<a id="__codelineno-13-12" name="__codelineno-13-12" href="#__codelineno-13-12"></a><span class="w">          </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span>
+<a id="__codelineno-13-13" name="__codelineno-13-13" href="#__codelineno-13-13"></a><span class="w">          </span><span class="nt">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"black"</span><span class="p">,</span>
+<a id="__codelineno-13-14" name="__codelineno-13-14" href="#__codelineno-13-14"></a><span class="w">          </span><span class="nt">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-13-15" name="__codelineno-13-15" href="#__codelineno-13-15"></a><span class="w">          </span><span class="nt">"strokeOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.8</span><span class="p">,</span>
+<a id="__codelineno-13-16" name="__codelineno-13-16" href="#__codelineno-13-16"></a><span class="w">          </span><span class="nt">"wellKnownName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"circle"</span>
+<a id="__codelineno-13-17" name="__codelineno-13-17" href="#__codelineno-13-17"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-13-18" name="__codelineno-13-18" href="#__codelineno-13-18"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-13-19" name="__codelineno-13-19" href="#__codelineno-13-19"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-13-20" name="__codelineno-13-20" href="#__codelineno-13-20"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-13-21" name="__codelineno-13-21" href="#__codelineno-13-21"></a><span class="p">}</span>
+</code></pre></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="transparant_punt.png" data-desc-position="bottom"><img alt="title" src="transparant_punt.png"></a><p></p>
+<p>Door de waarde van de eigenschap <code>opacity</code> aan te passen, kun je de doorzichtigheid van een punt bepalen. Bij een waarde van 1 is het punt volledig ondoorzichtig, terwijl een waarde van 0 het punt volledig transparant maakt. Met een waarde van 0.5 is het punt half doorzichtig, zodat onderliggende objecten gedeeltelijk zichtbaar blijven.</p>
+<p>Door de eigenschap <code>strokeOpacity</code> aan te passen, kun je op dezelfde manier de doorzichtigheid van de omlijning van het punt regelen. Deze instelling heeft dus invloed op de rand, niet op de vulling van het punt.</p>
 
 
 
