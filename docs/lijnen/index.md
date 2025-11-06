@@ -7,7 +7,7 @@ title: "Lijnen"
 Lijnen
 ---
 Voor deze handleiding over de styling van de lijnen is gebruik gemaakt van de dataset [Maximum snelheden wegvak overdag](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/abbf1e22-55aa-4a11-a855-7ac963e4a82c), [MIRT](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/0dacfa79-c2de-4927-bc97-d36a11c3cf14?language=all) en [Waterbeheergrens](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/ec6d6451-7ecd-4c25-b3ee-85845b01b513?language=all).
-Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
+Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de ["Genereer style”](../index.md/#style-genereren) functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
 
 Simpele styling
 ---
@@ -29,12 +29,50 @@ Simpele styling
 ```
 ![title](foto_simpele_lijn.png)
 
-De code hierboven is het resultaat van het genereren van een eenvoudige lijnweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `lineString`.
+Dit voorbeeld is opgesteld met de knop "Genereer style". Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `lineString`.
 
   - Het type symbool is `Mark`, oftewel een markering op de kaart.
   - De kleur #8e0d56 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde [HTML-kleuren](https://www.w3schools.com/colors/colors_names.asp) (bijvoorbeeld yellow, darkblue of tomato).
   - De `width` bepaalt de dikte van de lijn.
   - De `opacity` bepaalt de transparantie van de lijn.
+
+### Styling op categorie
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "30",
+      "filter": ["==", "omschr", 30],
+      "symbolizers": [
+        { "kind": "Line", "color": "#1E90FF", "width": 3, "opacity": 1 }
+      ]
+    },
+    {
+      "name": "40",
+      "filter": ["==", "omschr", 40],
+      "symbolizers": [
+        { "kind": "Line", "color": "#00CED1", "width": 3, "opacity": 1 }
+      ]
+    },
+    {
+      "name": "50",
+      "filter": ["==", "omschr", 50],
+      "symbolizers": [
+        { "kind": "Line", "color": "#32CD32", "width": 3, "opacity": 1 }
+      ]
+    }
+  ]
+}
+```
+![title](foto_lijnen_categorie.png)
+
+Dit voorbeeld is opgesteld met de knop "Genereer style". Het is mogelijk om aparte lijnen te genereren voor verschillende categorieën. In dit voorbeeld is er gekozen voor een styling op het veld `"omschr"`. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld `"omschr"`.
+
+Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
+
+!!! Info
+    Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.
 
 ### Lijnen met labels
 
@@ -68,7 +106,7 @@ De code hierboven is het resultaat van het genereren van een eenvoudige lijnweer
 ```
 ![title](lijnen_labels.png)
 
-Naast het gebruik van lijnen kan er ook informatie worden weergegeven met labels. In dit voorbeeld wordt `“onderwerp”` gebruikt als inhoud van de labels.
+Dit voorbeeld is opgesteld met de knop "Genereer style". Naast het gebruik van lijnen kan er ook informatie worden weergegeven met labels. In dit voorbeeld wordt `“onderwerp”` gebruikt als inhoud van de labels.
 
   - `name` bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.
   - `size` en `color` kunnen, net als bij de simpele lijn, vrij worden aangepast.
@@ -77,43 +115,7 @@ Naast het gebruik van lijnen kan er ook informatie worden weergegeven met labels
   - Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met `haloColor` en `haloWidth`.
 
 
-### Styling op categorie
-```json
-{
-  "name": "",
-  "rules": [
-    {
-      "name": "30",
-      "filter": ["==", "omschr", 30],
-      "symbolizers": [
-        { "kind": "Line", "color": "#1E90FF", "width": 3, "opacity": 1 }
-      ]
-    },
-    {
-      "name": "40",
-      "filter": ["==", "omschr", 40],
-      "symbolizers": [
-        { "kind": "Line", "color": "#00CED1", "width": 3, "opacity": 1 }
-      ]
-    },
-    {
-      "name": "50",
-      "filter": ["==", "omschr", 50],
-      "symbolizers": [
-        { "kind": "Line", "color": "#32CD32", "width": 3, "opacity": 1 }
-      ]
-    }
-  ]
-}
-```
-![title](foto_lijnen_categorie.png)
 
-Het is mogelijk om aparte lijnen te genereren voor verschillende categorieën. In dit voorbeeld is er gekozen voor een styling op het veld `"omschr"`. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld `"omschr"`.
-
-Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
-
-!!! Info
-    Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.
 
 Geavanceerde styling
 ---
@@ -262,7 +264,7 @@ Met deze styling wordt de weergave van de lijnen afhankelijk gemaakt van de scha
 
 Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie. Dit voorbeeld kan goed worden gecombineerd met andere voorbeelden uit dit kookboek: bij een hoge schaal kan een stippellijn worden weergegeven, terwijl deze bij uitzoomen wordt vereenvoudigd tot een eenvoudige lijn.
 
-### Lijn cap
+### Zichtbaar bij bepaald niveau
 ```json
 {
   "name": "",
@@ -271,26 +273,20 @@ Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomn
       "name": "PDOK - Maximum snelheden wegvak overdag",
       "filter": ["==", "$type", "LineString"],
       "symbolizers": [
-        {
-          "cap": "round",
-          "kind": "Line",
-          "color": "blue",
-          "width": 3,
-          "opacity": 1
-        }
-      ]
+        { "kind": "Line", "color": "#ae4ffb", "width": 5, "opacity": 1 }
+      ],
+      "scaleDenominator": { "max": 700000 }
     }
   ]
 }
 ```
-![title](lijn_cap.png)
-De manier waarop een lijn eindigt wordt bepaald met de eigenschap `cap`. Er zijn drie mogelijke instellingen:
+![title](lijn_zichtbaar_vanaf.png)
 
-- `Butt`: De lijn wordt recht afgesloten, met het einde van de lijn gelijk aan de lijn zelf. Dit is de default keuze.
-- `Round`: De lijn wordt afgerond, met een halve cirkel als einde.
-- `Square`: De lijn wordt vierkant afgesloten, een verlenging van de lijn zelf. 
+Wanneer er veel lijnen op de kaart staan, is het niet altijd wenselijk om deze op alle schaalniveaus zichtbaar te houden. Het kan overzichtelijker zijn om ze pas te tonen vanaf een bepaald zoomniveau. In dit voorbeeld worden de lijnen alleen weergegeven bij een schaal kleiner dan 1:700.000. Dat is ingesteld met de eigenschap: `"scaleDenominator": { "max": 700000 }`.
 
-![title](lijncap_uitleg.png)
+Hierdoor zijn de lijnen zichtbaar wanneer verder wordt ingezoomd, maar verdwijnen ze automatisch bij het uitzoomen naar 1:700.000 of kleiner detailniveau. Op deze manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.
+
+
 
 ### Stippellijn
 ```json
@@ -342,27 +338,7 @@ Met de eigenschap `dasharray` wordt de stijl van een stippellijn bepaald. De waa
 De eigenschap `perpendicularOffset` zorgt ervoor dat er een extra lijn wordt weergegeven die parallel loopt aan de oorspronkelijke lijn. De waarde wordt opgegeven in pixels. Bij een positieve waarde (bijvoorbeeld 5) verschijnt de extra lijn aan de linkerkant van de originele lijn, terwijl bij een negatieve waarde (bijvoorbeeld -5) de extra lijn aan de rechterkant wordt geplaatst.
 
 
-### Zichtbaar bij bepaald niveau
-```json
-{
-  "name": "",
-  "rules": [
-    {
-      "name": "PDOK - Maximum snelheden wegvak overdag",
-      "filter": ["==", "$type", "LineString"],
-      "symbolizers": [
-        { "kind": "Line", "color": "#ae4ffb", "width": 5, "opacity": 1 }
-      ],
-      "scaleDenominator": { "max": 700000 }
-    }
-  ]
-}
-```
-![title](lijn_zichtbaar_vanaf.png)
 
-Wanneer er veel lijnen op de kaart staan, is het niet altijd wenselijk om deze op alle schaalniveaus zichtbaar te houden. Het kan overzichtelijker zijn om ze pas te tonen vanaf een bepaald zoomniveau. In dit voorbeeld worden de lijnen alleen weergegeven bij een schaal kleiner dan 1:700.000. Dat is ingesteld met de eigenschap: `"scaleDenominator": { "max": 700000 }`.
-
-Hierdoor zijn de lijnen zichtbaar wanneer verder wordt ingezoomd, maar verdwijnen ze automatisch bij het uitzoomen naar 1:700.000 of kleiner detailniveau. Op deze manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.
 
 ### Lijn met omlijning
 ```json
@@ -385,3 +361,33 @@ Hierdoor zijn de lijnen zichtbaar wanneer verder wordt ingezoomd, maar verdwijne
 Om een lijn met een omlijning te maken, worden twee lijnlagen boven elkaar gebruikt met verschillende diktes en kleuren, zodat de omlijning duidelijk zichtbaar is. Het bovenstaande voorbeeld laat zien hoe dit kan worden toegepast:
 - Eerste lijn: tekent de onderliggende lijn iets breder (`width`: 6) en vormt zo de omlijning.
 - Tweede lijn: tekent de dunnere lijn erbovenop (`width`: 3), die de hoofdvorm van de lijn bepaalt.
+
+### Lijn cap
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "PDOK - Maximum snelheden wegvak overdag",
+      "filter": ["==", "$type", "LineString"],
+      "symbolizers": [
+        {
+          "cap": "round",
+          "kind": "Line",
+          "color": "blue",
+          "width": 3,
+          "opacity": 1
+        }
+      ]
+    }
+  ]
+}
+```
+![title](lijn_cap.png)
+De manier waarop een lijn eindigt wordt bepaald met de eigenschap `cap`. Er zijn drie mogelijke instellingen:
+
+- `Butt`: De lijn wordt recht afgesloten, met het einde van de lijn gelijk aan de lijn zelf. Dit is de default keuze.
+- `Round`: De lijn wordt afgerond, met een halve cirkel als einde.
+- `Square`: De lijn wordt vierkant afgesloten, een verlenging van de lijn zelf. 
+
+![title](lijncap_uitleg.png)

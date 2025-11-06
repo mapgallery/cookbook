@@ -7,7 +7,7 @@ title: "Punten"
 Punten
 ---
 Voor deze handleiding over de styling van punten is gebruik gemaakt van de dataset [Molens](https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/291afe4b-4f4b-497c-8026-fb437c4e9c7e), [Vuurtorens](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/559aec8c-a2e3-472a-9de0-3a4bd365c46d?language=all) en ROI voorzieningen.
-Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
+Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de ["Genereer style”](../index.md/#style-genereren) functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
 
 Simpele styling 
 ---
@@ -37,7 +37,7 @@ Simpele styling
 ```
 ![title](foto_simpele_punt.png)
 
-De code hierboven is het resultaat van het genereren van een eenvoudige puntweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `Point`.
+Dit voorbeeld is opgesteld met de knop "Genereer style". Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `Point`.
 
 - Het type symbool is `Mark`, oftewel een markering op de kaart (een punt).
 - De kleur #12cdf3 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde [HTML-kleuren](https://www.w3schools.com/colors/colors_names.asp) (bijvoorbeeld yellow, darkblue of tomato).
@@ -70,7 +70,7 @@ De code hierboven is het resultaat van het genereren van een eenvoudige puntweer
 ```
 ![title](foto_afbeelding_punt.png)
   
-Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om punten weer te geven met het symbooltype Icon.
+Dit voorbeeld is opgesteld met de knop "Genereer style". Het is naast een simpele punt ook mogelijk een zelfgekozen afbeelding te gebruiken om punten weer te geven met het symbooltype Icon.
 
 - `kind` is in plaats van `Mark`, nu `Icon`.
 - Bij `image` wordt de URL van de gewenste afbeelding opgegeven. Dit moet een directe link zijn die eindigt op het bestandsformaat, zoals .jpg, .svg of .png. Een betrouwbare bron voor geschikte afbeeldingen is bijvoorbeeld [Wikimedia Commons](https://commons.wikimedia.org/wiki/Category:Images).
@@ -78,52 +78,6 @@ Het is ook mogelijk een zelfgekozen afbeelding te gebruiken om punten weer te ge
     - Wanneer overlappen niet is toegestaan (`false`), worden symbolen pas zichtbaar bij verder inzoomen op de kaart.
     - Wanneer overlappen wel is toegestaan (`true`), kunnen symbolen gedeeltelijk of volledig bedekt worden door andere symbolen.
 
-### Punten met labels 
-```json
-{
-  "name": "",
-  "rules": [
-    {
-      "name": "Molens",
-      "filter": ["==", "$type", "Point"],
-      "symbolizers": [
-        {
-          "kind": "Mark",
-          "color": "#12cdf3",
-          "radius": 7,
-          "strokeColor": "black",
-          "strokeWidth": 2,
-          "strokeOpacity": 1,
-          "wellKnownName": "circle"
-        }
-      ]
-    },
-    {
-      "name": "TYPE",
-      "symbolizers": [
-        {
-          "kind": "Text",
-          "size": 12,
-          "color": "#111111",
-          "label": { "args": ["TYPE"], "name": "property" },
-          "offset": [0, 2],
-          "haloColor": "#FFFFFF",
-          "haloWidth": 1
-        }
-      ]
-    }
-  ]
-}
-```
-![title](punt_label.png)
-
-Naast het gebruik van symbolen kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt `"TYPE"` gebruikt als inhoud van de labels.
-
-- `name` bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.
-- `size` en `color` kunnen, net als bij een simpele punt, vrij worden aangepast.
-- Bij `args` wordt het veld opgegeven dat de labeltekst bevat, in dit geval `"TYPE"`.
-- Onder `offset` wordt de afstand van het label tot het punt ingesteld. Dit zijn [x, y] coördinaten. Positieve waarden geven rechts en omlaag aan, terwijl negatieve waarden links en omhoog aangeven.
-- Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met `haloColor` en `haloWidth`.
 
 ### Styling op categorie 
 ```json
@@ -181,13 +135,60 @@ Naast het gebruik van symbolen kan ook informatie worden weergegeven met labels.
 ![title](v2_punt_categorie.png)
 
 
-Het is mogelijk om aparte symbolen te genereren voor verschillende categorieën. In dit voorbeeld is gekozen voor een styling op het veld `"HFDFUNCTIE"`. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie "Genereer stijl". Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld `"HFDFUNCTIE"`.
+Dit voorbeeld is opgesteld met de knop "Genereer style". Het is mogelijk om aparte symbolen te genereren voor verschillende categorieën. In dit voorbeeld is gekozen voor een styling op het veld `"HFDFUNCTIE"`. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie "Genereer stijl". Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld `"HFDFUNCTIE"`.
 
 Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
 
 !!! Info 
 
     Als er geen velden zichtbaar zijn in het dropdownmenu van “Categorie veld”, controleer dan of in het tabblad “Velden” de optie “Aanpassen van velden” is aangevinkt.
+
+### Punten met labels 
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "Molens",
+      "filter": ["==", "$type", "Point"],
+      "symbolizers": [
+        {
+          "kind": "Mark",
+          "color": "#12cdf3",
+          "radius": 7,
+          "strokeColor": "black",
+          "strokeWidth": 2,
+          "strokeOpacity": 1,
+          "wellKnownName": "circle"
+        }
+      ]
+    },
+    {
+      "name": "TYPE",
+      "symbolizers": [
+        {
+          "kind": "Text",
+          "size": 12,
+          "color": "#111111",
+          "label": { "args": ["TYPE"], "name": "property" },
+          "offset": [0, 2],
+          "haloColor": "#FFFFFF",
+          "haloWidth": 1
+        }
+      ]
+    }
+  ]
+}
+```
+![title](punt_label.png)
+
+Dit voorbeeld is opgesteld met de knop "Genereer style". Naast het gebruik van symbolen kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt `"TYPE"` gebruikt als inhoud van de labels.
+
+- `name` bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.
+- `size` en `color` kunnen, net als bij een simpele punt, vrij worden aangepast.
+- Bij `args` wordt het veld opgegeven dat de labeltekst bevat, in dit geval `"TYPE"`.
+- Onder `offset` wordt de afstand van het label tot het punt ingesteld. Dit zijn [x, y] coördinaten. Positieve waarden geven rechts en omlaag aan, terwijl negatieve waarden links en omhoog aangeven.
+- Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met `haloColor` en `haloWidth`.
 
 Geavanceerde styling
 ---
@@ -414,6 +415,36 @@ Wanneer er veel punten op de kaart staan, is het niet altijd wenselijk om deze o
 
 Hierdoor zijn de punten zichtbaar wanneer verder wordt ingezoomd, maar verdwijnen ze automatisch bij het uitzoomen naar 1:1.000.000 of kleiner detailniveau. Op deze manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.
 
+### Transparant punt
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "Molens",
+      "filter": ["==", "$type", "Point"],
+      "symbolizers": [
+        {
+          "kind": "Mark",
+          "color": "olive",
+          "radius": 6,
+          "opacity": 0.7,
+          "strokeColor": "black",
+          "strokeWidth": 1,
+          "strokeOpacity": 0.8,
+          "wellKnownName": "circle"
+        }
+      ]
+    }
+  ]
+}
+```
+![title](transparant_punt.png)
+
+Door de waarde van de eigenschap `opacity` aan te passen, kun je de doorzichtigheid van een punt bepalen. Bij een waarde van 1 is het punt volledig ondoorzichtig, terwijl een waarde van 0 het punt volledig transparant maakt. Met een waarde van 0.5 is het punt half doorzichtig, zodat onderliggende objecten gedeeltelijk zichtbaar blijven.
+
+Door de eigenschap `strokeOpacity` aan te passen, kun je op dezelfde manier de doorzichtigheid van de omlijning van het punt regelen. Deze instelling heeft dus invloed op de rand, niet op de vulling van het punt.
+
 ### Punt met buffer
 ```json
 {
@@ -602,32 +633,3 @@ In dit voorbeeld wordt het veld `kleurcode` gebruikt om de kleur van elk punt te
 De dataset moet hiervoor geldige kleurwaarden bevatten, bijvoorbeeld in [HTML-formaat](https://www.w3schools.com/colors/colors_names.asp) ("red", "orange", "red") of hex-notitie ("#ff0000", "#00ffcc"). 
 
 
-### Transparant punt
-```json
-{
-  "name": "",
-  "rules": [
-    {
-      "name": "Molens",
-      "filter": ["==", "$type", "Point"],
-      "symbolizers": [
-        {
-          "kind": "Mark",
-          "color": "olive",
-          "radius": 6,
-          "opacity": 0.7,
-          "strokeColor": "black",
-          "strokeWidth": 1,
-          "strokeOpacity": 0.8,
-          "wellKnownName": "circle"
-        }
-      ]
-    }
-  ]
-}
-```
-![title](transparant_punt.png)
-
-Door de waarde van de eigenschap `opacity` aan te passen, kun je de doorzichtigheid van een punt bepalen. Bij een waarde van 1 is het punt volledig ondoorzichtig, terwijl een waarde van 0 het punt volledig transparant maakt. Met een waarde van 0.5 is het punt half doorzichtig, zodat onderliggende objecten gedeeltelijk zichtbaar blijven.
-
-Door de eigenschap `strokeOpacity` aan te passen, kun je op dezelfde manier de doorzichtigheid van de omlijning van het punt regelen. Deze instelling heeft dus invloed op de rand, niet op de vulling van het punt.

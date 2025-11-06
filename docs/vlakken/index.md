@@ -7,7 +7,7 @@ title: "Vlakken"
 Vlakken
 ---
 Voor deze handleiding over de styling van de vlakken is gebruik gemaakt van de dataset [Sluizen](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/ff62a030-bdd2-436a-9cea-8c83ccfa19f9?language=all), [Grenzen Omgevingsdiensten](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/6bda10cf-9648-4d17-af55-72fdf22193f6?language=all), [Luchthaveninformatie](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/7256a0a2-5712-4751-926e-88e9975edf7f?language=all), [Bevolkingskernen 2021](https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/9b795b71-e772-4315-a087-a2560343e2fe?language=all) en 3D panden. Deze zijn te vinden in [het nationaal georegister van PDOK](https://www.nationaalgeoregister.nl).
-Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
+Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de ["Genereer style”](../index.md/#style-genereren) functie in MapGallery. Vervolgens worden de [geavanceerde stylingopties](#geavanceerde-styling) besproken.
 
 Simpele styling
 ---
@@ -36,7 +36,7 @@ Simpele styling
 ```
 ![title](foto_simpel_vlak.png)
 
-De code hierboven is het resultaat van het genereren van een eenvoudige vlakweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `Polygon`.
+Dit voorbeeld is opgesteld met de knop "Genereer style". Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `Polygon`.
 
 - Het type symbool is `Fill`, oftewel een vlak op de kaart.
 - De kleur #47bea3 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde [HTML-kleuren](https://www.w3schools.com/colors/colors_names.asp) (bijvoorbeeld yellow, darkblue of tomato).
@@ -96,7 +96,7 @@ De code hierboven is het resultaat van het genereren van een eenvoudige vlakweer
 ```
 ![title](foto_categorie_vlak.png)
 
-Het is mogelijk om aparte vlakken te genereren voor verschillende categorieën. In dit voorbeeld, binnen deze dataset is gekozen voor een styling op het veld `"referencelevelbebu"`. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld `"referencelevelbebu"`.
+Dit voorbeeld is opgesteld met de knop "Genereer style". Het is mogelijk om aparte vlakken te genereren voor verschillende categorieën. In dit voorbeeld, binnen deze dataset is gekozen voor een styling op het veld `"referencelevelbebu"`. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld `"referencelevelbebu"`.
 
 Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.
 
@@ -142,7 +142,7 @@ Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de 
 ```
 ![title](foto_vlakken_labels.png)
 
-Naast het gebruik van vlakken kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt het veld `“Name”` gebruikt als inhoud van de labels.
+Dit voorbeeld is opgesteld met de knop "Genereer style". Naast het gebruik van vlakken kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt het veld `“Name”` gebruikt als inhoud van de labels.
 
 - `name` bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.
 - `size` en `color` kunnen, net als bij de simpele vlakken, vrij worden aangepast.
@@ -366,30 +366,6 @@ Deze styling maakt het mogelijk om een extra bufferlijn binnen een vlak weer te 
 De positie van deze bufferlijnen wordt bepaald met de eigenschap `perpendicularOffset`. Door de waarde hiervan aan te passen, verandert de afstand en richting van de bufferlijn. Positieve waarden (bijvoorbeeld 2) tekenen een parallelle lijn aan de linkerkant, terwijl negatieve waarden (bijvoorbeeld -2) een parallelle lijn aan de rechterkant genereren.
 
 
-### 3D vlakken
-```json
-{
-  "rules": [
-    {
-      "name": "Bouwhoogte pand",
-      "symbolizers": [
-        {
-          "kind": "Fill",
-          "color": "#cfc5b8",
-          "height": { "args": ["hoogte"], "name": "property" },
-          "opacity": 0.7,
-          "fillOpacity": 0.62
-        }
-      ]
-    }
-  ]
-}
-```
-![title](3d_panden.png)
-
-In MapGallery kunnen naast 2D-vlakken ook 3D-vlakken worden weergegeven. Dit gebeurt door in de stijl een hoogte-eigenschap toe te voegen, bijvoorbeeld `"height": { "args": ["hoogte"], "name": "property" }`. Met deze regel wordt aangegeven dat de hoogte van elk vlak wordt bepaald door het veld `hoogte` in de dataset. 
-
-De parameter `"args": ["hoogte"]` geeft aan welk veld uit de tabel wordt gebruikt voor de hoogte. MapGallery gebruikt deze waarde om het vlak in 3D omhoog te trekken: hoe hoger de waarde, hoe hoger het object op de kaart wordt weergegeven. Op deze manier ontstaat een realistische hoogteweergave, bijvoorbeeld van gebouwen.
 
 ### Van vlak naar punt bij uitzoomen
 ```json
@@ -442,3 +418,28 @@ Deze techniek is vooral handig bij datasets met veel polygonen, zoals gebouwen o
 !!! warning
 
     Deze werkwijze werkt alleen als de dataset zowel vlakken als punten bevat van dezelfde objecten.
+
+### 3D vlakken
+```json
+{
+  "rules": [
+    {
+      "name": "Bouwhoogte pand",
+      "symbolizers": [
+        {
+          "kind": "Fill",
+          "color": "#cfc5b8",
+          "height": { "args": ["hoogte"], "name": "property" },
+          "opacity": 0.7,
+          "fillOpacity": 0.62
+        }
+      ]
+    }
+  ]
+}
+```
+![title](3d_panden.png)
+
+In MapGallery kunnen naast 2D-vlakken ook 3D-vlakken worden weergegeven. Dit gebeurt door in de stijl een hoogte-eigenschap toe te voegen, bijvoorbeeld `"height": { "args": ["hoogte"], "name": "property" }`. Met deze regel wordt aangegeven dat de hoogte van elk vlak wordt bepaald door het veld `hoogte` in de dataset. 
+
+De parameter `"args": ["hoogte"]` geeft aan welk veld uit de tabel wordt gebruikt voor de hoogte. MapGallery gebruikt deze waarde om het vlak in 3D omhoog te trekken: hoe hoger de waarde, hoe hoger het object op de kaart wordt weergegeven. Op deze manier ontstaat een realistische hoogteweergave, bijvoorbeeld van gebouwen.
