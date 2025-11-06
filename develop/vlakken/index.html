@@ -573,18 +573,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3d-vlakken" class="md-nav__link">
+  <a href="#van-vlak-naar-punt-bij-uitzoomen" class="md-nav__link">
     <span class="md-ellipsis">
-      3D vlakken
+      Van vlak naar punt bij uitzoomen
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#van-vlak-naar-punt-bij-uitzoomen" class="md-nav__link">
+  <a href="#3d-vlakken" class="md-nav__link">
     <span class="md-ellipsis">
-      Van vlak naar punt bij uitzoomen
+      3D vlakken
     </span>
   </a>
   
@@ -756,18 +756,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#3d-vlakken" class="md-nav__link">
+  <a href="#van-vlak-naar-punt-bij-uitzoomen" class="md-nav__link">
     <span class="md-ellipsis">
-      3D vlakken
+      Van vlak naar punt bij uitzoomen
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#van-vlak-naar-punt-bij-uitzoomen" class="md-nav__link">
+  <a href="#3d-vlakken" class="md-nav__link">
     <span class="md-ellipsis">
-      Van vlak naar punt bij uitzoomen
+      3D vlakken
     </span>
   </a>
   
@@ -812,7 +812,7 @@
 <h1 id="mapgallery-geostyler-kookboek">MapGallery GeoStyler kookboek</h1>
 <h2 id="vlakken">Vlakken</h2>
 <p>Voor deze handleiding over de styling van de vlakken is gebruik gemaakt van de dataset <a href="https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/ff62a030-bdd2-436a-9cea-8c83ccfa19f9?language=all">Sluizen</a>, <a href="https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/6bda10cf-9648-4d17-af55-72fdf22193f6?language=all">Grenzen Omgevingsdiensten</a>, <a href="https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/7256a0a2-5712-4751-926e-88e9975edf7f?language=all">Luchthaveninformatie</a>, <a href="https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/9b795b71-e772-4315-a087-a2560343e2fe?language=all">Bevolkingskernen 2021</a> en 3D panden. Deze zijn te vinden in <a href="https://www.nationaalgeoregister.nl">het nationaal georegister van PDOK</a>.
-Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de <a href="#geavanceerde-styling">geavanceerde stylingopties</a> besproken.</p>
+Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de <a href="../#style-genereren">"Genereer style”</a> functie in MapGallery. Vervolgens worden de <a href="#geavanceerde-styling">geavanceerde stylingopties</a> besproken.</p>
 <h2 id="simpele-styling">Simpele styling</h2>
 <h3 id="simpel-vlak">Simpel vlak</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="p">{</span>
@@ -836,7 +836,7 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <a id="__codelineno-0-19" name="__codelineno-0-19" href="#__codelineno-0-19"></a><span class="p">}</span>
 </code></pre></div>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="foto_simpel_vlak.png" data-desc-position="bottom"><img alt="title" src="foto_simpel_vlak.png"></a><p></p>
-<p>De code hierboven is het resultaat van het genereren van een eenvoudige vlakweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type <code>Polygon</code>.</p>
+<p>Dit voorbeeld is opgesteld met de knop "Genereer style". Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type <code>Polygon</code>.</p>
 <ul>
 <li>Het type symbool is <code>Fill</code>, oftewel een vlak op de kaart.</li>
 <li>De kleur #47bea3 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde <a href="https://www.w3schools.com/colors/colors_names.asp"><abbr title="Hyper Text Markup Language">HTML</abbr>-kleuren</a> (bijvoorbeeld yellow, darkblue of tomato).</li>
@@ -894,7 +894,7 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <a id="__codelineno-1-47" name="__codelineno-1-47" href="#__codelineno-1-47"></a><span class="p">}</span>
 </code></pre></div>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="foto_categorie_vlak.png" data-desc-position="bottom"><img alt="title" src="foto_categorie_vlak.png"></a><p></p>
-<p>Het is mogelijk om aparte vlakken te genereren voor verschillende categorieën. In dit voorbeeld, binnen deze dataset is gekozen voor een styling op het veld <code>"referencelevelbebu"</code>. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld <code>"referencelevelbebu"</code>.</p>
+<p>Dit voorbeeld is opgesteld met de knop "Genereer style". Het is mogelijk om aparte vlakken te genereren voor verschillende categorieën. In dit voorbeeld, binnen deze dataset is gekozen voor een styling op het veld <code>"referencelevelbebu"</code>. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld <code>"referencelevelbebu"</code>.</p>
 <p>Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.</p>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -936,7 +936,7 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <a id="__codelineno-2-33" name="__codelineno-2-33" href="#__codelineno-2-33"></a><span class="p">}</span>
 </code></pre></div>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="foto_vlakken_labels.png" data-desc-position="bottom"><img alt="title" src="foto_vlakken_labels.png"></a><p></p>
-<p>Naast het gebruik van vlakken kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt het veld <code>“Name”</code> gebruikt als inhoud van de labels.</p>
+<p>Dit voorbeeld is opgesteld met de knop "Genereer style". Naast het gebruik van vlakken kan ook informatie worden weergegeven met labels. In dit voorbeeld wordt het veld <code>“Name”</code> gebruikt als inhoud van de labels.</p>
 <ul>
 <li><code>name</code> bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.</li>
 <li><code>size</code> en <code>color</code> kunnen, net als bij de simpele vlakken, vrij worden aangepast.</li>
@@ -1155,63 +1155,42 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="vlak_met_offset.png" data-desc-position="bottom"><img alt="title" src="vlak_met_offset.png"></a></p>
 <p>Deze styling maakt het mogelijk om een extra bufferlijn binnen een vlak weer te geven. In dit voorbeeld zijn twee buffers toegevoegd: één aan de buitenzijde en één aan de binnenzijde van de oorspronkelijke lijn.</p>
 <p>De positie van deze bufferlijnen wordt bepaald met de eigenschap <code>perpendicularOffset</code>. Door de waarde hiervan aan te passen, verandert de afstand en richting van de bufferlijn. Positieve waarden (bijvoorbeeld 2) tekenen een parallelle lijn aan de linkerkant, terwijl negatieve waarden (bijvoorbeeld -2) een parallelle lijn aan de rechterkant genereren.</p>
-<h3 id="3d-vlakken">3D vlakken</h3>
-<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
+<h3 id="van-vlak-naar-punt-bij-uitzoomen">Van vlak naar punt bij uitzoomen</h3>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bouwhoogte pand"</span><span class="p">,</span>
-<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fill"</span><span class="p">,</span>
-<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#cfc5b8"</span><span class="p">,</span>
-<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">          </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"hoogte"</span><span class="p">],</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"property"</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">          </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span>
-<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">          </span><span class="nt">"fillOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.62</span>
-<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">      </span><span class="p">]</span>
-<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="p">}</span>
-</code></pre></div>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="3d_panden.png" data-desc-position="bottom"><img alt="title" src="3d_panden.png"></a><p></p>
-<p>In MapGallery kunnen naast 2D-vlakken ook 3D-vlakken worden weergegeven. Dit gebeurt door in de stijl een hoogte-eigenschap toe te voegen, bijvoorbeeld <code>"height": { "args": ["hoogte"], "name": "property" }</code>. Met deze regel wordt aangegeven dat de hoogte van elk vlak wordt bepaald door het veld <code>hoogte</code> in de dataset. </p>
-<p>De parameter <code>"args": ["hoogte"]</code> geeft aan welk veld uit de tabel wordt gebruikt voor de hoogte. MapGallery gebruikt deze waarde om het vlak in 3D omhoog te trekken: hoe hoger de waarde, hoe hoger het object op de kaart wordt weergegeven. Op deze manier ontstaat een realistische hoogteweergave, bijvoorbeeld van gebouwen.</p>
-<h3 id="van-vlak-naar-punt-bij-uitzoomen">Van vlak naar punt bij uitzoomen</h3>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span>
-<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vlak"</span><span class="p">,</span>
-<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Polygon"</span><span class="p">],</span>
-<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fill"</span><span class="p">,</span>
-<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darkblue"</span><span class="p">,</span>
-<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">          </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">          </span><span class="nt">"outlineColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span>
-<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">          </span><span class="nt">"outlineWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">          </span><span class="nt">"outlineOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">      </span><span class="p">],</span>
-<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="w">      </span><span class="nt">"scaleDenominator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">500000</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-8-17" name="__codelineno-8-17" href="#__codelineno-8-17"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-8-18" name="__codelineno-8-18" href="#__codelineno-8-18"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-8-19" name="__codelineno-8-19" href="#__codelineno-8-19"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Punt"</span><span class="p">,</span>
-<a id="__codelineno-8-20" name="__codelineno-8-20" href="#__codelineno-8-20"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">],</span>
-<a id="__codelineno-8-21" name="__codelineno-8-21" href="#__codelineno-8-21"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-8-22" name="__codelineno-8-22" href="#__codelineno-8-22"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-8-23" name="__codelineno-8-23" href="#__codelineno-8-23"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mark"</span><span class="p">,</span>
-<a id="__codelineno-8-24" name="__codelineno-8-24" href="#__codelineno-8-24"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darkblue"</span><span class="p">,</span>
-<a id="__codelineno-8-25" name="__codelineno-8-25" href="#__codelineno-8-25"></a><span class="w">          </span><span class="nt">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
-<a id="__codelineno-8-26" name="__codelineno-8-26" href="#__codelineno-8-26"></a><span class="w">          </span><span class="nt">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span>
-<a id="__codelineno-8-27" name="__codelineno-8-27" href="#__codelineno-8-27"></a><span class="w">          </span><span class="nt">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<a id="__codelineno-8-28" name="__codelineno-8-28" href="#__codelineno-8-28"></a><span class="w">          </span><span class="nt">"strokeOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<a id="__codelineno-8-29" name="__codelineno-8-29" href="#__codelineno-8-29"></a><span class="w">          </span><span class="nt">"wellKnownName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"circle"</span>
-<a id="__codelineno-8-30" name="__codelineno-8-30" href="#__codelineno-8-30"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-8-31" name="__codelineno-8-31" href="#__codelineno-8-31"></a><span class="w">      </span><span class="p">],</span>
-<a id="__codelineno-8-32" name="__codelineno-8-32" href="#__codelineno-8-32"></a><span class="w">      </span><span class="nt">"scaleDenominator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"min"</span><span class="p">:</span><span class="w"> </span><span class="mi">500000</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
-<a id="__codelineno-8-33" name="__codelineno-8-33" href="#__codelineno-8-33"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-8-34" name="__codelineno-8-34" href="#__codelineno-8-34"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-8-35" name="__codelineno-8-35" href="#__codelineno-8-35"></a><span class="p">}</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Vlak"</span><span class="p">,</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Polygon"</span><span class="p">],</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fill"</span><span class="p">,</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darkblue"</span><span class="p">,</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">          </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="w">          </span><span class="nt">"outlineColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span>
+<a id="__codelineno-7-12" name="__codelineno-7-12" href="#__codelineno-7-12"></a><span class="w">          </span><span class="nt">"outlineWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-7-13" name="__codelineno-7-13" href="#__codelineno-7-13"></a><span class="w">          </span><span class="nt">"outlineOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-7-14" name="__codelineno-7-14" href="#__codelineno-7-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-15" name="__codelineno-7-15" href="#__codelineno-7-15"></a><span class="w">      </span><span class="p">],</span>
+<a id="__codelineno-7-16" name="__codelineno-7-16" href="#__codelineno-7-16"></a><span class="w">      </span><span class="nt">"scaleDenominator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">500000</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-7-17" name="__codelineno-7-17" href="#__codelineno-7-17"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-7-18" name="__codelineno-7-18" href="#__codelineno-7-18"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-7-19" name="__codelineno-7-19" href="#__codelineno-7-19"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Punt"</span><span class="p">,</span>
+<a id="__codelineno-7-20" name="__codelineno-7-20" href="#__codelineno-7-20"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"Point"</span><span class="p">],</span>
+<a id="__codelineno-7-21" name="__codelineno-7-21" href="#__codelineno-7-21"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-7-22" name="__codelineno-7-22" href="#__codelineno-7-22"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-7-23" name="__codelineno-7-23" href="#__codelineno-7-23"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mark"</span><span class="p">,</span>
+<a id="__codelineno-7-24" name="__codelineno-7-24" href="#__codelineno-7-24"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darkblue"</span><span class="p">,</span>
+<a id="__codelineno-7-25" name="__codelineno-7-25" href="#__codelineno-7-25"></a><span class="w">          </span><span class="nt">"radius"</span><span class="p">:</span><span class="w"> </span><span class="mi">7</span><span class="p">,</span>
+<a id="__codelineno-7-26" name="__codelineno-7-26" href="#__codelineno-7-26"></a><span class="w">          </span><span class="nt">"strokeColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"white"</span><span class="p">,</span>
+<a id="__codelineno-7-27" name="__codelineno-7-27" href="#__codelineno-7-27"></a><span class="w">          </span><span class="nt">"strokeWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-7-28" name="__codelineno-7-28" href="#__codelineno-7-28"></a><span class="w">          </span><span class="nt">"strokeOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<a id="__codelineno-7-29" name="__codelineno-7-29" href="#__codelineno-7-29"></a><span class="w">          </span><span class="nt">"wellKnownName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"circle"</span>
+<a id="__codelineno-7-30" name="__codelineno-7-30" href="#__codelineno-7-30"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-7-31" name="__codelineno-7-31" href="#__codelineno-7-31"></a><span class="w">      </span><span class="p">],</span>
+<a id="__codelineno-7-32" name="__codelineno-7-32" href="#__codelineno-7-32"></a><span class="w">      </span><span class="nt">"scaleDenominator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"min"</span><span class="p">:</span><span class="w"> </span><span class="mi">500000</span><span class="w"> </span><span class="p">}</span><span class="w"> </span>
+<a id="__codelineno-7-33" name="__codelineno-7-33" href="#__codelineno-7-33"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-7-34" name="__codelineno-7-34" href="#__codelineno-7-34"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-7-35" name="__codelineno-7-35" href="#__codelineno-7-35"></a><span class="p">}</span>
 </code></pre></div>
 <table>
 <thead>
@@ -1237,6 +1216,27 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <p class="admonition-title">Warning</p>
 <p>Deze werkwijze werkt alleen als de dataset zowel vlakken als punten bevat van dezelfde objecten.</p>
 </div>
+<h3 id="3d-vlakken">3D vlakken</h3>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="p">{</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Bouwhoogte pand"</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fill"</span><span class="p">,</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#cfc5b8"</span><span class="p">,</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">          </span><span class="nt">"height"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"hoogte"</span><span class="p">],</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"property"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">          </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.7</span><span class="p">,</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">          </span><span class="nt">"fillOpacity"</span><span class="p">:</span><span class="w"> </span><span class="mf">0.62</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="p">}</span>
+</code></pre></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="3d_panden.png" data-desc-position="bottom"><img alt="title" src="3d_panden.png"></a><p></p>
+<p>In MapGallery kunnen naast 2D-vlakken ook 3D-vlakken worden weergegeven. Dit gebeurt door in de stijl een hoogte-eigenschap toe te voegen, bijvoorbeeld <code>"height": { "args": ["hoogte"], "name": "property" }</code>. Met deze regel wordt aangegeven dat de hoogte van elk vlak wordt bepaald door het veld <code>hoogte</code> in de dataset. </p>
+<p>De parameter <code>"args": ["hoogte"]</code> geeft aan welk veld uit de tabel wordt gebruikt voor de hoogte. MapGallery gebruikt deze waarde om het vlak in 3D omhoog te trekken: hoe hoger de waarde, hoe hoger het object op de kaart wordt weergegeven. Op deze manier ontstaat een realistische hoogteweergave, bijvoorbeeld van gebouwen.</p>
 
 
 

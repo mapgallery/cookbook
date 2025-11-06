@@ -483,18 +483,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lijnen-met-labels" class="md-nav__link">
+  <a href="#styling-op-categorie" class="md-nav__link">
     <span class="md-ellipsis">
-      Lijnen met labels
+      Styling op categorie
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#styling-op-categorie" class="md-nav__link">
+  <a href="#lijnen-met-labels" class="md-nav__link">
     <span class="md-ellipsis">
-      Styling op categorie
+      Lijnen met labels
     </span>
   </a>
   
@@ -543,9 +543,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lijn-cap" class="md-nav__link">
+  <a href="#zichtbaar-bij-bepaald-niveau" class="md-nav__link">
     <span class="md-ellipsis">
-      Lijn cap
+      Zichtbaar bij bepaald niveau
     </span>
   </a>
   
@@ -570,18 +570,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#zichtbaar-bij-bepaald-niveau" class="md-nav__link">
+  <a href="#lijn-met-omlijning" class="md-nav__link">
     <span class="md-ellipsis">
-      Zichtbaar bij bepaald niveau
+      Lijn met omlijning
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lijn-met-omlijning" class="md-nav__link">
+  <a href="#lijn-cap" class="md-nav__link">
     <span class="md-ellipsis">
-      Lijn met omlijning
+      Lijn cap
     </span>
   </a>
   
@@ -705,18 +705,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lijnen-met-labels" class="md-nav__link">
+  <a href="#styling-op-categorie" class="md-nav__link">
     <span class="md-ellipsis">
-      Lijnen met labels
+      Styling op categorie
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#styling-op-categorie" class="md-nav__link">
+  <a href="#lijnen-met-labels" class="md-nav__link">
     <span class="md-ellipsis">
-      Styling op categorie
+      Lijnen met labels
     </span>
   </a>
   
@@ -765,9 +765,9 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#lijn-cap" class="md-nav__link">
+  <a href="#zichtbaar-bij-bepaald-niveau" class="md-nav__link">
     <span class="md-ellipsis">
-      Lijn cap
+      Zichtbaar bij bepaald niveau
     </span>
   </a>
   
@@ -792,18 +792,18 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#zichtbaar-bij-bepaald-niveau" class="md-nav__link">
+  <a href="#lijn-met-omlijning" class="md-nav__link">
     <span class="md-ellipsis">
-      Zichtbaar bij bepaald niveau
+      Lijn met omlijning
     </span>
   </a>
   
 </li>
         
           <li class="md-nav__item">
-  <a href="#lijn-met-omlijning" class="md-nav__link">
+  <a href="#lijn-cap" class="md-nav__link">
     <span class="md-ellipsis">
-      Lijn met omlijning
+      Lijn cap
     </span>
   </a>
   
@@ -848,7 +848,7 @@
 <h1 id="mapgallery-geostyler-kookboek">MapGallery GeoStyler kookboek</h1>
 <h2 id="lijnen">Lijnen</h2>
 <p>Voor deze handleiding over de styling van de lijnen is gebruik gemaakt van de dataset <a href="https://nationaalgeoregister.nl/geonetwork/srv/dut/catalog.search#/metadata/abbf1e22-55aa-4a11-a855-7ac963e4a82c">Maximum snelheden wegvak overdag</a>, <a href="https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/0dacfa79-c2de-4927-bc97-d36a11c3cf14?language=all">MIRT</a> en <a href="https://www.nationaalgeoregister.nl/geonetwork/srv/api/records/ec6d6451-7ecd-4c25-b3ee-85845b01b513?language=all">Waterbeheergrens</a>.
-Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de “genereer style” functie in MapGallery. Vervolgens worden de <a href="#geavanceerde-styling">geavanceerde stylingopties</a> besproken.</p>
+Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de stylingsmogelijkheden. Alle simpele styling voorbeelden zijn onderdeel van de <a href="../#style-genereren">"Genereer style”</a> functie in MapGallery. Vervolgens worden de <a href="#geavanceerde-styling">geavanceerde stylingopties</a> besproken.</p>
 <h2 id="simpele-styling">Simpele styling</h2>
 <h3 id="simpele-lijn">Simpele lijn</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>{
@@ -865,43 +865,78 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <a id="__codelineno-0-12" name="__codelineno-0-12" href="#__codelineno-0-12"></a>}
 </code></pre></div>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="foto_simpele_lijn.png" data-desc-position="bottom"><img alt="title" src="foto_simpele_lijn.png"></a><p></p>
-<p>De code hierboven is het resultaat van het genereren van een eenvoudige lijnweergave in MapGallery. Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type <code>lineString</code>.</p>
+<p>Dit voorbeeld is opgesteld met de knop "Genereer style". Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type <code>lineString</code>.</p>
 <ul>
 <li>Het type symbool is <code>Mark</code>, oftewel een markering op de kaart.</li>
 <li>De kleur #8e0d56 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde <a href="https://www.w3schools.com/colors/colors_names.asp"><abbr title="Hyper Text Markup Language">HTML</abbr>-kleuren</a> (bijvoorbeeld yellow, darkblue of tomato).</li>
 <li>De <code>width</code> bepaalt de dikte van de lijn.</li>
 <li>De <code>opacity</code> bepaalt de transparantie van de lijn.</li>
 </ul>
-<h3 id="lijnen-met-labels">Lijnen met labels</h3>
+<h3 id="styling-op-categorie">Styling op categorie</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
 <a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mirt lijnen fase"</span><span class="p">,</span>
-<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"LineString"</span><span class="p">],</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30"</span><span class="p">,</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"omschr"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span>
 <a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"purple"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1E90FF"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">      </span><span class="p">]</span>
 <a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">},</span>
 <a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Onderwerp"</span><span class="p">,</span>
-<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Text"</span><span class="p">,</span>
-<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">          </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span>
-<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darkblue"</span><span class="p">,</span>
-<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">          </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"onderwerp"</span><span class="p">],</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"property"</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">          </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span>
-<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">          </span><span class="nt">"haloColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#FFFFFF"</span><span class="p">,</span>
-<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">          </span><span class="nt">"haloWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40"</span><span class="p">,</span>
+<a id="__codelineno-1-13" name="__codelineno-1-13" href="#__codelineno-1-13"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"omschr"</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">],</span>
+<a id="__codelineno-1-14" name="__codelineno-1-14" href="#__codelineno-1-14"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-15" name="__codelineno-1-15" href="#__codelineno-1-15"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#00CED1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-1-16" name="__codelineno-1-16" href="#__codelineno-1-16"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-1-17" name="__codelineno-1-17" href="#__codelineno-1-17"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50"</span><span class="p">,</span>
+<a id="__codelineno-1-20" name="__codelineno-1-20" href="#__codelineno-1-20"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"omschr"</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">],</span>
+<a id="__codelineno-1-21" name="__codelineno-1-21" href="#__codelineno-1-21"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-22" name="__codelineno-1-22" href="#__codelineno-1-22"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#32CD32"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
 <a id="__codelineno-1-23" name="__codelineno-1-23" href="#__codelineno-1-23"></a><span class="w">      </span><span class="p">]</span>
 <a id="__codelineno-1-24" name="__codelineno-1-24" href="#__codelineno-1-24"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-1-25" name="__codelineno-1-25" href="#__codelineno-1-25"></a><span class="w">  </span><span class="p">]</span>
 <a id="__codelineno-1-26" name="__codelineno-1-26" href="#__codelineno-1-26"></a><span class="p">}</span>
 </code></pre></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="foto_lijnen_categorie.png" data-desc-position="bottom"><img alt="title" src="foto_lijnen_categorie.png"></a><p></p>
+<p>Dit voorbeeld is opgesteld met de knop "Genereer style". Het is mogelijk om aparte lijnen te genereren voor verschillende categorieën. In dit voorbeeld is er gekozen voor een styling op het veld <code>"omschr"</code>. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld <code>"omschr"</code>.</p>
+<p>Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.</p>
+</div>
+<h3 id="lijnen-met-labels">Lijnen met labels</h3>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mirt lijnen fase"</span><span class="p">,</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"LineString"</span><span class="p">],</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"purple"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Onderwerp"</span><span class="p">,</span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Text"</span><span class="p">,</span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">          </span><span class="nt">"size"</span><span class="p">:</span><span class="w"> </span><span class="mi">15</span><span class="p">,</span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"darkblue"</span><span class="p">,</span>
+<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">          </span><span class="nt">"label"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"args"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"onderwerp"</span><span class="p">],</span><span class="w"> </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"property"</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">          </span><span class="nt">"offset"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="mi">2</span><span class="p">],</span>
+<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">          </span><span class="nt">"haloColor"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#FFFFFF"</span><span class="p">,</span>
+<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">          </span><span class="nt">"haloWidth"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="p">}</span>
+</code></pre></div>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijnen_labels.png" data-desc-position="bottom"><img alt="title" src="lijnen_labels.png"></a><p></p>
-<p>Naast het gebruik van lijnen kan er ook informatie worden weergegeven met labels. In dit voorbeeld wordt <code>“onderwerp”</code> gebruikt als inhoud van de labels.</p>
+<p>Dit voorbeeld is opgesteld met de knop "Genereer style". Naast het gebruik van lijnen kan er ook informatie worden weergegeven met labels. In dit voorbeeld wordt <code>“onderwerp”</code> gebruikt als inhoud van de labels.</p>
 <ul>
 <li><code>name</code> bepaalt de naam van het label in de legenda. Deze kan naar wens worden aangepast.</li>
 <li><code>size</code> en <code>color</code> kunnen, net als bij de simpele lijn, vrij worden aangepast.</li>
@@ -909,41 +944,6 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <li>Onder <code>offset</code> wordt de afstand van het label tot de lijn ingesteld. Dit zijn [x, y] coördinaten. Positieve waarden geven rechts en omlaag aan, terwijl negatieve waarden links en omhoog aangeven.</li>
 <li>Labels kunnen een omlijning of gloed hebben. De kleur en dikte daarvan worden bepaald met <code>haloColor</code> en <code>haloWidth</code>.</li>
 </ul>
-<h3 id="styling-op-categorie">Styling op categorie</h3>
-<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
-<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
-<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"30"</span><span class="p">,</span>
-<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"omschr"</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">],</span>
-<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#1E90FF"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">      </span><span class="p">]</span>
-<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"40"</span><span class="p">,</span>
-<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"omschr"</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">],</span>
-<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#00CED1"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">      </span><span class="p">]</span>
-<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="w">    </span><span class="p">},</span>
-<a id="__codelineno-2-18" name="__codelineno-2-18" href="#__codelineno-2-18"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-2-19" name="__codelineno-2-19" href="#__codelineno-2-19"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"50"</span><span class="p">,</span>
-<a id="__codelineno-2-20" name="__codelineno-2-20" href="#__codelineno-2-20"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"omschr"</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">],</span>
-<a id="__codelineno-2-21" name="__codelineno-2-21" href="#__codelineno-2-21"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-2-22" name="__codelineno-2-22" href="#__codelineno-2-22"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#32CD32"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-2-23" name="__codelineno-2-23" href="#__codelineno-2-23"></a><span class="w">      </span><span class="p">]</span>
-<a id="__codelineno-2-24" name="__codelineno-2-24" href="#__codelineno-2-24"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-2-25" name="__codelineno-2-25" href="#__codelineno-2-25"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-2-26" name="__codelineno-2-26" href="#__codelineno-2-26"></a><span class="p">}</span>
-</code></pre></div>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="foto_lijnen_categorie.png" data-desc-position="bottom"><img alt="title" src="foto_lijnen_categorie.png"></a><p></p>
-<p>Het is mogelijk om aparte lijnen te genereren voor verschillende categorieën. In dit voorbeeld is er gekozen voor een styling op het veld <code>"omschr"</code>. Het gewenste veld kan worden geselecteerd door “Weergave op categorie” te kiezen binnen de functie Genereer stijl. Qua code verschilt dit nauwelijks van eerdere voorbeelden. Het verschil is dat de code nu bestaat uit verschillende blokken, elk met een andere filterwaarde voor het veld <code>"omschr"</code>.</p>
-<p>Let op: het bovenstaande voorbeeldcode toont alleen de eerste drie typen uit de categorie.</p>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>Als er geen velden staan onder het dropdown menu van 'Categorie veld'. Zorg dan dat bij het tabje “Velden” het aanpassen van velden is aangevinkt.</p>
-</div>
 <h2 id="geavanceerde-styling">Geavanceerde styling</h2>
 <h3 id="geavanceerde-labels">Geavanceerde labels</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
@@ -1127,7 +1127,7 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
 <li><code>"scaleDenominator": { "min": 50000 }</code>: De stijl wordt zichtbaar vanaf een schaal van 1:50.000, dus wanneer je verder uitzoomt.</li>
 </ul>
 <p>Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie. Dit voorbeeld kan goed worden gecombineerd met andere voorbeelden uit dit kookboek: bij een hoge schaal kan een stippellijn worden weergegeven, terwijl deze bij uitzoomen wordt vereenvoudigd tot een eenvoudige lijn.</p>
-<h3 id="lijn-cap">Lijn cap</h3>
+<h3 id="zichtbaar-bij-bepaald-niveau">Zichtbaar bij bepaald niveau</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="p">{</span>
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
 <a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1135,26 +1135,16 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
 <a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PDOK - Maximum snelheden wegvak overdag"</span><span class="p">,</span>
 <a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"LineString"</span><span class="p">],</span>
 <a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="p">{</span>
-<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">          </span><span class="nt">"cap"</span><span class="p">:</span><span class="w"> </span><span class="s2">"round"</span><span class="p">,</span>
-<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span>
-<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blue"</span><span class="p">,</span>
-<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">          </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
-<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="w">          </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
-<a id="__codelineno-6-14" name="__codelineno-6-14" href="#__codelineno-6-14"></a><span class="w">        </span><span class="p">}</span>
-<a id="__codelineno-6-15" name="__codelineno-6-15" href="#__codelineno-6-15"></a><span class="w">      </span><span class="p">]</span>
-<a id="__codelineno-6-16" name="__codelineno-6-16" href="#__codelineno-6-16"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-6-17" name="__codelineno-6-17" href="#__codelineno-6-17"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-6-18" name="__codelineno-6-18" href="#__codelineno-6-18"></a><span class="p">}</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#ae4ffb"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">      </span><span class="p">],</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">      </span><span class="nt">"scaleDenominator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">700000</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-6-13" name="__codelineno-6-13" href="#__codelineno-6-13"></a><span class="p">}</span>
 </code></pre></div>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijn_cap.png" data-desc-position="bottom"><img alt="title" src="lijn_cap.png"></a>
-De manier waarop een lijn eindigt wordt bepaald met de eigenschap <code>cap</code>. Er zijn drie mogelijke instellingen:<p></p>
-<ul>
-<li><code>Butt</code>: De lijn wordt recht afgesloten, met het einde van de lijn gelijk aan de lijn zelf. Dit is de default keuze.</li>
-<li><code>Round</code>: De lijn wordt afgerond, met een halve cirkel als einde.</li>
-<li><code>Square</code>: De lijn wordt vierkant afgesloten, een verlenging van de lijn zelf. </li>
-</ul>
-<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijncap_uitleg.png" data-desc-position="bottom"><img alt="title" src="lijncap_uitleg.png"></a></p>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijn_zichtbaar_vanaf.png" data-desc-position="bottom"><img alt="title" src="lijn_zichtbaar_vanaf.png"></a><p></p>
+<p>Wanneer er veel lijnen op de kaart staan, is het niet altijd wenselijk om deze op alle schaalniveaus zichtbaar te houden. Het kan overzichtelijker zijn om ze pas te tonen vanaf een bepaald zoomniveau. In dit voorbeeld worden de lijnen alleen weergegeven bij een schaal kleiner dan 1:700.000. Dat is ingesteld met de eigenschap: <code>"scaleDenominator": { "max": 700000 }</code>.</p>
+<p>Hierdoor zijn de lijnen zichtbaar wanneer verder wordt ingezoomd, maar verdwijnen ze automatisch bij het uitzoomen naar 1:700.000 of kleiner detailniveau. Op deze manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.</p>
 <h3 id="stippellijn">Stippellijn</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="p">{</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -1196,43 +1186,53 @@ De manier waarop een lijn eindigt wordt bepaald met de eigenschap <code>cap</cod
 </code></pre></div>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijn_offset.png" data-desc-position="bottom"><img alt="title" src="lijn_offset.png"></a><p></p>
 <p>De eigenschap <code>perpendicularOffset</code> zorgt ervoor dat er een extra lijn wordt weergegeven die parallel loopt aan de oorspronkelijke lijn. De waarde wordt opgegeven in pixels. Bij een positieve waarde (bijvoorbeeld 5) verschijnt de extra lijn aan de linkerkant van de originele lijn, terwijl bij een negatieve waarde (bijvoorbeeld -5) de extra lijn aan de rechterkant wordt geplaatst.</p>
-<h3 id="zichtbaar-bij-bepaald-niveau">Zichtbaar bij bepaald niveau</h3>
+<h3 id="lijn-met-omlijning">Lijn met omlijning</h3>
 <p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PDOK - Maximum snelheden wegvak overdag"</span><span class="p">,</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mirt"</span><span class="p">,</span>
 <a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"LineString"</span><span class="p">],</span>
 <a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#ae4ffb"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">5</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">      </span><span class="p">],</span>
-<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">      </span><span class="nt">"scaleDenominator"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"> </span><span class="nt">"max"</span><span class="p">:</span><span class="w"> </span><span class="mi">700000</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#800080"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#9190f8"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">      </span><span class="p">]</span>
 <a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">    </span><span class="p">}</span>
 <a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">  </span><span class="p">]</span>
 <a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="p">}</span>
-</code></pre></div>
-<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijn_zichtbaar_vanaf.png" data-desc-position="bottom"><img alt="title" src="lijn_zichtbaar_vanaf.png"></a><p></p>
-<p>Wanneer er veel lijnen op de kaart staan, is het niet altijd wenselijk om deze op alle schaalniveaus zichtbaar te houden. Het kan overzichtelijker zijn om ze pas te tonen vanaf een bepaald zoomniveau. In dit voorbeeld worden de lijnen alleen weergegeven bij een schaal kleiner dan 1:700.000. Dat is ingesteld met de eigenschap: <code>"scaleDenominator": { "max": 700000 }</code>.</p>
-<p>Hierdoor zijn de lijnen zichtbaar wanneer verder wordt ingezoomd, maar verdwijnen ze automatisch bij het uitzoomen naar 1:700.000 of kleiner detailniveau. Op deze manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.</p>
-<h3 id="lijn-met-omlijning">Lijn met omlijning</h3>
-<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span>
-<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
-<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="p">{</span>
-<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mirt"</span><span class="p">,</span>
-<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"LineString"</span><span class="p">],</span>
-<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
-<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#800080"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">},</span>
-<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">        </span><span class="p">{</span><span class="w"> </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span><span class="w"> </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#9190f8"</span><span class="p">,</span><span class="w"> </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span><span class="w"> </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="w"> </span><span class="p">}</span>
-<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">      </span><span class="p">]</span>
-<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="p">}</span>
-<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">  </span><span class="p">]</span>
-<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="p">}</span>
 </code></pre></div>
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijn_omlijning.png" data-desc-position="bottom"><img alt="title" src="lijn_omlijning.png"></a><p></p>
 <p>Om een lijn met een omlijning te maken, worden twee lijnlagen boven elkaar gebruikt met verschillende diktes en kleuren, zodat de omlijning duidelijk zichtbaar is. Het bovenstaande voorbeeld laat zien hoe dit kan worden toegepast:
 - Eerste lijn: tekent de onderliggende lijn iets breder (<code>width</code>: 6) en vormt zo de omlijning.
 - Tweede lijn: tekent de dunnere lijn erbovenop (<code>width</code>: 3), die de hoofdvorm van de lijn bepaalt.</p>
+<h3 id="lijn-cap">Lijn cap</h3>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">""</span><span class="p">,</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"PDOK - Maximum snelheden wegvak overdag"</span><span class="p">,</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">      </span><span class="nt">"filter"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">"=="</span><span class="p">,</span><span class="w"> </span><span class="s2">"$type"</span><span class="p">,</span><span class="w"> </span><span class="s2">"LineString"</span><span class="p">],</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">          </span><span class="nt">"cap"</span><span class="p">:</span><span class="w"> </span><span class="s2">"round"</span><span class="p">,</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="s2">"blue"</span><span class="p">,</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">          </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">          </span><span class="nt">"opacity"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="p">}</span>
+</code></pre></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijn_cap.png" data-desc-position="bottom"><img alt="title" src="lijn_cap.png"></a>
+De manier waarop een lijn eindigt wordt bepaald met de eigenschap <code>cap</code>. Er zijn drie mogelijke instellingen:<p></p>
+<ul>
+<li><code>Butt</code>: De lijn wordt recht afgesloten, met het einde van de lijn gelijk aan de lijn zelf. Dit is de default keuze.</li>
+<li><code>Round</code>: De lijn wordt afgerond, met een halve cirkel als einde.</li>
+<li><code>Square</code>: De lijn wordt vierkant afgesloten, een verlenging van de lijn zelf. </li>
+</ul>
+<p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijncap_uitleg.png" data-desc-position="bottom"><img alt="title" src="lijncap_uitleg.png"></a></p>
 
 
 
