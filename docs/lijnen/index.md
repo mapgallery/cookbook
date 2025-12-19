@@ -223,6 +223,10 @@ Deze stijl bepaalt hoe de lijnen op de kaart worden weergegeven op basis van de 
 - Voor snelheden boven de 100 km/u → een rode lijn. 
     - `[">", "omschr", 100]`
 
+!!! question "Meer info"
+
+    Voor meer informatie over de verschillende mogelijkheden van filteren, zie de pagina over [geavgeavanceerde filtering](../filtering/index.md).
+
 !!! warning
 
     Let op: deze stijl kan alleen worden toegepast als het datatype van het veld numeriek (number) is. Wanneer het veld een ander datatype heeft, werkt deze vorm van styling niet.

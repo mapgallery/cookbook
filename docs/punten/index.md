@@ -327,6 +327,10 @@ Deze stijl bepaalt hoe punten op de kaart worden weergegeven op basis van het ja
 - Na 1990 → grote donkerblauwe cirkels (`radius: 8`).
     - `[">=", "jaar_van_ingebruikstelling", 1990]`
 
+!!! question "Meer info"
+
+    Voor meer informatie over de verschillende mogelijkheden van filteren, zie de pagina over [geavgeavanceerde filtering](../filtering/index.md).
+
 !!! warning
 
     Let op: deze stijl kan alleen worden toegepast als het datatype van het veld numeriek (number) is. Wanneer het veld een ander datatype heeft, werkt deze vorm van styling niet.
