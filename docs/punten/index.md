@@ -329,7 +329,7 @@ Deze stijl bepaalt hoe punten op de kaart worden weergegeven op basis van het ja
 
 !!! question "Meer info"
 
-    Voor meer informatie over de verschillende mogelijkheden van filteren, zie de pagina over [geavgeavanceerde filtering](../filtering/index.md).
+    Voor meer informatie over de verschillende mogelijkheden van filteren, zie de pagina over [geavanceerde filtering](../filtering/index.md).
 
 !!! warning
 

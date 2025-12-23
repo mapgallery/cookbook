@@ -1,10 +1,10 @@
 ---
-title: "Geavgeavanceerde filtering"
+title: "Geavanceerde filtering"
 ---
 
 # {{ config.site_name }}
 
-Geavgeavanceerde filtering
+Geavanceerde filtering
 ---
 
 Met geavanceerde filters kun je in MapGallery objecten op de kaart weergeven op basis van specifieke eigenschappen. Door gebruik te maken van operators zoals AND (`&&`), OR (`||`) en vergelijkingsoperatoren zoals `==`, `<`, `>=`, kun je heel gericht bepalen welke objecten zichtbaar zijn en op welke manier. Op deze pagina leggen we uit hoe deze operators werken, met voorbeelden van hoe je filters kunt combineren om precies de data te tonen die je nodig hebt.

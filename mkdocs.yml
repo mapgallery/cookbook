@@ -45,6 +45,7 @@ nav:
       - punten/index.md
       - lijnen/index.md
       - vlakken/index.md
+      - filtering/index.md
       - faq/index.md
 
 plugins:
