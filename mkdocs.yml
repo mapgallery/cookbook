@@ -1,12 +1,12 @@
-copyright: Copyright &copy; 2016 - 2025 MapGallery B.V.
+copyright: Copyright &copy; 2016 - 2026 MapGallery B.V.
 site_name: MapGallery GeoStyler kookboek
-site_url: https://docs.mapgallery.eu/
-repo_url: https://github.com/mapgallery/documentation
+site_url: https://geostyler.mapgallery.eu/
+repo_url: https://github.com/mapgallery/cookbook
 edit_uri: edit/main/docs/
 extra:
   analytics:
     provider: plausible
-    domain: docs.mapgallery.eu
+    domain: geostyler.mapgallery.eu
   homepage: https://mapgallery.eu
   social:
     - icon: fontawesome/solid/paper-plane
