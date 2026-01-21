@@ -4,7 +4,7 @@ title: "Introductie"
 
 # {{ config.site_name }}
 
-Het MapGallery GeoStyler Kookboek bevat diverse ‘recepten’ voor het stylen van kaartlagen binnen MapGallery. Deze handleiding is bedoeld om gebruikers te ondersteunen bij het optimaal benutten van de mogelijkheden binnen het platform. Veel succes met het ontdekken van de wereld van geografische informatie!
+Het [MapGallery](https://mapgallery.eu) GeoStyler Kookboek bevat diverse ‘recepten’ voor het stylen van kaartlagen binnen MapGallery. Deze handleiding is bedoeld om gebruikers te ondersteunen bij het optimaal benutten van de mogelijkheden binnen het platform. Veel succes met het ontdekken van de wereld van geografische informatie!
 
 – Het MapGallery Team
 
