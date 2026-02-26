@@ -587,6 +587,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#lijnen-zonder-individuele-legenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lijnen zonder individuele legenda
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -825,6 +834,15 @@
   <a href="#lijn-cap" class="md-nav__link">
     <span class="md-ellipsis">
       Lijn cap
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#lijnen-zonder-individuele-legenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Lijnen zonder individuele legenda
     </span>
   </a>
   
@@ -1258,6 +1276,55 @@ De manier waarop een lijn eindigt wordt bepaald met de eigenschap <code>cap</cod
 <li><code>Square</code>: De lijn wordt vierkant afgesloten, een verlenging van de lijn zelf. </li>
 </ul>
 <p><a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijncap_uitleg.png" data-desc-position="bottom"><img alt="title" src="lijncap_uitleg.png"></a></p>
+<h3 id="lijnen-zonder-individuele-legenda">Lijnen zonder individuele legenda</h3>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">{</span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Mirt"</span><span class="p">,</span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Line"</span><span class="p">,</span>
+<a id="__codelineno-11-8" name="__codelineno-11-8" href="#__codelineno-11-8"></a><span class="w">          </span><span class="nt">"width"</span><span class="p">:</span><span class="w"> </span><span class="mi">3</span><span class="p">,</span>
+<a id="__codelineno-11-9" name="__codelineno-11-9" href="#__codelineno-11-9"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-11-10" name="__codelineno-11-10" href="#__codelineno-11-10"></a><span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"categorical"</span><span class="p">,</span>
+<a id="__codelineno-11-11" name="__codelineno-11-11" href="#__codelineno-11-11"></a><span class="w">            </span><span class="nt">"stops"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-11-12" name="__codelineno-11-12" href="#__codelineno-11-12"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Noord-Nederland"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#1F77B4"</span><span class="p">],</span>
+<a id="__codelineno-11-13" name="__codelineno-11-13" href="#__codelineno-11-13"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Noordwest-Nederland"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FF7F0E"</span><span class="p">],</span>
+<a id="__codelineno-11-14" name="__codelineno-11-14" href="#__codelineno-11-14"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Oost-Nederland"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#2CA02C"</span><span class="p">],</span>
+<a id="__codelineno-11-15" name="__codelineno-11-15" href="#__codelineno-11-15"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Zuid-Nederland"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#D62728"</span><span class="p">],</span>
+<a id="__codelineno-11-16" name="__codelineno-11-16" href="#__codelineno-11-16"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Zuidwest-Nederland"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#9467BD"</span><span class="p">]</span>
+<a id="__codelineno-11-17" name="__codelineno-11-17" href="#__codelineno-11-17"></a><span class="w">            </span><span class="p">],</span>
+<a id="__codelineno-11-18" name="__codelineno-11-18" href="#__codelineno-11-18"></a><span class="w">            </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#0000ff"</span><span class="p">,</span>
+<a id="__codelineno-11-19" name="__codelineno-11-19" href="#__codelineno-11-19"></a><span class="w">            </span><span class="nt">"property"</span><span class="p">:</span><span class="w"> </span><span class="s2">"gebied"</span>
+<a id="__codelineno-11-20" name="__codelineno-11-20" href="#__codelineno-11-20"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-11-21" name="__codelineno-11-21" href="#__codelineno-11-21"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-11-22" name="__codelineno-11-22" href="#__codelineno-11-22"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-11-23" name="__codelineno-11-23" href="#__codelineno-11-23"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-11-24" name="__codelineno-11-24" href="#__codelineno-11-24"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-11-25" name="__codelineno-11-25" href="#__codelineno-11-25"></a><span class="p">}</span>
+</code></pre></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="lijnen_een_legenda.png" data-desc-position="bottom"><img alt="title" src="lijnen_een_legenda.png"></a><p></p>
+<p>Deze stijl geeft de lijnen weer met een unieke kleur op basis van het attribuut gebied. Hoewel de lijnen op verschillende waarden worden gestyled, verschijnt er in de legenda slechts één veld.</p>
+<ul>
+<li>Met <code>name</code> wordt aangegeven hoe de klasse in de legenda genoemd wordt.</li>
+<li>
+<p>Het <code>type</code> is categorical, omdat aan elke waarde van het attribuut gebied een specifieke kleur wordt toegewezen.</p>
+<ul>
+<li>Een alternatieve optie is interval, waarbij de stops worden gebruikt om te bepalen tussen welke waarden een lijn valt. </li>
+</ul>
+<p>In dit voorbeeld hieronder krijgt een lijn met de waarde 16 de eerste kleur (<code>#1F77B4</code>).
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s2">"#1F77B4"</span><span class="p">],</span>
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FF7F0E"</span><span class="p">],</span>
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a><span class="p">[</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="s2">"#2CA02C"</span><span class="p">]</span>
+</code></pre></div><p></p>
+</li>
+<li>
+<p>Onder <code>stops</code> worden de verschillende waarden van het attribuut gebied gekoppeld aan specifieke kleuren.</p>
+</li>
+<li>De default kleur is blauw (<code>#0000FF</code>) en wordt gebruikt voor alle waarden van het attribuut gebied die niet expliciet in de stops zijn opgenomen.</li>
+<li><code>property</code> laat zien op welk veld wordt gefilterd. </li>
+</ul>
+<p>Deze manier van stylen is vooral handig wanneer het veld veel verschillende mogelijkheden heeft, omdat zo wordt voorkomen dat de legenda te lang wordt.</p>
 
 
 

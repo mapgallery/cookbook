@@ -590,6 +590,15 @@
   
 </li>
         
+          <li class="md-nav__item">
+  <a href="#vlakken-zonder-individuele-legenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vlakken zonder individuele legenda
+    </span>
+  </a>
+  
+</li>
+        
       </ul>
     </nav>
   
@@ -789,6 +798,15 @@
   <a href="#3d-vlakken" class="md-nav__link">
     <span class="md-ellipsis">
       3D vlakken
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#vlakken-zonder-individuele-legenda" class="md-nav__link">
+    <span class="md-ellipsis">
+      Vlakken zonder individuele legenda
     </span>
   </a>
   
@@ -1262,6 +1280,58 @@ Aan de hand van deze dataset zullen enkele voorbeelden gegeven worden van de sty
 <a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="3d_panden.png" data-desc-position="bottom"><img alt="title" src="3d_panden.png"></a><p></p>
 <p>In MapGallery kunnen naast 2D-vlakken ook 3D-vlakken worden weergegeven. Dit gebeurt door in de stijl een hoogte-eigenschap toe te voegen, bijvoorbeeld <code>"height": { "args": ["hoogte"], "name": "property" }</code>. Met deze regel wordt aangegeven dat de hoogte van elk vlak wordt bepaald door het veld <code>hoogte</code> in de dataset. </p>
 <p>De parameter <code>"args": ["hoogte"]</code> geeft aan welk veld uit de tabel wordt gebruikt voor de hoogte. MapGallery gebruikt deze waarde om het vlak in 3D omhoog te trekken: hoe hoger de waarde, hoe hoger het object op de kaart wordt weergegeven. Op deze manier ontstaat een realistische hoogteweergave, bijvoorbeeld van gebouwen.</p>
+<h3 id="vlakken-zonder-individuele-legenda">Vlakken zonder individuele legenda</h3>
+<p></p><div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">"rules"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">      </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"CBS Bevolkingskernen 2021"</span><span class="p">,</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">      </span><span class="nt">"symbolizers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">        </span><span class="p">{</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">          </span><span class="nt">"kind"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Fill"</span><span class="p">,</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">          </span><span class="nt">"color"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">            </span><span class="nt">"type"</span><span class="p">:</span><span class="w"> </span><span class="s2">"categorical"</span><span class="p">,</span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">            </span><span class="nt">"stops"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Drenthe"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#1F77B4"</span><span class="p">],</span>
+<a id="__codelineno-9-12" name="__codelineno-9-12" href="#__codelineno-9-12"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Flevoland"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FF7F0E"</span><span class="p">],</span>
+<a id="__codelineno-9-13" name="__codelineno-9-13" href="#__codelineno-9-13"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Fryslân"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#2CA02C"</span><span class="p">],</span>
+<a id="__codelineno-9-14" name="__codelineno-9-14" href="#__codelineno-9-14"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Gelderland"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#D62728"</span><span class="p">],</span>
+<a id="__codelineno-9-15" name="__codelineno-9-15" href="#__codelineno-9-15"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Groningen"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#9467BD"</span><span class="p">],</span>
+<a id="__codelineno-9-16" name="__codelineno-9-16" href="#__codelineno-9-16"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Noord-Holland"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#8C564B"</span><span class="p">],</span>
+<a id="__codelineno-9-17" name="__codelineno-9-17" href="#__codelineno-9-17"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Overijssel"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#E377C2"</span><span class="p">],</span>
+<a id="__codelineno-9-18" name="__codelineno-9-18" href="#__codelineno-9-18"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Utrecht"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#7F7F7F"</span><span class="p">],</span>
+<a id="__codelineno-9-19" name="__codelineno-9-19" href="#__codelineno-9-19"></a><span class="w">              </span><span class="p">[</span><span class="s2">"Zuid-Holland"</span><span class="p">,</span><span class="w"> </span><span class="s2">"#BCBD22"</span><span class="p">]</span>
+<a id="__codelineno-9-20" name="__codelineno-9-20" href="#__codelineno-9-20"></a><span class="w">            </span><span class="p">],</span>
+<a id="__codelineno-9-21" name="__codelineno-9-21" href="#__codelineno-9-21"></a><span class="w">            </span><span class="nt">"default"</span><span class="p">:</span><span class="w"> </span><span class="s2">"#0000ff"</span><span class="p">,</span>
+<a id="__codelineno-9-22" name="__codelineno-9-22" href="#__codelineno-9-22"></a><span class="w">            </span><span class="nt">"property"</span><span class="p">:</span><span class="w"> </span><span class="s2">"provincie"</span>
+<a id="__codelineno-9-23" name="__codelineno-9-23" href="#__codelineno-9-23"></a><span class="w">          </span><span class="p">}</span>
+<a id="__codelineno-9-24" name="__codelineno-9-24" href="#__codelineno-9-24"></a><span class="w">        </span><span class="p">}</span>
+<a id="__codelineno-9-25" name="__codelineno-9-25" href="#__codelineno-9-25"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-9-26" name="__codelineno-9-26" href="#__codelineno-9-26"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-9-27" name="__codelineno-9-27" href="#__codelineno-9-27"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-9-28" name="__codelineno-9-28" href="#__codelineno-9-28"></a><span class="p">}</span>
+</code></pre></div>
+<a class="glightbox" data-type="image" data-width="auto" data-height="auto" href="vlak_een_legenda.png" data-desc-position="bottom"><img alt="title" src="vlak_een_legenda.png"></a><p></p>
+<p>Deze stijl geeft de vlakken weer met een unieke kleur op basis van het attribuut provincie. Hoewel de vlakken op verschillende waarden worden gestyled, verschijnt er in de legenda slechts één veld.</p>
+<ul>
+<li>Met <code>name</code> wordt aangegeven hoe de klasse in de legenda genoemd wordt.</li>
+<li>
+<p>Het <code>type</code> is categorical, omdat aan elke waarde van het attribuut provincie een specifieke kleur wordt toegewezen.</p>
+<ul>
+<li>Een alternatieve optie is interval, waarbij de stops worden gebruikt om te bepalen tussen welke waarden een vlak valt. </li>
+</ul>
+<p>In dit voorbeeld hieronder krijgt een vlak met de waarde 16 de eerste kleur (<code>#1F77B4</code>).
+</p><div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">[</span><span class="mi">0</span><span class="p">,</span><span class="w"> </span><span class="s2">"#1F77B4"</span><span class="p">],</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="p">[</span><span class="mi">100</span><span class="p">,</span><span class="w"> </span><span class="s2">"#FF7F0E"</span><span class="p">],</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="p">[</span><span class="mi">200</span><span class="p">,</span><span class="w"> </span><span class="s2">"#2CA02C"</span><span class="p">]</span>
+</code></pre></div><p></p>
+</li>
+<li>
+<p>Onder <code>stops</code> worden de verschillende waarden van het attribuut provincie gekoppeld aan specifieke kleuren.</p>
+</li>
+<li>De default kleur is blauw (<code>#0000FF</code>) en wordt gebruikt voor alle waarden van het attribuut provincie die niet expliciet in de stops zijn opgenomen.</li>
+<li><code>property</code> laat zien op welk veld wordt gefilterd. </li>
+</ul>
+<p>Deze manier van stylen is vooral handig wanneer het veld veel verschillende mogelijkheden heeft, omdat zo wordt voorkomen dat de legenda te lang wordt.</p>
 
 
 
