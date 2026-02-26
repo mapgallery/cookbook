@@ -636,4 +636,60 @@ In dit voorbeeld wordt het veld `kleurcode` gebruikt om de kleur van elk punt te
 
 De dataset moet hiervoor geldige kleurwaarden bevatten, bijvoorbeeld in [HTML-formaat](https://www.w3schools.com/colors/colors_names.asp) ("red", "orange", "red") of hex-notitie ("#ff0000", "#00ffcc"). 
 
+### Punten zonder individuele legenda
 
+```json
+{
+  "name": "",
+  "rules": [
+    {
+      "name": "PDOK - Molens",
+      "symbolizers": [
+        {
+          "kind": "Mark",
+          "wellKnownName": "circle",
+          "radius": 5,
+          "strokeColor": "black",
+          "strokeWidth": 2,
+          "color": {
+            "type": "categorical",
+            "stops": [
+              ["getijdemolen", "#1f77b4"],
+              ["hondenkarn", "#ff7f0e"],
+              ["koemolen", "#2ca02c"],
+              ["ros- en watermolen", "#d62728"],
+              ["rosmolen", "#9467bd"],
+              ["tredmolen", "#8c564b"],
+              ["watermolen", "#e377c2"],
+              ["watervluchtmolen", "#17becf"],
+              ["windmolen", "#bcbd22"]
+            ],
+            "default": "#0000ff",
+            "property": "CATEGORIE"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+![title](punt_een_legenda.png)
+
+Deze stijl geeft de punten weer met een unieke kleur op basis van het attribuut categorie. Hoewel de punten op verschillende waarden worden gestyled, verschijnt er in de legenda slechts één veld.
+
+- Met `name` wordt aangegeven hoe de klasse in de legenda genoemd wordt.
+- Het `type` is categorical, omdat aan elke waarde van het attribuut categorie een specifieke kleur wordt toegewezen.
+    - Een alternatieve optie is interval, waarbij de stops worden gebruikt om te bepalen tussen welke waarden een punt valt. 
+    
+    In dit voorbeeld hieronder krijgt een punt met de waarde 16 de eerste kleur (`#1F77B4`).
+    ```json
+    [0, "#1F77B4"],
+    [100, "#FF7F0E"],
+    [200, "#2CA02C"]
+    ```
+
+- Onder `stops` worden de verschillende waarden van het attribuut categorie gekoppeld aan specifieke kleuren.
+- De default kleur is blauw (`#0000FF`) en wordt gebruikt voor alle waarden van het attribuut categorie ed die niet expliciet in de stops zijn opgenomen.
+- `property` laat zien op welk veld wordt gefilterd. 
+
+Deze manier van stylen is vooral handig wanneer het veld veel verschillende mogelijkheden heeft, omdat zo wordt voorkomen dat de legenda te lang wordt.

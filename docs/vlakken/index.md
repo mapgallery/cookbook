@@ -447,3 +447,56 @@ Deze techniek is vooral handig bij datasets met veel polygonen, zoals gebouwen o
 In MapGallery kunnen naast 2D-vlakken ook 3D-vlakken worden weergegeven. Dit gebeurt door in de stijl een hoogte-eigenschap toe te voegen, bijvoorbeeld `"height": { "args": ["hoogte"], "name": "property" }`. Met deze regel wordt aangegeven dat de hoogte van elk vlak wordt bepaald door het veld `hoogte` in de dataset. 
 
 De parameter `"args": ["hoogte"]` geeft aan welk veld uit de tabel wordt gebruikt voor de hoogte. MapGallery gebruikt deze waarde om het vlak in 3D omhoog te trekken: hoe hoger de waarde, hoe hoger het object op de kaart wordt weergegeven. Op deze manier ontstaat een realistische hoogteweergave, bijvoorbeeld van gebouwen.
+
+### Vlakken zonder individuele legenda
+
+```json
+{
+  "rules": [
+    {
+      "name": "CBS Bevolkingskernen 2021",
+      "symbolizers": [
+        {
+          "kind": "Fill",
+          "color": {
+            "type": "categorical",
+            "stops": [
+              ["Drenthe", "#1F77B4"],
+              ["Flevoland", "#FF7F0E"],
+              ["Fryslân", "#2CA02C"],
+              ["Gelderland", "#D62728"],
+              ["Groningen", "#9467BD"],
+              ["Noord-Holland", "#8C564B"],
+              ["Overijssel", "#E377C2"],
+              ["Utrecht", "#7F7F7F"],
+              ["Zuid-Holland", "#BCBD22"]
+            ],
+            "default": "#0000ff",
+            "property": "provincie"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+![title](vlak_een_legenda.png)
+
+Deze stijl geeft de vlakken weer met een unieke kleur op basis van het attribuut provincie. Hoewel de vlakken op verschillende waarden worden gestyled, verschijnt er in de legenda slechts één veld.
+
+- Met `name` wordt aangegeven hoe de klasse in de legenda genoemd wordt.
+- Het `type` is categorical, omdat aan elke waarde van het attribuut provincie een specifieke kleur wordt toegewezen.
+    - Een alternatieve optie is interval, waarbij de stops worden gebruikt om te bepalen tussen welke waarden een vlak valt. 
+    
+    In dit voorbeeld hieronder krijgt een vlak met de waarde 16 de eerste kleur (`#1F77B4`).
+    ```json
+    [0, "#1F77B4"],
+    [100, "#FF7F0E"],
+    [200, "#2CA02C"]
+    ```
+
+- Onder `stops` worden de verschillende waarden van het attribuut provincie gekoppeld aan specifieke kleuren.
+- De default kleur is blauw (`#0000FF`) en wordt gebruikt voor alle waarden van het attribuut provincie die niet expliciet in de stops zijn opgenomen.
+- `property` laat zien op welk veld wordt gefilterd. 
+
+Deze manier van stylen is vooral handig wanneer het veld veel verschillende mogelijkheden heeft, omdat zo wordt voorkomen dat de legenda te lang wordt.

@@ -395,3 +395,53 @@ De manier waarop een lijn eindigt wordt bepaald met de eigenschap `cap`. Er zijn
 - `Square`: De lijn wordt vierkant afgesloten, een verlenging van de lijn zelf. 
 
 ![title](lijncap_uitleg.png)
+
+### Lijnen zonder individuele legenda
+
+```json
+{
+  "rules": [
+    {
+      "name": "Mirt",
+      "symbolizers": [
+        {
+          "kind": "Line",
+          "width": 3,
+          "color": {
+            "type": "categorical",
+            "stops": [
+              ["Noord-Nederland", "#1F77B4"],
+              ["Noordwest-Nederland", "#FF7F0E"],
+              ["Oost-Nederland", "#2CA02C"],
+              ["Zuid-Nederland", "#D62728"],
+              ["Zuidwest-Nederland", "#9467BD"]
+            ],
+            "default": "#0000ff",
+            "property": "gebied"
+          }
+        }
+      ]
+    }
+  ]
+}
+```
+![title](lijnen_een_legenda.png)
+
+Deze stijl geeft de lijnen weer met een unieke kleur op basis van het attribuut gebied. Hoewel de lijnen op verschillende waarden worden gestyled, verschijnt er in de legenda slechts één veld.
+
+- Met `name` wordt aangegeven hoe de klasse in de legenda genoemd wordt.
+- Het `type` is categorical, omdat aan elke waarde van het attribuut gebied een specifieke kleur wordt toegewezen.
+    - Een alternatieve optie is interval, waarbij de stops worden gebruikt om te bepalen tussen welke waarden een lijn valt. 
+    
+    In dit voorbeeld hieronder krijgt een lijn met de waarde 16 de eerste kleur (`#1F77B4`).
+    ```json
+    [0, "#1F77B4"],
+    [100, "#FF7F0E"],
+    [200, "#2CA02C"]
+    ```
+
+- Onder `stops` worden de verschillende waarden van het attribuut gebied gekoppeld aan specifieke kleuren.
+- De default kleur is blauw (`#0000FF`) en wordt gebruikt voor alle waarden van het attribuut gebied die niet expliciet in de stops zijn opgenomen.
+- `property` laat zien op welk veld wordt gefilterd. 
+
+Deze manier van stylen is vooral handig wanneer het veld veel verschillende mogelijkheden heeft, omdat zo wordt voorkomen dat de legenda te lang wordt.

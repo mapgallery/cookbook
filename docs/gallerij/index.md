@@ -19,7 +19,8 @@ GeoStyler voorbeelden voor punten:
 | [Zoom-based punten](../punten/#zoom-based-punten)<br>![Zoom-based punten](../punten/zoom_based_klein.png) | [Zichtbaar bij bepaald niveau](../punten/#zichtbaar-bij-bepaald-niveau)<br>![Zichtbaar bij bepaald niveau](../punten/punt_zichtbaarheid.png) |
 | [Transparant punt](../punten/#transparant-punt)<br>![Transparant punt](../punten/transparant_punt.png) | [Punt met buffer](../punten/#punt-met-buffer)<br>![Simpele punt](../punten/punt_buffer.png) |
 | [Eigen icoon toevoegen](../punten/#eigen-icoon-toevoegen)<br>![Simpele punt](../punten/2d_vuurtoren_afbeelding.png) | [Rotatie op basis van data](../punten/#rotatie-op-basis-van-data)<br>![Rotatie op basis van data](../punten/rotatie.png) |
-| [Afbeelding op basis van data](../punten/#afbeelding-op-basis-van-data)<br>![Afbeelding op basis van data](../punten/voorzieningen_afbeelding_icon_v2.jpg) | [Kleur op basis van data](../punten/#kleur-op-basis-van-data)<br>![Kleur op basis van data](../punten/data_kleur.png) |
+| [Afbeelding op basis van data](../punten/#afbeelding-op-basis-van-data)<br>![Afbeelding op basis van data](../punten/voorzieningen_afbeelding_icon_v2.jpg) | [Kleur op basis van data](../punten/#kleur-op-basis-van-data)<br>![Kleur op basis van data](../punten/data_kleur.png) | 
+| [Punten zonder individuele legenda](../punten/#punten-zonder-individuele-legenda)<br>![Punten zonder individuele legenda](../punten/punt_een_legenda.png) |
 
 
 
@@ -33,7 +34,7 @@ GeoStyler voorbeelden voor lijnen:
 | [Attribute-based lijnen](../lijnen/#atribute-based-lijnen)<br>![Attribute-based lijnen](../lijnen/lijn_attributebased.png) | [Zoom-based lijnen](../lijnen/#zoom-based-lijnen)<br>![Zoom-based lijnen](../lijnen/lijn_zoom_klein.png) |
 | [Zichtbaar bij bepaald niveau](../lijnen/#zichtbaar-bij-bepaald-niveau)<br>![Zichtbaar bij bepaald niveau](../lijnen/lijn_zichtbaar_vanaf.png) | [Stippellijn](../lijnen/#stippellijn)<br>![Stippellijn](../lijnen/stippel_lijn.png) |
 | [Lijn met offset](../lijnen/#lijn-met-offset)<br>![Lijn met offset](../lijnen/lijn_offset.png) | [Lijn met omlijning](../lijnen/#lijn-met-omlijning)<br>![Lijn met omlijning](../lijnen/lijn_omlijning.png) |
-| [Lijn cap](../lijnen/#lijn-cap)<br>![Lijn cap](../lijnen/lijn_cap.png) | |
+| [Lijn cap](../lijnen/#lijn-cap)<br>![Lijn cap](../lijnen/lijn_cap.png) | [Lijnen zonder individuele legenda](../lijnen/#lijnen-zonder-individuele-legenda)<br>![Lijnen zonder individuele legenda](../lijnen/lijnen_een_legenda.png)|
 
 
 ### Vlakken
@@ -45,4 +46,4 @@ GeoStyler voorbeelden voor vlakken:
 | [Vlakken met labels](../vlakken/#vlakken-met-labels)<br>![Vlakken met labels](../vlakken/foto_vlakken_labels.png) | [Geavanceerde labels](../vlakken/#geavanceerde-labels)<br>![Geavanceerde labels](../vlakken/vlak_geavanceerde_labels.png) |
 | [Atribute-based vlakken](../vlakken/#atribute-based-vlakken)<br>![Attribute-based vlakken](../vlakken/vlak_attribute_based.png) | [Zichtbaar bij bepaald niveau](../vlakken/#zichtbaar-bij-bepaald-niveau)<br>![Zichtbaar bij bepaald niveau](../vlakken/vlakken_zichtbaarheid.png) |
 | [Vlakken met omlijning](../vlakken/#vlakken-met-omlijning)<br>![Vlakken met omlijning](../vlakken/vlak_met_offset.png) | [Van vlak naar punt bij uitzoomen](../vlakken/#van-vlak-naar-punt-bij-uitzoomen)<br>![Van vlak naar punt bij uitzoomen](../vlakken/punt_van_vlak.png) |
-| [3D vlakken](../vlakken/#3d-vlakken)<br>![3D vlakken](../vlakken/3d_panden.png) | |
+| [3D vlakken](../vlakken/#3d-vlakken)<br>![3D vlakken](../vlakken/3d_panden.png) | [Vlakken zonder individuele legenda](../vlakken/#vlakken-zonder-individuele-legenda)<br>![Vlakken zonder individuele legenda](../vlakken/vlak_een_legenda.png) |
