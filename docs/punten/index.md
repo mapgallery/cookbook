@@ -45,7 +45,7 @@ Dit voorbeeld is opgesteld met de knop "Genereer style". Binnen rules zijn de op
 - De `strokeColor` bepaalt de kleur van de omlijning, die in dit geval zwart is. Hiervoor kunnen dezelfde kleurnotaties worden toegepast als bij de vulling van het punt.
 - De `strokeWidth` bepaalt de dikte van de omlijning.
 - De `strokeOpacity` bepaalt de transparantie van de omlijning.
-- Met `wellKnownName` wordt de vorm van het symbool vastgelegd. In dit geval betreft het een cirkel.
+- Met `wellKnownName` wordt de vorm van het symbool vastgelegd. De marker opties zijn: `circle`, `square`, `triangle`, `star`, `cross` en `x`.
 
 ### Punt als afbeelding
 ```json
