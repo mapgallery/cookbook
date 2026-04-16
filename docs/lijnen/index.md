@@ -290,8 +290,6 @@ Wanneer er veel lijnen op de kaart staan, is het niet altijd wenselijk om deze o
 
 Hierdoor zijn de lijnen zichtbaar wanneer verder wordt ingezoomd, maar verdwijnen ze automatisch bij het uitzoomen naar 1:700.000 of kleiner detailniveau. Op deze manier blijft de kaart overzichtelijk en worden te veel overlappende symbolen op grote schaalniveaus voorkomen.
 
-
-
 ### Stippellijn
 ```json
 {
@@ -310,6 +308,31 @@ Hierdoor zijn de lijnen zichtbaar wanneer verder wordt ingezoomd, maar verdwijne
 Met de eigenschap `dasharray` wordt de stijl van een stippellijn bepaald. De waarden in de reeks bestaan uit afwisselend lijnlengtes en tussenruimtes. De oneven getallen (de eerste, derde, enzovoort) geven de lengte van de lijnsegmenten aan, terwijl de even getallen (de tweede, vierde, enzovoort) de afstand tussen de segmenten bepalen.
 
 `"dasharray": [3, 2]` maakt een patroon van drie pixels lijn gevolgd door twee pixels ruimte, dat zich herhaalt over de hele lijn.
+
+### Gecombineerde lijnstijl
+```json
+{
+  "rules": [
+    {
+      "name": "",
+      "symbolizers": [
+        {
+          "kind": "Text",
+          "size": 10,
+          "color": "#0000FF",
+          "label": "●",
+          "opacity": 1,
+          "spacing": 10,
+          "placement": "line"
+        },
+        { "kind": "Line", "color": "#0000FF", "width": 3 }
+      ]
+    }
+  ]
+}
+```
+
+Door meerdere `symbolizers` te combineren kan een geavanceerde stijl worden weergeven zoals hekwerk of een lijn met symbolen. Er kan gebruik gemaakt worden van Unicode characters.
 
 
 ### Lijn met offset
