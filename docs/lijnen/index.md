@@ -332,7 +332,7 @@ Met de eigenschap `dasharray` wordt de stijl van een stippellijn bepaald. De waa
 }
 ```
 
-Door meerdere `symbolizers` te combineren kan een geavanceerde stijl worden weergeven zoals hekwerk of een lijn met symbolen. Er kan gebruik gemaakt worden van Unicode characters.
+Door meerdere `symbolizers` te combineren kan een geavanceerde lijnstijl worden weergeven zoals hekwerk, spoorlijn, routelijn of een lijn met symbolen. Er kan gebruik gemaakt worden van Unicode characters.
 
 
 ### Lijn met offset
