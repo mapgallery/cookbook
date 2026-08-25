@@ -6,7 +6,7 @@ title: "FAQ"
 
 FAQ
 ---
-Op deze pagina worden de Frequently Asked Questions (FAQ) bedantwoord: 
+Op deze pagina worden de Frequently Asked Questions (FAQ) beantwoord.
 
 
 ??? info "Waarom zie ik geen categorieën als ik een stijl genereer in MapGallery?"

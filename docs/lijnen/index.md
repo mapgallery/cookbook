@@ -31,7 +31,7 @@ Simpele styling
 
 Dit voorbeeld is opgesteld met de knop "Genereer style". Binnen rules zijn de opmaakregels beschreven. In de filter is gekozen voor alle geometrieën van het type `lineString`.
 
-  - Het type symbool is `Mark`, oftewel een markering op de kaart.
+  - Het type symbool is `Line`, oftewel een lijn op de kaart.
   - De kleur #8e0d56 is weergegeven in hex-notatie. Naast een hexcode kunnen ook andere kleurnotaties worden gebruikt, zoals RGB, RGBA, HSL, HSLA, of een van de 140 vooraf gedefinieerde [HTML-kleuren](https://www.w3schools.com/colors/colors_names.asp) (bijvoorbeeld yellow, darkblue of tomato).
   - De `width` bepaalt de dikte van de lijn.
   - De `opacity` bepaalt de transparantie van de lijn.
@@ -146,7 +146,7 @@ Geavanceerde styling
           "haloColor": "#FFFFFF",
           "haloWidth": 2,
           "placement": "line",
-          "allow Overlap": true
+          "allowOverlap": true
         }
       ]
     }
@@ -184,7 +184,7 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
 | Op de lijn    | [0, 0] | ![title](lijn_geavanceerd_label_00.png) |
 
 
-### Atribute-based lijnen
+### Attribute-based lijnen
 ```json
 {
   "rules": [
@@ -237,22 +237,21 @@ Deze stijl bepaalt hoe de lijnen op de kaart worden weergegeven op basis van de 
   "rules": [
     {
       "name": "Groot",
-      "symbolizers": [{ "kind": "Line", "size": 28, "color": "darkblue" }],
+      "symbolizers": [{ "kind": "Line", "width": 28, "color": "darkblue" }],
       "scaleDenominator": { "max": 100000 }
     },
     {
       "name": "Middel",
-      "symbolizers": [{ "kind": "Line", "size": 14, "color": "darkblue" }],
+      "symbolizers": [{ "kind": "Line", "width": 14, "color": "darkblue" }],
       "scaleDenominator": { "max": 1000000, "min": 100000 }
     },
     {
       "name": "Klein",
-      "symbolizers": [{ "kind": "Line", "size": 7, "color": "darkblue" }],
+      "symbolizers": [{ "kind": "Line", "width": 7, "color": "darkblue" }],
       "scaleDenominator": { "min": 1000000 }
     }
   ]
 }
-
 ```
 
 | Schaalniveau | Bereik | Afbeelding |
@@ -331,8 +330,9 @@ Met de eigenschap `dasharray` wordt de stijl van een stippellijn bepaald. De waa
   ]
 }
 ```
+![title](lijn_gecombineerd.png)
 
-Door meerdere `symbolizers` te combineren kan een geavanceerde lijnstijl worden weergeven zoals hekwerk, spoorlijn, routelijn of een lijn met symbolen. Er kan gebruik gemaakt worden van Unicode characters.
+Door meerdere symbolizers te combineren kan een geavanceerde lijnstijl worden weergeven zoals hekwerk, spoorlijn, routelijn of een lijn met symbolen. Bij `label` kan gebruik gemaakt worden van de 128 [ASCII](https://www.w3schools.com/charsets/ref_html_ascii.asp) karakters.
 
 
 ### Lijn met offset

@@ -187,7 +187,7 @@ Geavanceerde styling
           "rotate": -25,
           "opacity": 1,
           "haloColor": "#FFFFFF",
-          "haloWidth": 1
+          "haloWidth": 1,
           "allowOverlap": false
         }
       ]
@@ -225,7 +225,7 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
 - Onder `offset` wordt de afstand van het label tot het vlak bepaald. Dit zijn [x, y] coördinaten. Positieve waarden geven rechts en omlaag aan, terwijl negatieve waarden links en omhoog aangeven.
 
 
-### Atribute-based vlakken
+### Attribute-based vlakken
 ```json
 {
   "name": "Aantal inwoners",
@@ -281,13 +281,13 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
 ```
 ![title](vlak_attribute_based.png)
 
-Deze stijl bepaalt hoe de  op de kaart worden weergegeven op basis van `“aantalInwoners”`.
+Deze stijl bepaalt hoe de vlakken op de kaart worden weergegeven op basis van `“aantalInwoners”`.
 
-- Klein → gele vlakken (tot 5.000 inwoners)
+- Klein → rode vlakken (tot 5.000 inwoners)
     - `["<", "aantalInwoners", 5000]`
 - Middel → oranje vlakken (5.000 tot 10.000 inwoners).
     - `["&&",[">=", "aantalInwoners", 5000],["<", "aantalInwoners", 10000]]`
-- Groot → rode vlakken (vanaf 10.000 inwoners)
+- Groot → gele vlakken (vanaf 10.000 inwoners)
     - `[">=", "aantalInwoners", 10000]`
 
 !!! question "Meer info"

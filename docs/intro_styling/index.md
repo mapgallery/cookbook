@@ -4,7 +4,7 @@ title: "Introductie"
 
 # {{ config.site_name }}
 
-Het [MapGallery](https://mapgallery.eu) GeoStyler Kookboek bevat diverse ‘recepten’ voor het stylen van kaartlagen binnen MapGallery. Deze handleiding is bedoeld om gebruikers te ondersteunen bij het optimaal benutten van de mogelijkheden binnen het platform. Veel succes met het ontdekken van de wereld van geografische informatie!
+Het [MapGallery](https://mapgallery.eu) Kookboek bevat diverse ‘recepten’ voor het stylen van kaartlagen binnen MapGallery. Deze handleiding is bedoeld om gebruikers te ondersteunen bij het optimaal benutten van de mogelijkheden binnen het platform. Veel succes met het ontdekken van de wereld van geografische informatie!
 
 – Het MapGallery Team
 
@@ -47,11 +47,11 @@ GeoStyler gebruikt JSON om vast te leggen hoe geografische objecten (punten, lij
 
 ### Gebruik van een tekst/code editor
 
-Het is mogelijk om stijlen direct binnen MapGallery op te stellen, maar voor meer overzicht of het bewaren van codefragmenten kan gebruik worden gemaakt van een teksteditor zoals Kladblok of Word. Een betere optie is een gespecialiseerde code-editor, zoals Visual Studio Code. Dankzij kleurcodering wordt de stijlcode beter leesbaar en overzichtelijker.
+Het is mogelijk om stijlen direct binnen MapGallery op te stellen, maar voor meer overzicht of het bewaren van codefragmenten kan gebruik worden gemaakt van een teksteditor zoals Kladblok. Een betere optie is een gespecialiseerde code-editor, zoals Visual Studio Code. Dankzij kleurcodering wordt de stijlcode beter leesbaar en overzichtelijker.
 
 ### Geostyler demo 
 
-Een handig hulpmiddel voor het maken van een style is de [demo van GeoStyler](https://demo.geostyler.org/). Hier kunnen verschillende styling opties verkend worden voor punten, lijnen en vlakken. In de code-editor aan de rechterkant is direct de bijbehorende code te bekijken en de toegepaste stijl op de kaart te zien. Dit maakt het eenvoudig om te experimenteren met stijlen en direct het effect van aanpassingen te zien. Bovendien kunnen bestaande stijlen, zoals SLD, eenvoudig worden omgezet naar het GeoStyler-formaat.
+Een handig hulpmiddel voor het maken van een style is de [demo van GeoStyler](https://demo.geostyler.org/). Hier kunnen verschillende styling opties verkend worden voor punten, lijnen en vlakken. Ook kunnen er bestaande stijlen, zoals SLD, eenvoudig worden vertaald naar het GeoStyler-formaat.
 
 ### Geostyler Documentatie
 Naast de GeoStyler-demo kan ook de [documentatie](https://geostyler.github.io/geostyler-style/docs/master/index.html) van GeoStyler van pas komen. Daar worden de verschillende mogelijkheden van GeoStyler uitgebreid toegelicht voor meer verdieping. 

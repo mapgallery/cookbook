@@ -262,7 +262,7 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
     - Wanneer overlappen wel is toegestaan (`true`), kunnen labels gedeeltelijk of volledig overlapt worden door andere labels.
 - Onder `offset` wordt de afstand van het label tot het punt ingesteld. Dit zijn [x, y] coördinaten. Positieve waarden geven rechts en omlaag aan, terwijl negatieve waarden links en omhoog aangeven.
 
-### Atribute-based punten
+### Attribute-based punten
 ```json
 {
   "name": "Jaar van ingebruikstelling",
@@ -275,7 +275,7 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
           "kind": "Mark",
           "color": "#66CCFF",
           "radius": 4,
-          "stroke": "#000000",
+          "strokeColor": "#000000",
           "strokeWidth": 1,
           "wellKnownName": "circle"
         }
@@ -293,7 +293,7 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
           "kind": "Mark",
           "color": "#3399FF",
           "radius": 6,
-          "stroke": "#000000",
+          "strokeColor": "#000000",
           "strokeWidth": 1,
           "wellKnownName": "circle"
         }
@@ -307,7 +307,7 @@ Deze labels zijn geavanceerder en bieden meer mogelijkheden voor persoonlijke vo
           "kind": "Mark",
           "color": "#0033CC",
           "radius": 8,
-          "stroke": "#000000",
+          "strokeColor": "#000000",
           "strokeWidth": 1,
           "wellKnownName": "circle"
         }
@@ -389,8 +389,9 @@ Deze stijl bepaalt hoe punten op de kaart worden weergegeven op basis van het ja
 
 Met deze styling wordt de weergave van punten afhankelijk gemaakt van de schaal. In dit voorbeeld verandert de grootte van het punt op basis van het zoomniveau. Dit gedrag wordt geregeld met de `scaleDenominator`, waarin een minimale en/of maximale waarde kan worden opgegeven.
 
-- `"scaleDenominator": { "max": 100000 }`: De stijl is zichtbaar tot een schaal van 1:100.000, dus wanneer je dichterbij bent (meer ingezoomd).
-- `"scaleDenominator": { "min": 50000 }`: De stijl wordt zichtbaar vanaf een schaal van 1:50.000, dus wanneer je verder uitzoomt.
+- `"scaleDenominator": { "max": 100000 }`: De stijl is zichtbaar bij een schaalgetal van 100.000 of kleiner, dus wanneer je dichterbij bent (meer ingezoomd).
+- `"scaleDenominator": { "max": 1000000, "min": 100000 }`: De stijl is zichtbaar bij een schaalgetal tussen 100.000 en 1.000.000, dus wanneer je op een middelmatig zoomniveau zit.
+- `"scaleDenominator": { "min": 1000000 }`: De stijl is zichtbaar bij een schaalgetal van 1.000.000 of groter, dus wanneer je verder uitzoomt.
 
 Op deze manier kan de kaart verschillende weergaven tonen op verschillende zoomniveaus, wat zorgt voor een overzichtelijke en schaalafhankelijke visualisatie. Dit voorbeeld kan ook goed worden gecombineerd met andere voorbeelden uit dit kookboek: bij een hoge schaal kan een icoon als marker dienen, terwijl dit bij uitzoomen verandert in een eenvoudig punt.
 
@@ -503,7 +504,7 @@ Om een buffer rond een punt weer te geven, wordt een extra, grotere cirkel achte
         {
           "kind": "Icon",
           "size": 7,
-          "image": "https://pics.freeicons.io/uploads/icons/png/67939692616269555413314-512.png",
+          "image": "https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/1f5fc.svg",
           "sizeUnit": "m",
           "allowOverlap": true
         }
@@ -528,7 +529,7 @@ In dit voorbeeld wordt de [Tokyo Tower](https://images.emojiterra.com/google/not
     - Protocol: HTTP - Assets web URL
 - Ga naar style van de kaartlaag:
     - Bij `image` wordt de URL van de gewenste afbeelding opgegeven. Dit moet een directe link zijn die eindigt op het bestandsformaat, zoals .jpg, .svg of .png. In dit voorbeeld is dit: [Tokyo Tower](https://images.emojiterra.com/google/noto-emoji/unicode-16.0/color/svg/1f5fc.svg).
-- - `kind` is in plaats van `Mark` nu `Icon`.
+    - `kind` is in plaats van `Mark` nu `Icon`.
 - De optie `allowOverlap` bepaalt of de afbeeldingen elkaar mogen overlappen:
     - Wanneer overlappen niet is toegestaan (`false`), worden symbolen pas zichtbaar bij verder inzoomen op de kaart.
     - Wanneer overlappen wel is toegestaan (`true`), kunnen symbolen gedeeltelijk of volledig bedekt worden door andere symbolen.
@@ -545,16 +546,15 @@ In dit voorbeeld wordt de [Tokyo Tower](https://images.emojiterra.com/google/not
   "name": "",
   "rules": [
     {
-      "name": "Voorziening",
+      "name": "Voorzieningen",
+      "filter": ["==", "$type", "Point"],
       "symbolizers": [
         {
-          "kind": "Icon",
-          "size": 14,
-          "image": "https://imroi.github.io/kaartsymbolen/iconen/voorziening/{symbool_id}.svg",
+          "kind": "Mark",
+          "color": "#bb6ff8",
+          "radius": 7, 
           "rotate": { "args": ["rotatie"], "name": "property" },
-          "sizeUnit": "m",
-          "allowOverlap": true,
-          "defaultImage": "https://imroi.github.io/kaartsymbolen/iconen/voorziening/172.svg"
+          "wellKnownName": "triangle"
         }
       ]
     }
@@ -584,7 +584,6 @@ De regel `"rotate": { "args": ["rotatie"], "name": "property" }` geeft aan dat d
           "kind": "Icon",
           "size": 14,
           "image": "https://imroi.github.io/kaartsymbolen/iconen/voorziening/{symbool_id}.svg",
-          "rotate": { "args": ["rotatie"], "name": "property" },
           "sizeUnit": "m",
           "allowOverlap": true,
           "defaultImage": "https://imroi.github.io/kaartsymbolen/iconen/voorziening/172.svg"
@@ -599,11 +598,6 @@ De regel `"rotate": { "args": ["rotatie"], "name": "property" }` geeft aan dat d
 In MapGallery kun je ook dynamisch afbeeldingen gebruiken op basis van waarden in de dataset. In dit voorbeeld wordt bij `image` een link opgegeven naar een svg-bestand, waarin `{symbool_id}` een variabele is.
 
 Tijdens het laden van de kaart wordt `{symbool_id}` automatisch vervangen door de waarde uit het veld `symbool_id` van elk object. Zo krijgt elk punt het juiste icoon. De parameter `defaultImage` wordt gebruikt als er voor een object geen geldige symbool_id-waarde is, zodat er altijd een symbool zichtbaar blijft. 
-
-
-!!! warning
-
-    Let op: deze stijl kan alleen worden toegepast als er een symbool 
 
 
 ### Kleur op basis van data 
@@ -689,7 +683,7 @@ Deze stijl geeft de punten weer met een unieke kleur op basis van het attribuut 
     ```
 
 - Onder `stops` worden de verschillende waarden van het attribuut categorie gekoppeld aan specifieke kleuren.
-- De default kleur is blauw (`#0000FF`) en wordt gebruikt voor alle waarden van het attribuut categorie ed die niet expliciet in de stops zijn opgenomen.
+- De default kleur is blauw (`#0000FF`) en wordt gebruikt voor alle waarden van het attribuut categorie die niet expliciet in de stops zijn opgenomen.
 - `property` laat zien op welk veld wordt gefilterd. 
 
 Deze manier van stylen is vooral handig wanneer het veld veel verschillende mogelijkheden heeft, omdat zo wordt voorkomen dat de legenda te lang wordt.
