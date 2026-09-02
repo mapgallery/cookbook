@@ -39,19 +39,15 @@ markdown_extensions:
   - attr_list
   
 nav:
-  - Kookboek:
-      - Styling:
-          - intro_styling/index.md
-          - gallerij/index.md
-          - punten/index.md
-          - lijnen/index.md
-          - vlakken/index.md
-          - filtering/index.md
-      - Template:
-          - intro_template/index.md
-          - template_gallerij/index.md
-          - template_voorbeelden/index.md
-      - faq/index.md
+
+  - Geostyler:
+    - intro_styling/index.md
+    - gallerij/index.md
+    - punten/index.md
+    - lijnen/index.md
+    - vlakken/index.md
+    - filtering/index.md
+  - faq/index.md
 
 plugins:
   - macros:

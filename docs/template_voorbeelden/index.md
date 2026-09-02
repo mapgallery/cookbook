@@ -6,6 +6,7 @@ title: "Voorbeelden"
 
 Template voorbeelden
 ---
+In dit stuk worden verschillende voorbeelden gegeven over de mogelijkheden van templates binnen MapGallery. De voorbeeld kaartlaag die wordt gebruikt is de [CBS Wijken en Buurten 2024](https://www.pdok.nl/introductie/-/article/cbs-wijken-en-buurten). Alle code voorbeelden die gegeven worden met veld namen zullen hier over gaan. 
 
 ### Kleuren
 De primaire kleur van MapGallery kan per omgeving worden aangepast, dit is de kleur die de knoppen en andere details krijgen. Deze kan aangepast worden in de applicatie instellingen. Deze kleur wordt gebruikt voor de bootstrap primairy kleur. De primary kleur is daarom ook per omgeving anders, in dit geval is de primary kleur geel (#FCCB19), maar dit zal dus per omgeving wisselen. Verder zijn er nog 9 andere vaste Bootstrap kleuren waar gebruikt van gemaakt kan worden. 
